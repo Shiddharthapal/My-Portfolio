@@ -1,7 +1,12 @@
+import React from "react";
+import Nav from "./Nav";
+import { Outlet } from "react-router-dom";
+
 export function Layout() {
   return (
-    <div>
-      <h1>defaultLayout</h1>
+    <div className="h-screen">
+      <Nav />
+      <Outlet />
     </div>
   );
 }
