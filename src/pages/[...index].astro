@@ -1,18 +1,8 @@
 ---
 import App from "../components/App";
 import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
-
-export async function getStaticPaths() {
-  const routes = ["", "about", "contact", "portfolio", "resume"];
-  return routes.map((route) => ({
-    params: {
-      index: route === "" ? undefined : route,
-    },
-  }));
-}
 ---
 
-<Layout title="Shiddhartha">
+<Layout title="My Portfolio">
   <App client:only />
 </Layout>
