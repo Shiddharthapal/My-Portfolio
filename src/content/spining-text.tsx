@@ -16,7 +16,7 @@ export default function SpinningText() {
 
       // Calculate rotation based on scroll position
       const scrollPosition = window.scrollY;
-      const newRotation = (scrollPosition * 0.1) % 360;
+      const newRotation = (scrollPosition * 0.5) % 360;
       setRotation(newRotation);
     };
 
@@ -71,7 +71,7 @@ export default function SpinningText() {
           {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={i}
-              className="absolute w-full h-full text-[#e6e1c5] text-lg font-serif"
+              className="absolute w-full h-full text-gray-200 text-lg font-serif"
               style={{
                 transform: `rotate(${i * 30}deg)`,
               }}
@@ -79,7 +79,7 @@ export default function SpinningText() {
               <span
                 className="absolute left-1/2 -translate-x-1/2 -top-2 whitespace-nowrap"
                 style={{
-                  transform: `rotate(${90}deg)`,
+                  transform: `rotate(${110}deg)`,
                 }}
               >
                 {i === 0 && "Explore"}
@@ -96,12 +96,12 @@ export default function SpinningText() {
         {/* Center button */}
         <button
           onClick={handleClick}
-          className={`relative z-10 w-28 h-28 rounded-full bg-primary border-2 border-[#e6e1c5] flex flex-col items-center justify-center transition-transform ${
+          className={`relative z-10 w-28 h-28 rounded-full bg-primary border-2 border-gray-200 flex flex-col items-center justify-center transition-transform ${
             clicked ? "scale-95" : "scale-100"
           }`}
         >
-          <span className="text-white font-bold text-xl">SCROLL</span>
-          <span className="text-white font-bold text-xl">ME!</span>
+          <span className="text-gray-200 font-bold text-xl">SCROLL</span>
+          <span className="text-gray-200 font-bold text-xl">ME!</span>
         </button>
       </div>
     </div>

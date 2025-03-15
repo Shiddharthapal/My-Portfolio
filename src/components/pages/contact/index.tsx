@@ -7,6 +7,7 @@ import {
   Linkedin,
   Twitter,
   Instagram,
+  MapPinX,
 } from "lucide-react";
 
 type FormData = {
@@ -29,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 bg-primary">
+    <div className=" mx-auto  py-16 bg-primary">
       <h1 className="text-4xl font-bold text-white mb-8 text-center">
         Contact Me
       </h1>
@@ -86,7 +87,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
                 >
-                  <Linkedin className="w-6 h-6 text-gray-700" />
+                  <Linkedin className="w-6 h-6 text-blue-600" />
                 </a>
                 <a
                   href="https://www.instagram.com/shiddhartha_pal?igsh=MWw2bWRrajh2ZzQwag%3D%3D&utm_source=qr "
@@ -94,7 +95,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
                 >
-                  <Instagram className="w-6 h-6 text-gray-700" />
+                  <Instagram className="w-6 h-6 text-red-600" />
                 </a>
               </div>
             </div>
@@ -102,7 +103,9 @@ export default function Contact() {
 
           {/* Map Placeholder */}
           <div className="bg-blue-200 rounded-lg h-64 flex items-center justify-center">
-            <span className="text-black">Loading</span>
+            <span className="text-red-600">
+              <MapPinX />
+            </span>
           </div>
         </div>
 

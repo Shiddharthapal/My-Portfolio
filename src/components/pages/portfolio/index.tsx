@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 type Project = {
   id: number;
@@ -23,8 +24,8 @@ const projects: Project[] = [
       "TypeScript",
       "MongoDB",
       "Redux",
-      "HTML5",
       "Tailwind CSS",
+      "HTML5",
       "Bunny CDN",
     ],
     category: "Full Stack",
@@ -65,7 +66,7 @@ export default function Projects() {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="container mx-auto px-4 py-16 bg-primary">
+    <div className=" mx-auto px-4 py-16 bg-primary">
       <h1 className="text-4xl font-bold text-white mb-8 text-center">
         My Projects
       </h1>
@@ -94,48 +95,33 @@ export default function Projects() {
             key={project.id}
             className="bg-white rounded-lg shadow-md overflow-hidden"
           >
-            <div className="relative h-48">
+            <div className="relative h-52">
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="mb-4">
-                <div className="flex flex-wrap gap-2">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileHover={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6 flex flex-col justify-end"
+              >
+                <div className="text-white">
+                  <h3 className="text-xl font-bold mb-2">
+                    Title: {project.title}
+                  </h3>
+                  <p className="text-gray-200">{project.description}</p>
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
+                      className="px-2 py-1  text-gray-400 text-sm rounded"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-100 text-gray-800 px-4 py-2 rounded hover:bg-gray-200 transition duration-300"
-                >
-                  View Code
-                </a>
-              </div>
+              </motion.div>
             </div>
           </div>
         ))}
