@@ -2,7 +2,7 @@ import SpinningText from "src/content/spining-text";
 
 export default function Home() {
   return (
-    <div className="container  bg-primary">
+    <div className="  bg-primary">
       <div className=" mx-auto px-4 p-16 ">
         {/* Hero Section */}
         <div className="grid md:grid-cols-2 gap-2 mb-16">
@@ -23,7 +23,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/contact"
-                  className="bg-gray-100 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition duration-300"
+                  className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition duration-300"
                 >
                   Contact Me
                 </a>
@@ -38,14 +38,14 @@ export default function Home() {
             <img
               src="/public/portfolio.jpg"
               alt="Shiddhartha"
-              className="mx-auto lg:ml-72 max-h-96"
+              className="mx-auto lg:ml-72 max-h-96 "
             />
           </div>
         </div>
 
         {/* Skills Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Frontend Development
             </h3>
@@ -54,7 +54,7 @@ export default function Home() {
               Tailwind CSS, Astro.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Backend Development
             </h3>
@@ -62,7 +62,7 @@ export default function Home() {
               Experience with Node.js, Astro, and database management systems.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               UI/UX Design
             </h3>

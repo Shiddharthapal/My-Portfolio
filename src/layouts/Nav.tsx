@@ -22,11 +22,19 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <div className="flex space-x-4">
-              <NavLink href="/">Home</NavLink>
-              <NavLink href="/about">About</NavLink>
-              <NavLink href="/contact">Contact</NavLink>
-              <NavLink href="/portfolio">Projects</NavLink>
+            <div className="flex space-x-4 ">
+              <NavLink href="/">
+                <p className="text-gray-200 hover:text-gray-600">Home</p>
+              </NavLink>
+              <NavLink href="/about">
+                <p className="text-gray-200 hover:text-gray-600">About</p>
+              </NavLink>
+              <NavLink href="/contact">
+                <p className="text-gray-200 hover:text-gray-600">Contact</p>
+              </NavLink>
+              <NavLink href="/portfolio">
+                <p className="text-gray-200 hover:text-gray-600">Projects</p>
+              </NavLink>
             </div>
           </div>
           <div className="sm:hidden flex items-center">
