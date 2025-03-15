@@ -12,20 +12,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-black shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-xl font-bold text-gray-800">
-              Logo
+            <Link to="/" className="text-xl font-bold text-gray-300 font-mono">
+              SHIDDHARTHA
             </Link>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="flex space-x-4">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About</NavLink>
-              <NavLink href="/services">Services</NavLink>
               <NavLink href="/contact">Contact</NavLink>
+              <NavLink href="/portfolio">Projects</NavLink>
             </div>
           </div>
           <div className="sm:hidden flex items-center">
@@ -48,8 +48,8 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <MobileNavLink href="/">Home</MobileNavLink>
             <MobileNavLink href="/about">About</MobileNavLink>
-            <MobileNavLink href="/services">Services</MobileNavLink>
             <MobileNavLink href="/contact">Contact</MobileNavLink>
+            <MobileNavLink href="/portfolio">Projects</MobileNavLink>
           </div>
         </div>
       )}

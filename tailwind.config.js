@@ -7,8 +7,12 @@ module.exports = {
         border: "hsl(var(--border))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        primary:{
+  DEFAULT: "#071522"
+}
       },
     },
   },
   plugins: [],
 }
+

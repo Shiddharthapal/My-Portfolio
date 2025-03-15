@@ -49,7 +49,7 @@ const projects: Project[] = [
 
 const categories = ["All", "Full Stack", "Web App", "Frontend"];
 
-export default function Portfolio() {
+export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredProjects =

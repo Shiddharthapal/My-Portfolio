@@ -1,5 +1,13 @@
 import { useForm } from "react-hook-form";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 type FormData = {
   name: string;
@@ -21,15 +29,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+    <div className="container mx-auto px-4 py-16 bg-primary">
+      <h1 className="text-4xl font-bold text-red-100 mb-8 text-center">
         Contact Me
       </h1>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Contact Information */}
         <div>
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div className="bg-red-100 rounded-lg shadow-md p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Get in Touch
             </h2>
@@ -37,24 +45,24 @@ export default function Contact() {
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-blue-600" />
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:shiddhartpal01355@gmail.com"
                   className="text-gray-600 hover:text-blue-600"
                 >
-                  your.email@example.com
+                  shiddhartpal01355@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-blue-600" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:01860680768"
                   className="text-gray-600 hover:text-blue-600"
                 >
-                  +123 456 7890
+                  01860680768
                 </a>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-600">City, Country</span>
+                <span className="text-gray-600">Dhaka, Bangladesh</span>
               </div>
             </div>
 
@@ -65,41 +73,41 @@ export default function Contact() {
               </h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/Shiddharthapal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition duration-300"
+                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
                 >
                   <Github className="w-6 h-6 text-gray-700" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/shiddhartha-pal-6s80768"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition duration-300"
+                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
                 >
                   <Linkedin className="w-6 h-6 text-gray-700" />
                 </a>
                 <a
-                  href="https://twitter.com/yourusername"
+                  href="https://www.instagram.com/shiddhartha_pal?igsh=MWw2bWRrajh2ZzQwag%3D%3D&utm_source=qr "
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition duration-300"
+                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
                 >
-                  <Twitter className="w-6 h-6 text-gray-700" />
+                  <Instagram className="w-6 h-6 text-gray-700" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Map Placeholder */}
-          <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-            <span className="text-gray-600">Map Integration Here</span>
+          <div className="bg-red-100 rounded-lg h-64 flex items-center justify-center">
+            <span className="text-black">Loading</span>
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="bg-red-100 rounded-lg shadow-md p-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Send a Message
           </h2>
@@ -192,7 +200,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300"
+              className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-800 transition duration-300"
             >
               Send Message
             </button>
