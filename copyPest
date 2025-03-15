@@ -1,0 +1,120 @@
+13:18:52 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:18:53 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:04 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:04 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at validateDynamicRouteModule (file:///C:/All%20Projects%20,Code/Projects/My%20Portfolio/node_modules/.pnpm/astro@5.3.0_jiti@2.4.2_lightningcss@1.29.1_rollup@4.34.8_typescript@5.7.3_yaml@2.7.0/node_modules/astro/dist/core/routing/validation.js:19:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at validateDynamicRouteModule (file:///C:/All%20Projects%20,Code/Projects/My%20Portfolio/node_modules/.pnpm/astro@5.3.0_jiti@2.4.2_lightningcss@1.29.1_rollup@4.34.8_typescript@5.7.3_yaml@2.7.0/node_modules/astro/dist/core/routing/validation.js:19:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at C:\All Projects ,Code\Projects\My Portfolio\src\pages\[...index].astro
+    [...] See full stack trace in the browser, or rerun with --verbose.
+13:19:06 [ERROR] [GetStaticPathsRequired] `getStaticPaths()` function is required for dynamic routes. Make sure that you `export` a `getStaticPaths` function from your dynamic route.
+  Hint:
+    See https://docs.astro.build/en/guides/routing/#dynamic-routes for more information on dynamic routes.
+
+        If you meant for this route to be server-rendered, set `export const prerender = false;` in the page.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/get-static-paths-required/
+  Stack trace:
+    at validateDynamicRouteModule (file:///C:/All%20Projects%20,Code/Projects/My%20Portfolio/node_modules/.pnpm/astro@5.3.0_jiti@2.4.2_lightningcss@1.29.1_rollup@4.34.8_typescript@5.7.3_yaml@2.7.0/node_modules/astro/dist/core/routing/validation.js:19:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
