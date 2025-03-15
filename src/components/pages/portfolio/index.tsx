@@ -47,7 +47,7 @@ const projects: Project[] = [
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website built with modern technologies.",
-    image: "/blog-placeholder-3.jpg",
+    image: "/blog-placeholder-about.jpg",
     technologies: ["React", "TypeScript", "Tailwind CSS", "HTML5"],
     category: "Frontend",
     demoLink: "Loading...",

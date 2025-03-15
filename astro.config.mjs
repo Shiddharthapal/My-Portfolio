@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   integrations: [
@@ -12,4 +13,6 @@ export default defineConfig({
     tailwind(),
   ],
   site: 'http://localhost:3000',
+  output: 'server', 
+  adapter: netlify()
 });
