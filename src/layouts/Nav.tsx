@@ -3,6 +3,7 @@ import type React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import LoopingLetterAnimation from "src/content/motionAnimation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="text-xl font-bold text-gray-300 font-mono">
-              SHIDDHARTHA
+              <LoopingLetterAnimation />
             </Link>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">

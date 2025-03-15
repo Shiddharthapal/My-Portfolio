@@ -79,7 +79,7 @@ export default function Home() {
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-blue-300 rounded-lg shadow-md overflow-hidden">
+            <div className="bg-blue-200 rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-blue-500"></div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -87,7 +87,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   A full-stack video stream application built with React and
-                  Node.js.
+                  TypeScript.
                 </p>
                 <a
                   href="/portfolio"
@@ -97,7 +97,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="bg-blue-300 rounded-lg shadow-md overflow-hidden">
+            <div className="bg-blue-200 rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-blue-500"></div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">

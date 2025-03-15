@@ -30,14 +30,14 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto px-4 py-16 bg-primary">
-      <h1 className="text-4xl font-bold text-red-100 mb-8 text-center">
+      <h1 className="text-4xl font-bold text-white mb-8 text-center">
         Contact Me
       </h1>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Contact Information */}
         <div>
-          <div className="bg-red-100 rounded-lg shadow-md p-8 mb-8">
+          <div className="bg-blue-200 rounded-lg shadow-md p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Get in Touch
             </h2>
@@ -57,7 +57,7 @@ export default function Contact() {
                   href="tel:01860680768"
                   className="text-gray-600 hover:text-blue-600"
                 >
-                  01860680768
+                  01860*****8
                 </a>
               </div>
               <div className="flex items-center gap-4">
@@ -101,13 +101,13 @@ export default function Contact() {
           </div>
 
           {/* Map Placeholder */}
-          <div className="bg-red-100 rounded-lg h-64 flex items-center justify-center">
+          <div className="bg-blue-200 rounded-lg h-64 flex items-center justify-center">
             <span className="text-black">Loading</span>
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-red-100 rounded-lg shadow-md p-8">
+        <div className="bg-blue-200 rounded-lg shadow-md p-8">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Send a Message
           </h2>

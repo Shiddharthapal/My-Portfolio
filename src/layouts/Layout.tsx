@@ -6,7 +6,7 @@ export function Layout() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <main className="container ">
+      <main className=" ">
         <Outlet />
       </main>
     </div>

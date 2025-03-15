@@ -3,8 +3,8 @@ export default function About() {
     <div className="container mx-auto px-4 py-16 bg-primary">
       {/* Professional Summary */}
       <div className="max-w-4xl mx-auto mb-16">
-        <h1 className="text-4xl font-bold text-red-100 mb-6">About Me</h1>
-        <div className="bg-red-100 rounded-lg shadow-md p-8">
+        <h1 className="text-4xl font-bold text-white mb-6">About Me</h1>
+        <div className="bg-blue-200 rounded-lg shadow-md p-8">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
               <div className="">
@@ -36,11 +36,11 @@ export default function About() {
 
       {/* Skills */}
       <div className="max-w-4xl mx-auto mb-16">
-        <h2 className="text-2xl font-semibold text-red-100 mb-6">
+        <h2 className="text-2xl font-semibold text-white mb-6">
           Technical Skills
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-red-100 rounded-lg shadow-md p-6">
+          <div className="bg-blue-200 rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Frontend
             </h3>
@@ -52,7 +52,7 @@ export default function About() {
               <li>• Redux / Context API</li>
             </ul>
           </div>
-          <div className="bg-red-100 rounded-lg shadow-md p-6">
+          <div className="bg-blue-200 rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Backend
             </h3>
@@ -69,8 +69,8 @@ export default function About() {
 
       {/* Education */}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">Education</h2>
-        <div className="bg-red-100 rounded-lg shadow-md p-6">
+        <h2 className="text-2xl font-semibold text-white mb-6">Education</h2>
+        <div className="bg-blue-200 rounded-lg shadow-md p-6">
           <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Bachelor of Science in Software Engineering
           </h3>

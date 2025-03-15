@@ -14,36 +14,43 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Video Streaming Platform",
     description:
-      "A full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard.",
-    image: "/blog-placeholder-1.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      "A full-featured Video Streaming Platform with videos, user dashboard LogIn and LogOut feature.",
+    image: "/public/videoStream.webp",
+    technologies: [
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Redux",
+      "HTML5",
+      "Tailwind CSS",
+      "Bunny CDN",
+    ],
     category: "Full Stack",
-    demoLink: "https://demo-ecommerce.com",
-    codeLink: "https://github.com/username/ecommerce",
+    demoLink: "Loading...",
+    codeLink: "Invalid URL",
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "E-Commerce Web App",
     description:
       "A collaborative task management application with real-time updates and team features.",
-    image: "/blog-placeholder-2.jpg",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
+    image: "/public/preview.webp",
+    technologies: ["React", "TypeScript", "HTML5", "Tailwind CSS"],
     category: "Web App",
-    demoLink: "https://demo-taskmanager.com",
-    codeLink: "https://github.com/username/taskmanager",
+    demoLink: "Loading...",
+    codeLink: "Invalid URL",
   },
   {
     id: 3,
     title: "Portfolio Website",
-    description:
-      "A personal portfolio website built with modern technologies and animations.",
+    description: "A personal portfolio website built with modern technologies.",
     image: "/blog-placeholder-3.jpg",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "HTML5"],
     category: "Frontend",
-    demoLink: "https://demo-portfolio.com",
-    codeLink: "https://github.com/username/portfolio",
+    demoLink: "Loading...",
+    codeLink: "Invalid URL",
   },
 ];
 
@@ -58,8 +65,8 @@ export default function Projects() {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+    <div className="container mx-auto px-4 py-16 bg-primary">
+      <h1 className="text-4xl font-bold text-white mb-8 text-center">
         My Projects
       </h1>
 
