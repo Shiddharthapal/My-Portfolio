@@ -15,6 +15,10 @@ export default defineConfig({
   ],
 
   site: 'http://localhost:3000',
-  adapter: vercel(),
-  adapter: vercelServerless(),
+  adapter: vercel({
+    imageService: true,
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
