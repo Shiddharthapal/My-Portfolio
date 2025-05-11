@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
+import vercel from '@astrojs/vercel';
+
 export default defineConfig({
   integrations: [
     mdx(),
@@ -11,5 +13,7 @@ export default defineConfig({
     react(),
     tailwind(),
   ],
+
   site: 'http://localhost:3000',
+  adapter: vercel(),
 });
