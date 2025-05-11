@@ -14,10 +14,10 @@ export default defineConfig({
     tailwind(),
   ],
 
-  site: 'http://localhost:4321',
   adapter: netlify(),
   output: 'server',
   experimental: {
-    session: true,
-  }
+    session: true
+  },
+  site: 'http://shiddharthapal_29.netlify.app',
 });
