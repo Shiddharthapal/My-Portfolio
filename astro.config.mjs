@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-import vercelServerless from '@astrojs/vercel/serverless';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
@@ -14,7 +13,8 @@ export default defineConfig({
     tailwind(),
   ],
 
-  site: 'http://localhost:3000',
+  site: 'http://localhost:4321',
+  output: 'server',
   adapter: vercel({
     imageService: true,
     webAnalytics: {

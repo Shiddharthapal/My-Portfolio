@@ -1,8 +1,8 @@
 /* empty css                                   */
-import { c as createAstro, a as createComponent, r as renderHead, b as renderSlot, d as renderTemplate, e as renderComponent } from '../chunks/astro/server_Cs4bx1JN.mjs';
+import { c as createAstro, a as createComponent, r as renderHead, b as renderSlot, d as renderTemplate, e as renderComponent } from '../chunks/astro/server_WAeusLkB.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro = createAstro("http://localhost:3000");
+const $$Astro = createAstro("http://localhost:4321");
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;
