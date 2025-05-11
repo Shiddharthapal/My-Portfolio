@@ -1,4 +1,4 @@
-/* empty css                                   */
+/* empty css                                 */
 import { e as createAstro, f as createComponent, i as renderHead, j as renderSlot, r as renderTemplate, k as renderComponent } from '../chunks/astro/server_Dtpg7Cf-.mjs';
 export { renderers } from '../renderers.mjs';
 
@@ -11,16 +11,16 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
 }, "C:/All Projects ,Code/Projects/My Portfolio/src/layouts/Layout.astro", void 0);
 
 const prerender = false;
-const $$ = createComponent(($$result, $$props, $$slots) => {
+const $$Index = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "My Portfolio" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "App", null, { "client:only": true, "client:component-hydration": "only", "client:component-path": "C:/All Projects ,Code/Projects/My Portfolio/src/components/App", "client:component-export": "default" })} ` })}`;
-}, "C:/All Projects ,Code/Projects/My Portfolio/src/pages/[...index].astro", void 0);
+}, "C:/All Projects ,Code/Projects/My Portfolio/src/pages/index.astro", void 0);
 
-const $$file = "C:/All Projects ,Code/Projects/My Portfolio/src/pages/[...index].astro";
-const $$url = "/[...index]";
+const $$file = "C:/All Projects ,Code/Projects/My Portfolio/src/pages/index.astro";
+const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: $$,
+  default: $$Index,
   file: $$file,
   prerender,
   url: $$url
