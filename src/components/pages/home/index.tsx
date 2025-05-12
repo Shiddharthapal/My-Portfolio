@@ -36,7 +36,7 @@ export default function Home() {
               <SpinningText />
             </div>
             <img
-              src="/public/portfolio.jpg"
+              src="/portfolio.jpg"
               alt="Shiddhartha"
               className="mx-auto lg:ml-72 max-h-96 "
             />
