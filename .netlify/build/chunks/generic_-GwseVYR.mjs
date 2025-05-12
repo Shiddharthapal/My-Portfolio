@@ -1268,7 +1268,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_BxaKftUv.mjs'
+      './sharp_D-oB1mVo.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1431,7 +1431,7 @@ function applyResponsiveAttributes({
   return attributes;
 }
 
-const $$Astro$1 = createAstro("http://shiddharthapal_29.netlify.app");
+const $$Astro$1 = createAstro("http://shiddharthapal29.netlify.app");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Image;
@@ -1913,7 +1913,7 @@ function lookup(extn) {
 	return mimes[!~idx ? tmp : tmp.substring(++idx)];
 }
 
-const $$Astro = createAstro("http://shiddharthapal_29.netlify.app");
+const $$Astro = createAstro("http://shiddharthapal29.netlify.app");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Picture;

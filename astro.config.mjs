@@ -17,5 +17,5 @@ export default defineConfig({
   experimental: {
     session: true
   },
-  site: 'http://shiddharthapal_29.netlify.app',
+  site: 'http://shiddharthapal29.netlify.app',
 });

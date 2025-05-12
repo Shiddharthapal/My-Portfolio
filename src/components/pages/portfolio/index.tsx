@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: "Video Streaming Platform",
     description:
       "A full-featured Video Streaming Platform with videos, user dashboard LogIn and LogOut feature.",
-    image: "/public/videoStream.webp",
+    image: "/videoStream.webp",
     technologies: [
       "React",
       "TypeScript",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     title: "E-Commerce Web App",
     description:
       "A collaborative task management application with real-time updates and team features.",
-    image: "/public/preview.webp",
+    image: "/preview.webp",
     technologies: ["React", "TypeScript", "HTML5", "Tailwind CSS"],
     category: "Web App",
     demoLink: "Loading...",
