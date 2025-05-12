@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
@@ -15,7 +14,6 @@ export default defineConfig({
   ],
 
   adapter: netlify(),
-  output: 'static',
   experimental: {
     session: true
   },
