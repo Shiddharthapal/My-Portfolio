@@ -9,7 +9,7 @@ export default function About() {
             <div className="md:w-1/3">
               <div className="">
                 <img
-                  src="/public/about_me.jpg"
+                  src="/about_me.jpg"
                   alt="Shiddhartha"
                   className="w-52 h-48 mx-auto rounded-full"
                 />
