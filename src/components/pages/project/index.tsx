@@ -22,6 +22,7 @@ const projects: Project[] = [
     technologies: [
       "React",
       "TypeScript",
+      "Node.js",
       "MongoDB",
       "Redux",
       "Tailwind CSS",
@@ -31,9 +32,18 @@ const projects: Project[] = [
     category: "Full Stack",
     demoLink: "Loading...",
     codeLink: "Invalid URL",
+  },{
+    id: 2,
+    title: "Contest Tracker",
+    description: "It shows all details of a contestent like (Total submission, Last month submission, Total perticipation, Ranking Graph, Score etc.).",
+    image: "/contestTracker.jpg",
+    technologies: ["React", "TypeScript", "REST APIs", "Redux", "MongoDB", "HTML5/CSS3"],
+    category: "Full Stack",
+    demoLink: "Loading...",
+    codeLink: "Invalid URL",
   },
   {
-    id: 2,
+    id: 3,
     title: "E-Commerce Web App",
     description:
       "A collaborative task management application with real-time updates and team features.",
@@ -42,17 +52,7 @@ const projects: Project[] = [
     category: "Web App",
     demoLink: "Loading...",
     codeLink: "Invalid URL",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description: "A personal portfolio website built with modern technologies.",
-    image: "/blog-placeholder-3.jpg",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "HTML5"],
-    category: "Frontend",
-    demoLink: "Loading...",
-    codeLink: "Invalid URL",
-  },
+  }
 ];
 
 const categories = ["All", "Full Stack", "Web App", "Frontend"];

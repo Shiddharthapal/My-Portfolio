@@ -29,12 +29,13 @@ const Navbar = () => {
               <NavLink href="/about">
                 <p className="text-gray-200 hover:text-gray-600">About</p>
               </NavLink>
+              <NavLink href="/project">
+                <p className="text-gray-200 hover:text-gray-600">Project</p>
+              </NavLink>
               <NavLink href="/contact">
                 <p className="text-gray-200 hover:text-gray-600">Contact</p>
               </NavLink>
-              <NavLink href="/portfolio">
-                <p className="text-gray-200 hover:text-gray-600">Projects</p>
-              </NavLink>
+              
             </div>
           </div>
           <div className="sm:hidden flex items-center">
@@ -58,7 +59,7 @@ const Navbar = () => {
             <MobileNavLink href="/">Home</MobileNavLink>
             <MobileNavLink href="/about">About</MobileNavLink>
             <MobileNavLink href="/contact">Contact</MobileNavLink>
-            <MobileNavLink href="/portfolio">Projects</MobileNavLink>
+            <MobileNavLink href="/project">Projects</MobileNavLink>
           </div>
         </div>
       )}
