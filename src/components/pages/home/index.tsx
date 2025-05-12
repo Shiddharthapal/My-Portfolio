@@ -50,8 +50,8 @@ export default function Home() {
               Frontend Development
             </h3>
             <p className="text-gray-600">
-              Expertise in React, TypeScript, and modern CSS frameworks like
-              Tailwind CSS, Astro.
+              Expertise in React, JavaScript, Redux, HTML and modern CSS frameworks like
+              Tailwind CSS.
             </p>
           </div>
           <div className="bg-gray-200 p-6 rounded-lg shadow-md">
@@ -59,16 +59,16 @@ export default function Home() {
               Backend Development
             </h3>
             <p className="text-gray-600">
-              Experience with Node.js, Astro, and database management systems.
+              Experience in Node.js, TypeScript, REST APIs, MongoDB, MySQL.
             </p>
           </div>
           <div className="bg-gray-200 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              UI/UX Design
+              Technology and Tools
             </h3>
             <p className="text-gray-600">
-              Creating intuitive and responsive user interfaces with modern
-              design principles.
+              Using AI Agent, Git, GitHub, ClickUp, Agile Model, Postman, and other tools to streamline.
+              Expertise in ServerSide Application, Client Side Application, Monolith, Microservice.
             </p>
           </div>
         </div>
@@ -86,8 +86,8 @@ export default function Home() {
                   Project One
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  A full-stack video stream application built with React and
-                  TypeScript.
+                  A full-stack video stream application built with React,
+                  TypeScript, Node.js, Redux and MongoDB .
                 </p>
                 <a
                   href="/portfolio"
@@ -103,7 +103,16 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Project Two
                 </h3>
-                <p className="text-gray-600 mb-4">Working</p>
+                <p className="text-gray-600 mb-4">
+                  A full-stack Contest Tracker application built with React,
+                  TypeScript and also using REST APIs, MongoDB.
+                </p>
+                <a
+                  href="/portfolio"
+                  className="text-blue-700 hover:text-blue-800 font-medium hover:underline"
+                >
+                  Learn More →
+                </a>
               </div>
             </div>
           </div>

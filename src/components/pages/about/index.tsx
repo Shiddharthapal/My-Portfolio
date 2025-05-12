@@ -20,16 +20,27 @@ export default function About() {
                 Professional Summary
               </h2>
               <p className="text-gray-600 mb-4">
-                I'm a full-stack developer with a passion for creating solutions
-                to problems. With over 5 months of experience in web
-                development, I specialize in using AI agent to applications.
+                I’m a passionate fullstack developer with 3 years of web development experience and 1 year
+                of hands-on work in Node.js. I’ve built and maintained real-world applications, 
+                including a video streaming platform for over 10,000 users and Contest Tracker. I enjoy solving problems, 
+                writing clean code, and continuously learning new technologies like Nest.js and Docker.
               </p>
-              <p className="text-gray-600">
-                My approach combines technical expertise with creative
-                problem-solving to deliver better-quality software that meets
-                business objectives and user needs.
-              </p>
+        
+             
             </div>
+            
+          </div>
+          <div>
+            <p className="text-gray-600 mb-4">
+                Also I have Interned from <a  href="https://www.decodeit.org//"
+                className="text-blue-700">DecodeIT</a> where I 
+                sharpen my axe by building full-stack apps using Node.js, React and MongoDB.
+              </p>
+            <p className="text-gray-600">
+                I’ve been using AI agents in my development work for the past year. It helps me to enhance productivity,
+                handle repetitive backend tasks and add smart features to my projects. I’m confident that I can deliver 
+                clean and efficient code.
+              </p>
           </div>
         </div>
       </div>
@@ -41,29 +52,30 @@ export default function About() {
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-blue-200 rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Frontend
-            </h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>• React.js </li>
-              <li>• TypeScript</li>
-              <li>• Tailwind CSS</li>
-              <li>• HTML5 / CSS3</li>
-              <li>• Redux / Context API</li>
-            </ul>
-          </div>
-          <div className="bg-blue-200 rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Backend
-            </h3>
+            
             <ul className="space-y-2 text-gray-600">
               <li>• Node.js</li>
               <li>• RESTful APIs</li>
-              <li>• MongoDB / MySQL</li>
-              <li>• AWS, Bunny CND</li>
-              <li>• Netlify</li>
+              <li>• TypeScript</li>
+              <li>• JavaScript</li>
+              <li>• React.js </li>
+              <li>• Git</li>
+              <li>• ClickUp</li>
             </ul>
           </div>
+          <div className="bg-blue-200 rounded-lg shadow-md p-6">
+    
+            <ul className="space-y-2 text-gray-600">
+              <li>• AI Agent</li>
+              <li>• Astro</li>
+              <li>• Redux</li>
+              <li>• MongoDB / MySQL</li>
+              <li>• Tailwind CSS</li>
+              <li>• HTML5/CSS3</li>
+              <li>• AWS, Bunny CND</li>
+            </ul>
+          </div>
+          
         </div>
       </div>
 
@@ -71,16 +83,13 @@ export default function About() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold text-white mb-6">Education</h2>
         <div className="bg-blue-200 rounded-lg shadow-md p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">
-            Bachelor of Science in Software Engineering
-          </h3>
-          <p className="text-gray-600 mb-2">
-            Daffodil International University • 2022 - 2026
-          </p>
           <p className="text-gray-600">
-            Focused on software engineering and web development. Participated in
-            various coding competitions.
+            Bsc in Software Engineering
           </p>
+          <p className="text-gray-600 mb-2">
+            Daffodil International University
+          </p>
+          
         </div>
       </div>
     </div>
