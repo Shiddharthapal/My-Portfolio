@@ -2,7 +2,7 @@
 import { e as createAstro, f as createComponent, i as renderHead, j as renderSlot, r as renderTemplate, k as renderComponent } from '../chunks/astro/server_Dtpg7Cf-.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro = createAstro("http://shiddharthapal_29.netlify.app");
+const $$Astro = createAstro("http://shiddharthapal29.netlify.app");
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;
