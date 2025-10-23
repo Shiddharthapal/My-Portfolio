@@ -1,100 +1,88 @@
+"use client";
+
 import type React from "react";
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import LoopingLetterAnimation from "src/content/motionAnimation";
+export default function Navbar() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <nav className="bg-black shadow-md">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-xl font-bold text-gray-300 font-mono">
-              <LoopingLetterAnimation />
-            </Link>
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="#home" className="text-2xl font-bold text-blue-600">
+              Hamid.
+            </a>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <div className="flex space-x-4 ">
-              <NavLink href="/">
-                <p className="text-gray-200 hover:text-gray-600">Home</p>
-              </NavLink>
-              <NavLink href="/about">
-                <p className="text-gray-200 hover:text-gray-600">About</p>
-              </NavLink>
-              <NavLink href="/project">
-                <p className="text-gray-200 hover:text-gray-600">Project</p>
-              </NavLink>
-              <NavLink href="/contact">
-                <p className="text-gray-200 hover:text-gray-600">Contact</p>
-              </NavLink>
-              
-            </div>
+
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
+                className="text-foreground hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
-          <div className="sm:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+
+          {/* Right Side - Theme Toggle & Resume Button */}
+          <div className="flex items-center space-x-4">
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-lg hover:bg-accent transition-colors duration-200"
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? (
+                  <Sun className="w-5 h-5 text-foreground" />
+                ) : (
+                  <Moon className="w-5 h-5 text-foreground" />
+                )}
+              </button>
+            )}
+            <a
+              href="#contact"
+              onClick={(e) => handleScroll(e, "#contact")}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm"
             >
-              <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
+              Resume
+            </a>
           </div>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="sm:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <MobileNavLink href="/">Home</MobileNavLink>
-            <MobileNavLink href="/about">About</MobileNavLink>
-            <MobileNavLink href="/contact">Contact</MobileNavLink>
-            <MobileNavLink href="/project">Projects</MobileNavLink>
-          </div>
-        </div>
-      )}
     </nav>
   );
-};
-
-const NavLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => (
-  <Link
-    to={href}
-    className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-  >
-    {children}
-  </Link>
-);
-
-const MobileNavLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => (
-  <Link
-    to={href}
-    className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-  >
-    {children}
-  </Link>
-);
-
-export default Navbar;
+}

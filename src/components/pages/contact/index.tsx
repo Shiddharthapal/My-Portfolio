@@ -1,215 +1,82 @@
-import { useForm } from "react-hook-form";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
-  MapPinX,
-} from "lucide-react";
+"use client";
 
-type FormData = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
-
-  const onSubmit = (data: FormData) => {
-    // Handle form submission
-    console.log(data);
-  };
-
   return (
-    <div className=" mx-auto  py-16 bg-primary">
-      <h1 className="text-4xl font-bold text-white mb-8 text-center">
-        Contact Me
-      </h1>
+    <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Get In <span className="text-blue-500">Touch</span>
+          </h2>
+          <p className="text-muted-foreground">
+            Have a project in mind? Let's work together to bring your ideas to
+            life.
+          </p>
+        </div>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Contact Information */}
-        <div>
-          <div className="bg-blue-200 rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-              Get in Touch
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <Mail className="w-5 h-5 text-blue-600" />
-                <a
-                  href="mailto:shiddhartpal01355@gmail.com"
-                  className="text-gray-600 hover:text-blue-600"
-                >
-                  shiddhartpal01355@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-blue-600" />
-                <a
-                  href="tel:01860680768"
-                  className="text-gray-600 hover:text-blue-600"
-                >
-                  01860*****8
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <MapPin className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-600">Dhaka, Bangladesh</span>
-              </div>
-            </div>
-
-            {/* Social Media Links */}
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Follow Me
-              </h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/Shiddharthapal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
-                >
-                  <Github className="w-6 h-6 text-gray-700" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/shiddhartha-pal-6s80768"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
-                >
-                  <Linkedin className="w-6 h-6 text-blue-600" />
-                </a>
-                <a
-                  href="https://www.instagram.com/shiddhartha_pal?igsh=MWw2bWRrajh2ZzQwag%3D%3D&utm_source=qr "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition duration-300"
-                >
-                  <Instagram className="w-6 h-6 text-red-600" />
-                </a>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+            <Mail className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Email</h3>
+            <a
+              href="mailto:abhamid8586@gmail.com"
+              className="text-blue-500 hover:underline text-sm"
+            >
+              abhamid8586@gmail.com
+            </a>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-blue-200 rounded-lg h-64 flex items-center justify-center">
-            <span className="text-red-600">
-              <MapPinX />
-            </span>
+          <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+            <Phone className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Phone</h3>
+            <a
+              href="tel:+8801985308586"
+              className="text-blue-500 hover:underline text-sm"
+            >
+              +880 1985-308586
+            </a>
+          </div>
+
+          <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+            <MapPin className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+            <h3 className="font-semibold text-foreground mb-2">Location</h3>
+            <p className="text-muted-foreground text-sm">Khulna, Bangladesh</p>
           </div>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-blue-200 rounded-lg shadow-md p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            Send a Message
-          </h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Name
-              </label>
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <form className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
-                id="name"
-                {...register("name", { required: "Name is required" })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Your Name"
+                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              {errors.name && (
-                <p className="mt-1 text-sm text-red-600">
-                  {errors.name.message}
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Email
-              </label>
               <input
                 type="email"
-                id="email"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Invalid email address",
-                  },
-                })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Your Email"
+                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              {errors.email && (
-                <p className="mt-1 text-sm text-red-600">
-                  {errors.email.message}
-                </p>
-              )}
             </div>
-
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                {...register("subject", { required: "Subject is required" })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-              />
-              {errors.subject && (
-                <p className="mt-1 text-sm text-red-600">
-                  {errors.subject.message}
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                {...register("message", { required: "Message is required" })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-              />
-              {errors.message && (
-                <p className="mt-1 text-sm text-red-600">
-                  {errors.message.message}
-                </p>
-              )}
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-800 transition duration-300"
-            >
+            <input
+              type="text"
+              placeholder="Subject"
+              className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <textarea
+              placeholder="Your Message"
+              rows={5}
+              className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 h-auto">
               Send Message
-            </button>
+            </Button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
