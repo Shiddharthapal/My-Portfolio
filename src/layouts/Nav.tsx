@@ -40,6 +40,10 @@ export default function Navbar() {
     } else {
       performScroll(sectionId);
     }
+
+    if (window.history.replaceState) {
+      window.history.replaceState(null, "", "/");
+    }
   };
 
   const performScroll = (sectionId) => {
