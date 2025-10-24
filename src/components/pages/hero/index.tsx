@@ -1,77 +1,40 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-blue-50 to-white">
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div className="space-y-6">
-          <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-            Welcome to my portfolio
-          </div>
-
-          <div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-2">
-              Hi, I'm <span className="text-blue-500">Hamid</span>
-            </h1>
-            <p className="text-2xl text-muted-foreground font-semibold">
-              FullStack Developer
-            </p>
-          </div>
-
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-            I am a passionate full stack developer specialized in MERN stack
-            with extensive experience in project management. I love building
-            efficient, user-friendly applications and leading teams to success.
+    <section id="hero" className="min-h-screen flex items-center">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Hi, I'm <span className="text-blue-600">Hamid</span>
+          </h1>
+          <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8">
+            FullStack Developer specializing in MERN stack
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+            I build modern, responsive web applications with a focus on user
+            experience and performance.
           </p>
-
-          <div className="flex gap-4 pt-4">
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 h-auto">
+          <div className="flex gap-4">
+            <a
+              href="#contact"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
               Get in Touch
-            </Button>
-            <Button
-              variant="outline"
-              className="px-6 py-2 h-auto bg-transparent"
+            </a>
+            <a
+              href="#projects"
+              className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-200"
             >
               View Projects
-            </Button>
-          </div>
-
-          <div className="flex gap-4 pt-4">
-            <a href="#" className="p-2 hover:bg-blue-100 rounded-lg transition">
-              <Github className="w-6 h-6 text-foreground" />
-            </a>
-            <a href="#" className="p-2 hover:bg-blue-100 rounded-lg transition">
-              <Linkedin className="w-6 h-6 text-foreground" />
-            </a>
-            <a href="#" className="p-2 hover:bg-blue-100 rounded-lg transition">
-              <Mail className="w-6 h-6 text-foreground" />
             </a>
           </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="relative w-80 h-80 rounded-full bg-blue-400 overflow-hidden border-8 border-white shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-              <div className="text-white text-center">
-                <div className="text-6xl mb-2">👨‍💻</div>
-                <p className="font-semibold">FullStack Developer</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating Tags */}
-          <div className="absolute top-20 right-0 bg-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
-            Problem Solver
-          </div>
-          <div className="absolute bottom-32 left-0 bg-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
-            Project Management
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

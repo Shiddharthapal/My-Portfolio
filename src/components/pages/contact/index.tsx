@@ -1,81 +1,124 @@
-"use client";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
 
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
+interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactForm>();
+
+  const onSubmit = async (data: ContactForm) => {
+    try {
+      // Here you would typically send the data to your backend
+      console.log("Form data:", data);
+      reset();
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again.");
+    }
+  };
+
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Get In <span className="text-blue-500">Touch</span>
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Get in Touch
           </h2>
-          <p className="text-muted-foreground">
-            Have a project in mind? Let's work together to bring your ideas to
-            life.
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12">
+            Have a question or want to work together? Feel free to reach out!
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-            <Mail className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-            <h3 className="font-semibold text-foreground mb-2">Email</h3>
-            <a
-              href="mailto:abhamid8586@gmail.com"
-              className="text-blue-500 hover:underline text-sm"
-            >
-              abhamid8586@gmail.com
-            </a>
-          </div>
-
-          <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-            <Phone className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-            <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-            <a
-              href="tel:+8801985308586"
-              className="text-blue-500 hover:underline text-sm"
-            >
-              +880 1985-308586
-            </a>
-          </div>
-
-          <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition">
-            <MapPin className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-            <h3 className="font-semibold text-foreground mb-2">Location</h3>
-            <p className="text-muted-foreground text-sm">Khulna, Bangladesh</p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Name
+              </label>
               <input
                 type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                id="name"
+                {...register("name", { required: "Name is required" })}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800"
               />
+              {errors.name && (
+                <p className="mt-1 text-sm text-red-600">
+                  {errors.name.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Email
+              </label>
               <input
                 type="email"
-                placeholder="Your Email"
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                id="email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address",
+                  },
+                })}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800"
               />
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-600">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={5}
-              className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 h-auto">
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={5}
+                {...register("message", { required: "Message is required" })}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800"
+              />
+              {errors.message && (
+                <p className="mt-1 text-sm text-red-600">
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
               Send Message
-            </Button>
+            </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
