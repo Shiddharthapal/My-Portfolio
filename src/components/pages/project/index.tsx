@@ -1,102 +1,98 @@
-import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
-const projects = [
-  {
-    title: "Contest Tracker",
-    description:
-      "A web application to track programming contests across different platforms",
-    image: "/contestTracker.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Express.js"],
-    liveUrl: "https://contest-tracker.netlify.app",
-    githubUrl: "https://github.com/yourusername/contest-tracker",
-  },
-  {
-    title: "Video Streaming Platform",
-    description: "A video streaming platform with real-time chat functionality",
-    image: "/videoStream.webp",
-    technologies: ["React", "WebRTC", "Socket.io", "Node.js"],
-    liveUrl: "https://video-stream-app.netlify.app",
-    githubUrl: "https://github.com/yourusername/video-stream",
-  },
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio website built with React and Astro",
-    image: "/portfolio.jpg",
-    technologies: ["React", "Astro", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://hamid-portfolio.netlify.app",
-    githubUrl: "https://github.com/yourusername/portfolio",
-  },
-];
+export default function ProjectsPage() {
+  const projects = [
+    {
+      id: 1,
+      title: "Aronyo",
+      description:
+        "Aronyo is a modern, responsive, and interactive Plant selling Fullstack web application. This platform is built for users to explore, filter, and order fancy plants.",
+      image: "/plant-selling-ecommerce-website.jpg",
+      tags: ["React", "JavaScript", "TypeScript"],
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Food Hunter",
+      description:
+        "Food Hunter is a modern, responsive, and interactive food ordering Fullstack web application. This platform is built for users to explore, filter, and order delicious food.",
+      image: "/food-ordering-restaurant-website.jpg",
+      tags: ["React", "JavaScript", "TypeScript"],
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "E-Commerce Platform",
+      description:
+        "A comprehensive e-commerce solution with advanced filtering, cart management, and secure checkout. Built with modern web technologies for optimal performance.",
+      image: "/ecommerce-shopping-platform.jpg",
+      tags: ["Next.js", "TypeScript", "Tailwind"],
+      featured: true,
+    },
+  ];
 
-export default function Projects() {
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+    <main className="min-h-screen bg-background">
+      {/* Header Section */}
+      <section className="py-16 px-2 sm:px-2 lg:px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            My{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explore my recent web development projects showcasing my expertise
+            in the MERN stack and project management.
+          </p>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
             Featured Projects
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <Card
+                key={project.id}
+                className="overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
+                {/* Project Image */}
+                <div className="relative h-48 bg-muted overflow-hidden">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded text-sm"
-                      >
-                        {tech}
-                      </span>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
-                  <div className="flex gap-4">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
-                    >
-                      Source Code
-                    </a>
-                  </div>
                 </div>
-              </motion.div>
+              </Card>
             ))}
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }
