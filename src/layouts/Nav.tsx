@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [theme, setTheme] = useState(() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
@@ -20,36 +21,72 @@ export default function Navbar() {
   }, [theme]);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Skills", href: "/skills" },
-    { name: "Projects", href: "/projects" },
-    { name: "Resume", href: "/resume" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", section: "home" },
+    { name: "About", section: "about" },
+    { name: "Skills", section: "skills" },
+    { name: "Projects", section: "projects" },
+    { name: "Resume", section: "resume" },
+    { name: "Contact", section: "contact" },
   ];
-  console.log("hi");
+
+  const scrollToSection = (sectionId) => {
+    // First navigate to home if not already there
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        performScroll(sectionId);
+      }, 100);
+    } else {
+      performScroll(sectionId);
+    }
+  };
+
+  const performScroll = (sectionId) => {
+    if (sectionId === "home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 64; // Height of fixed navbar (h-16 = 4rem = 64px)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md  border-border z-50">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-border z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-blue-600">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-2xl font-bold text-blue-600 cursor-pointer"
+            >
               Shiddhartha.
-            </Link>
+            </button>
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center justify-end space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.name}
-                to={link.href}
+                onClick={() => scrollToSection(link.section)}
                 className="text-foreground hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
               >
                 {link.name}
-              </Link>
+              </button>
             ))}
           </div>
 
@@ -66,12 +103,12 @@ export default function Navbar() {
                 <Moon className="w-5 h-5 text-foreground" />
               )}
             </button>
-            <Link
-              to="/resume"
+            <button
+              onClick={() => scrollToSection("resume")}
               className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm"
             >
               Resume
-            </Link>
+            </button>
           </div>
         </div>
       </div>

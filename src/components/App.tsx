@@ -5,6 +5,7 @@ import Resume from "./pages/resume";
 import Project from "./pages/project";
 import Hero from "./pages/hero";
 import Skills from "./pages/skill";
+import CarsorRing from "./cursor";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,9 +15,9 @@ import {
 import Layout from "../layouts/Layout";
 
 export default function App() {
-  console.log("hi");
   return (
     <BrowserRouter>
+      <CarsorRing />
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
