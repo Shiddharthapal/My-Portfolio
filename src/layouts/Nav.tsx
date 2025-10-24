@@ -25,7 +25,7 @@ export default function Navbar() {
     { name: "About", section: "about" },
     { name: "Skills", section: "skills" },
     { name: "Projects", section: "projects" },
-    { name: "Resume", section: "resume" },
+    { name: "Exprience", section: "resume" },
     { name: "Contact", section: "contact" },
   ];
 
