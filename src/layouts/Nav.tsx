@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [theme, setTheme] = useState(() => {
@@ -26,28 +27,29 @@ export default function Navbar() {
     { name: "Resume", href: "/resume" },
     { name: "Contact", href: "/contact" },
   ];
+  console.log("hi");
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md  border-border z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-blue-600">
-              Hamid.
-            </a>
+            <Link to="/" className="text-2xl font-bold text-blue-600">
+              Shiddhartha.
+            </Link>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-foreground hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -64,12 +66,12 @@ export default function Navbar() {
                 <Moon className="w-5 h-5 text-foreground" />
               )}
             </button>
-            <a
-              href="/resume"
+            <Link
+              to="/resume"
               className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm"
             >
               Resume
-            </a>
+            </Link>
           </div>
         </div>
       </div>

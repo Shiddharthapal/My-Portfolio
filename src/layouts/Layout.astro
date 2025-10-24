@@ -1,27 +1,24 @@
 ---
-import Nav from './Nav';
-
 interface Props {
-  title?: string;
+  title: string;
 }
 
-const { title = "Hamid - FullStack Developer Portfolio" } = Astro.props;
+const { title } = Astro.props;
+import '../styles/global.css';
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Hamid, a passionate FullStack Developer specialized in MERN stack" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>{"Shiddhartha"}</title>
   </head>
-  <body class="min-h-screen bg-background text-foreground font-sans antialiased">
-    <Nav client:load />
-    <main class="pt-16">
-      <slot />
-    </main>
+  <body>
+    <slot />
   </body>
 </html>
 

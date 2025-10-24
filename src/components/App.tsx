@@ -3,12 +3,20 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Resume from "./pages/resume";
 import Project from "./pages/project";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Layout } from "../layouts/Layout";
+import Hero from "./pages/hero";
+import Skills from "./pages/skill";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+import Layout from "../layouts/Layout";
 
 export default function App() {
+  console.log("hi");
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
@@ -16,8 +24,10 @@ export default function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/hero" element={<Hero />} />
+          <Route path="/skill" element={<Skills />} />
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }

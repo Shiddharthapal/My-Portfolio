@@ -1,20 +1,8 @@
 ---
+import App from '../components/App';
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/pages/hero';
-import About from '../components/pages/about';
-import Skills from '../components/pages/skill';
-import Projects from '../components/pages/project';
-import Contact from '../components/pages/contact';
-import Resume from '../components/pages/resume';
 ---
 
-<Layout>
-  <div class="container mx-auto px-4">
-    <Hero client:load />
-    <About client:visible />
-    <Skills client:visible />
-    <Projects client:visible />
-    <Resume client:visible />
-    <Contact client:visible />
-  </div>
+<Layout title="MediCare+">
+  <App client:only />
 </Layout>
