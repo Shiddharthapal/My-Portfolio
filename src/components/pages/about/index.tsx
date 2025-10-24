@@ -1,6 +1,45 @@
 import { motion } from "framer-motion";
+import { Briefcase, FileText, User, Code, Brain } from "lucide-react";
 
 export default function About() {
+  const stats = [
+    {
+      icon: Briefcase,
+      count: 2,
+      suffix: "+",
+      label1: "Years",
+      label2: "Experience",
+      color: "text-purple-400",
+      bgColor: "bg-purple-50",
+    },
+    {
+      icon: FileText,
+      count: 3,
+      suffix: "+",
+      label1: "Projects",
+      label2: "Completed",
+      color: "text-purple-400",
+    },
+    {
+      icon: Brain,
+      count: 500,
+      suffix: "+",
+      label1: "Problem Solve",
+      label2: "",
+      color: "text-purple-400",
+      bgColor: "bg-purple-50",
+    },
+    {
+      icon: Code,
+      count: 15,
+      suffix: "K+",
+      label1: "Lines of Code",
+      label2: "",
+      color: "text-purple-400",
+      bgColor: "bg-purple-50",
+    },
+  ];
+
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
@@ -10,24 +49,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                I'm a passionate Full Stack Developer with expertise in building
-                modern web applications using the MERN stack (MongoDB,
-                Express.js, React, and Node.js).
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                With several years of experience in web development, I focus on
-                creating efficient, scalable, and user-friendly applications
-                that solve real-world problems.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
-                I'm constantly learning and staying up-to-date with the latest
-                technologies and best practices in web development.
-              </p>
-            </div>
             <div className="relative">
               <motion.img
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -38,6 +60,80 @@ export default function About() {
                 alt="About Me"
                 className="rounded-lg shadow-lg w-full max-w-md mx-auto"
               />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                About{" "}
+                <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Me
+                </span>{" "}
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                I’m a passionate Full-Stack developer with a strong foundation
+                in problem solving with strong DSA and experience in MERN. I am
+                also skilled in using AI tools like AI agents etc.
+              </p>
+              <div className="max-w-md bg-white rounded-lg">
+                {/* Fullname */}
+                <div className="flex text-lg mb-3">
+                  <div className="w-32 text-gray-800 font-medium">
+                    Fullname:
+                  </div>
+                  <div className="flex-1 text-gray-700">Shiddhartha Pal</div>
+                </div>
+
+                {/* Address */}
+                <div className="flex text-lg mb-3">
+                  <div className="w-32 text-gray-800 font-medium">Address:</div>
+                  <div className="flex-1 text-gray-700">Dhaka, Bangladesh</div>
+                </div>
+
+                {/* Email */}
+                <div className="flex text-lg mb-3">
+                  <div className="w-32 text-gray-800 font-medium">Email:</div>
+                  <div className="flex-1 text-blue-500">
+                    shiddhartpal01355@gmail.com
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex text-lg mb-8">
+                  <div className="w-32 text-gray-800 font-medium">Phone:</div>
+                  <div className="flex-1 text-blue-500">+8801860680768</div>
+                </div>
+
+                {/* Contact Button */}
+                <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+                  Contact Me
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-9">
+                {stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="bg-purple-50 flex flex-col items-center rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    {/* Icon */}
+                    <div
+                      className={`${stat.bgColor} w-10 h-6 rounded-xl flex items-center justify-center mb-2`}
+                    >
+                      <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                    </div>
+
+                    {/* Count */}
+                    <div className="text-2xl font-bold text-gray-700 ">
+                      {stat.count}
+                      {stat.suffix}
+                    </div>
+
+                    {/* Label */}
+                    <div className="text-gray-500 flex flex-col items-center text-sm">
+                      <div>{stat.label1}</div>
+                      {stat.label2 && <div>{stat.label2}</div>}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
