@@ -87,7 +87,7 @@ export default function Navbar() {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.section)}
-                className="text-foreground hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
+                className="focus:outline-none text-foreground hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
               >
                 {link.name}
               </button>
