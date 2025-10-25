@@ -34,7 +34,7 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <section id="projects" className="py-8">
+    <section id="projects" className="py-3">
       <main className="min-h-screen bg-background">
         {/* Header Section */}
         <motion.div
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
         >
           <section className="py-16 px-2 sm:px-2 lg:px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+              <h1 className="text-4xl text-gray-700  font-bold mb-4">
                 My{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Projects
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
           {/* Featured Projects Section */}
           <section className="py-0 ">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl  font-bold text-center mb-12">
+              <h2 className="text-2xl text-gray-700  font-bold text-center mb-8">
                 Featured Projects
               </h2>
 
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
                 {projects.map((project) => (
                   <Card
                     key={project.id}
-                    className="overflow-hidden flex flex-row hover:shadow-lg transition-shadow duration-300"
+                    className="overflow-hidden border-none flex flex-row shadow-md hover:shadow-lg hover:shadow-[hsl(254,49%,86%)] transition-shadow duration-300"
                   >
                     {/* Project Image - Left Side */}
                     <div className="relative h-auto w-1/2 flex-shrink-0 bg-muted overflow-hidden">
