@@ -50,7 +50,10 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export default function SkillCard({ skill }: SkillCardProps) {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg hover:shadow-[hsl(254,49%,86%)] transition-shadow flex flex-col items-center justify-center text-center min-h-32">
+    <div
+      className="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg hover:shadow-[hsl(254,49%,86%)] transition-shadow 
+    flex flex-col items-center justify-center text-center min-h-32"
+    >
       <div className="mb-3">{ICON_MAP[skill.icon] || ICON_MAP.code}</div>
       <h3 className="text-gray-900 font-semibold text-sm">{skill.name}</h3>
     </div>

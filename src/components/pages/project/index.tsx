@@ -60,12 +60,12 @@ export default function ProjectsPage() {
 
           {/* Featured Projects Section */}
           <section className="py-0 ">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-full mx-7">
               <h2 className="text-2xl text-gray-700  font-bold text-center mb-8">
                 Featured Projects
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-9">
                 {projects.map((project) => (
                   <Card
                     key={project.id}
