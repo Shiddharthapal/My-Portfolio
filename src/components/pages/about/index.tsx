@@ -51,7 +51,7 @@ export default function About() {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-blue-500 to-purple-500 rounded-lg translate-x-6 translate-y-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-bl from-blue-400 to-purple-400 rounded-lg translate-x-6 translate-y-6"></div>
 
               <motion.img
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -107,7 +107,11 @@ export default function About() {
                 </div>
 
                 {/* Contact Button */}
-                <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+                <button
+                  className="px-8 py-3 bg-gradient-to-l from-blue-400 to-purple-400 text-white 
+                rounded-lg font-medium hover:bg-gradient-to-r transition-all duration-200
+                "
+                >
                   Contact Me
                 </button>
               </div>

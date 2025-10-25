@@ -101,7 +101,10 @@ export default function ProjectsPage() {
                           </Badge>
                         ))}
                       </div>
-                      <button className="mt-6 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-200 focus:outline-none">
+                      <button
+                        className="mt-6 px-4 py-2 bg-gradient-to-l from-blue-400 to-purple-400 text-white 
+                      rounded-lg font-medium hover:bg-gradient-to-r  transition-all duration-200 focus:outline-none"
+                      >
                         Live Demo
                       </button>
                     </div>

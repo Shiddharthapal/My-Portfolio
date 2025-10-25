@@ -107,12 +107,15 @@ export default function Navbar() {
                 <Moon className="w-5 h-5 text-foreground" />
               )}
             </button>
-            <button
-              onClick={() => scrollToSection("resume")}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-sm"
+            <a
+              href="https://drive.google.com/file/d/1n1Xp_JiZSKVS30ihKnZ7AK-UqM93i0yF/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Resume
-            </button>
+              <button className="px-6 py-2 focus:outline-none text-white bg-gradient-to-l from-blue-400 to-purple-400  rounded-lg hover:bg-gradient-to-r transition-colors duration-200 font-medium text-sm">
+                Resume
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -338,7 +338,9 @@ export default function Contact() {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:bg-gradient-to-l text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-gradient-to-l from-blue-400 to-purple-400 hover:bg-gradient-to-r
+                       text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2
+                        disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isLoading ? (
                         <>
