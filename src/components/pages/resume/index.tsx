@@ -20,7 +20,7 @@ export default function Resume() {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-4">
+              <h1 className="text-4xl font-bold mb-4">
                 Experience &{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Education

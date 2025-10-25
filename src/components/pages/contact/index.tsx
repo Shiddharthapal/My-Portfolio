@@ -96,7 +96,7 @@ export default function Contact() {
         >
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-4">
+              <h1 className="text-4xl font-bold mb-4">
                 Get In{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Touch
@@ -127,26 +127,26 @@ export default function Contact() {
                         Contact Information
                       </h2>
 
-                      <p className="text-gray-600 mb-8 leading-relaxed">
+                      <p className="text-gray-600 mb-6 leading-relaxed">
                         Feel free to reach out for opportunities,
                         collaborations, or just to say hi! I'm always open to
                         discussing new projects and ideas.
                       </p>
 
                       {/* Contact Details */}
-                      <div className="space-y-6 mb-8">
+                      <div className="space-y-6 mb-4">
                         {/* Email */}
                         <div className="flex items-start gap-4">
-                          <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
-                            <Mail className="w-6 h-6 text-purple-600" />
+                          <div className="bg-[hsl(260,60%,94%)] p-3 rounded-full flex-shrink-0">
+                            <Mail className="w-5 h-5 text-[hsl(251,51%,65%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">
+                            <h3 className="font-semibold text-gray-900 mb-0">
                               Email
                             </h3>
                             <a
                               href={formdata.email}
-                              className="text-blue-500 hover:underline"
+                              className="text-[hsl(251,51%,65%)] text-lg hover:underline"
                             >
                               {formdata.email.replace("mailto:", "")}
                             </a>
@@ -155,16 +155,16 @@ export default function Contact() {
 
                         {/* Phone */}
                         <div className="flex items-start gap-4">
-                          <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
-                            <Phone className="w-6 h-6 text-purple-600" />
+                          <div className="bg-[hsl(260,60%,94%)] p-3 rounded-full flex-shrink-0">
+                            <Phone className="w-5 h-5 text-[hsl(251,51%,65%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">
+                            <h3 className="font-semibold text-gray-900 mb-0">
                               Phone
                             </h3>
                             <a
                               href={formdata.phone}
-                              className="text-blue-500 hover:underline"
+                              className="text-[hsl(251,51%,65%)] text-lg hover:underline"
                             >
                               {formdata.phone.replace("tel:", "")}
                             </a>
@@ -173,14 +173,16 @@ export default function Contact() {
 
                         {/* Location */}
                         <div className="flex items-start gap-4">
-                          <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
-                            <MapPin className="w-6 h-6 text-purple-600" />
+                          <div className="bg-[hsl(260,60%,94%)] p-3 rounded-full flex-shrink-0">
+                            <MapPin className="w-5 h-5 text-[hsl(251,51%,65%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">
+                            <h3 className="font-semibold text-gray-900 mb-0">
                               Location
                             </h3>
-                            <p className="text-blue-500">{formdata.Location}</p>
+                            <p className="text-[hsl(251,51%,65%)] text-lg">
+                              {formdata.Location}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -195,17 +197,25 @@ export default function Contact() {
                             href="https://github.com/Shiddharthapal"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-purple-100 focus:outline-none p-4 rounded-full hover:bg-purple-200 transition"
+                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] transition"
                           >
-                            <Github className="w-6 h-6 text-purple-600" />
+                            <Github className="w-5 h-5 text-gray-700 hover:text-white" />
                           </a>
                           <a
                             href="https://www.linkedin.com/in/shiddharthapal/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-purple-100 p-4 rounded-full hover:bg-purple-200 transition"
+                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] transition"
                           >
-                            <Linkedin className="w-6 h-6 text-purple-600" />
+                            <Linkedin className="w-5 h-5 text-gray-700 hover:text-white" />
+                          </a>
+                          <a
+                            href="https://wa.me/01860680768"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] transition"
+                          >
+                            <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white" />
                           </a>
                         </div>
                       </div>
@@ -215,7 +225,7 @@ export default function Contact() {
               </div>
 
               {/* Right Section - Contact Form */}
-              <div className="flex flex-col">
+              <div className="flex flex-col border border-gray-400 rounded-2xl">
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
                   <h2 className="text-3xl font-bold text-foreground mb-8">
                     Send me a message
@@ -238,7 +248,7 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Enter your name"
-                          className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-2 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)]"
                           required
                           disabled={isLoading}
                         />
@@ -257,7 +267,7 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="Enter your email"
-                          className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-2 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)]"
                           required
                           disabled={isLoading}
                         />
@@ -279,7 +289,7 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="Enter subject line"
-                        className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)]"
                         required
                         disabled={isLoading}
                       />
@@ -300,7 +310,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="Enter your message"
                         rows={6}
-                        className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                        className="w-full px-4 py-3 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)] resize-none"
                         required
                         disabled={isLoading}
                       />
