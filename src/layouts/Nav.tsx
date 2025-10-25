@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
+              className="text-2xl focus:outline-none font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
             >
               Shiddhartha.
             </button>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-lg hover:bg-accent transition-colors duration-200"
+              className="p-2 rounded-lg focus:outline-none hover:bg-accent transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
@@ -112,7 +112,10 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="px-6 py-2 focus:outline-none text-white bg-gradient-to-l from-blue-400 to-purple-400  rounded-lg hover:bg-gradient-to-r transition-colors duration-200 font-medium text-sm">
+              <button
+                onClick={() => scrollToSection("resume")}
+                className="px-6 py-2 focus:outline-none bg-gradient-to-l from-blue-400 to-purple-400 text-white rounded-lg hover:bg-gradient-to-r transition-colors duration-200 font-medium text-sm"
+              >
                 Resume
               </button>
             </a>
