@@ -5,10 +5,10 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [jumpOffsets, setJumpOffsets] = useState([0, 0, 0]);
   const badges = [
     { id: 1, label: "Problem Solver", angle: 45 },
-    { id: 2, label: "FullStack Developer", angle: 180 },
+    { id: 2, label: "Full-Stack Developer", angle: 180 },
     { id: 3, label: "Project Management", angle: 315 },
   ];
 
@@ -19,13 +19,29 @@ export default function Hero() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    const directions = [1, 1, 1];
+    const offsets = [0, 3.33, 6.66]; // Stagger start positions for serial effect
+
+    const interval = setInterval(() => {
+      const newOffsets = offsets.map((offset, i) => {
+        let newOffset = offset + directions[i] * 4;
+        if (newOffset >= 10) directions[i] = -3; // Jump up to 10px
+        if (newOffset <= 0) directions[i] = 3; // Jump down to 0px
+        offsets[i] = newOffset;
+        return newOffset;
+      });
+      setJumpOffsets([...newOffsets]);
+    }, 300);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center px-6 "
     >
-      {/* ✅ Main Container with 2 columns */}
+      {/*  Main Container with 2 columns */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
         {/* Left Side - Text Content */}
         <motion.div
@@ -37,7 +53,7 @@ export default function Hero() {
           <span className="inline-block bg-[hsl(260,60%,94%)] px-6 py-1 rounded-full text-[hsl(257,30%,50%)] font-semibold">
             Welcome my portfolio
           </span>
-          <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-700 font-bold">
+          <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-600 font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Shiddhartha
@@ -100,7 +116,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative flex items-center justify-center"
         >
-          {/* ✅ Container for the profile - no min-h-screen */}
+          {/*  Container for the profile - no min-h-screen */}
           <div className="relative">
             {/* Outer Glow Ring */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 blur-2xl opacity-30 scale-110" />
@@ -119,6 +135,7 @@ export default function Hero() {
               const isActive = index === activeIndex;
               // ✅ Responsive radius based on screen size
               const radius = window.innerWidth < 768 ? 170 : 240;
+              // Add rotation to the badge angle for spinning effect
               const angleRad = (badge.angle * Math.PI) / 180;
               const x = Math.cos(angleRad) * radius;
               const y = Math.sin(angleRad) * radius;
@@ -130,7 +147,9 @@ export default function Hero() {
                     isActive ? "scale-110" : "scale-100"
                   }`}
                   style={{
-                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${
+                      y - jumpOffsets[index]
+                    }px))`,
                   }}
                 >
                   <div
@@ -139,7 +158,7 @@ export default function Hero() {
                       border-2 transition-all duration-300
                       ${
                         isActive
-                          ? "border-blue-500 shadow-blue-200"
+                          ? "border-[hsl(257,30%,50%)] shadow-[hsl(254,49%,86%)]"
                           : "border-gray-200"
                       }
                     `}
@@ -147,7 +166,9 @@ export default function Hero() {
                     <span
                       className={`
                         text-xs md:text-sm font-semibold whitespace-nowrap
-                        ${isActive ? "text-blue-600" : "text-gray-700"}
+                        ${
+                          isActive ? "text-[hsl(257,30%,50%)]" : "text-gray-700"
+                        }
                       `}
                     >
                       {badge.label}
