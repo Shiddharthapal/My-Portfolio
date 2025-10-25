@@ -79,7 +79,7 @@ export default function SkillsSection() {
   const skills = SKILLS_DATA[activeTab as keyof typeof SKILLS_DATA];
 
   return (
-    <section className="w-full bg-[hsl(264,45%,96%)] px-4 py-20">
+    <section id="skills" className="w-full bg-[hsl(264,45%,96%)] px-4 py-20">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
