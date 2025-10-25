@@ -9,7 +9,7 @@ export default function About() {
       suffix: "+",
       label1: "Years",
       label2: "Experience",
-      color: "text-purple-400",
+      color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
     },
     {
@@ -18,7 +18,7 @@ export default function About() {
       suffix: "+",
       label1: "Projects",
       label2: "Completed",
-      color: "text-purple-400",
+      color: "text-[hsl(251,85%,75%)]",
     },
     {
       icon: Brain,
@@ -26,7 +26,7 @@ export default function About() {
       suffix: "+",
       label1: "Problem Solve",
       label2: "",
-      color: "text-purple-400",
+      color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
     },
     {
@@ -35,13 +35,13 @@ export default function About() {
       suffix: "K+",
       label1: "Lines of Code",
       label2: "",
-      color: "text-purple-400",
+      color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
     },
   ];
 
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="min-h-screen  py-5">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ export default function About() {
                 {/* Email */}
                 <div className="flex text-lg mb-3">
                   <div className="w-32 text-gray-800 font-medium">Email:</div>
-                  <div className="flex-1 text-blue-500">
+                  <div className="flex-1 text-[hsl(251,85%,75%)] ">
                     shiddhartpal01355@gmail.com
                   </div>
                 </div>
@@ -99,7 +99,9 @@ export default function About() {
                 {/* Phone */}
                 <div className="flex text-lg mb-8">
                   <div className="w-32 text-gray-800 font-medium">Phone:</div>
-                  <div className="flex-1 text-blue-500">+8801860680768</div>
+                  <div className="flex-1 text-[hsl(251,85%,75%)]">
+                    +8801860680768
+                  </div>
                 </div>
 
                 {/* Contact Button */}
@@ -111,7 +113,7 @@ export default function About() {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-purple-50 flex flex-col items-center rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                    className="bg-[hsl(264,45%,96%)] flex flex-col items-center rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                   >
                     {/* Icon */}
                     <div
