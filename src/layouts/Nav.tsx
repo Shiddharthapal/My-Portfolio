@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-2xl font-bold text-blue-600 cursor-pointer"
+              className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
             >
               Shiddhartha.
             </button>

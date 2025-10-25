@@ -8,13 +8,13 @@ import Resume from "../resume";
 export default function Home() {
   console.log("hi");
   return (
-    <>
+    <div className="bg-[hsl(270,20%,98%)]">
       <Hero />
       <About />
       <Skill />
       <Projects />
       <Resume />
       <Contact />
-    </>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-blue-50 to-white"
+      className="min-h-screen flex items-center justify-center px-6 "
     >
       {/* ✅ Main Container with 2 columns */}
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
@@ -33,7 +34,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <span className="inline-block bg-purple-100 px-6 py-1 rounded-full text-purple-800 font-semibold">
+          <span className="inline-block bg-[hsl(260,60%,94%)] px-6 py-1 rounded-full text-[hsl(257,30%,50%)] font-semibold">
             Welcome my portfolio
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
@@ -42,7 +43,7 @@ export default function Hero() {
               Shiddhartha
             </span>
           </h1>
-          <h2 className="text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300">
+          <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-500 dark:text-gray-300">
             FullStack Developer specializing in MERN stack
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-400">
@@ -52,16 +53,42 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <a
               href="#contact"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg hover:bg-gradient-to-br transition-colors duration-200"
             >
               Get in Touch
             </a>
 
             <a
               href="#projects"
-              className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-200"
+              className="px-4 py-2 border border-[hsl(257,30%,50%)] text-gray-700 rounded-lg hover:bg-[hsl(260,60%,94%)] dark:hover:bg-blue-900/20 transition-colors duration-200"
             >
               View Projects
+            </a>
+          </div>
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/Shiddharthapal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] transition"
+            >
+              <Github className="w-5 h-5 text-gray-700 " />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shiddharthapal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] transition"
+            >
+              <Linkedin className="w-5 h-5 text-gray-700 " />
+            </a>
+            <a
+              href="mailto:shiddhartpal01355@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] transition"
+            >
+              <Mail className="w-5 h-5 text-gray-700 " />
             </a>
           </div>
         </motion.div>
