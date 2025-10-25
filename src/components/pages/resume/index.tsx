@@ -17,7 +17,7 @@ export default function Resume() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-3">
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl text-gray-700 font-bold mb-4">
