@@ -31,7 +31,7 @@ export default function About() {
     },
     {
       icon: Code,
-      count: 15,
+      count: 20,
       suffix: "K+",
       label1: "Lines of Code",
       label2: "",
