@@ -20,7 +20,7 @@ export default function Resume() {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold mb-4">
+              <h1 className="text-4xl text-gray-700 font-bold mb-4">
                 Experience &{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Education
@@ -40,14 +40,16 @@ export default function Resume() {
                   <div className="w-10 h-10 rounded-full bg-[hsl(253,100%,94%)] flex items-center justify-center">
                     <Briefcase className="w-6 h-6 text-[hsl(251,51%,65%)]" />
                   </div>
-                  <h2 className="text-2xl font-bold">Work Experience</h2>
+                  <h2 className="text-2xl text-gray-700 font-bold">
+                    Work Experience
+                  </h2>
                 </div>
 
                 {/* Experience Card */}
                 <div className="bg-white rounded-lg mb-6 p-6 border border-purple-100 shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-gray-700">
                         Full Stack Developer
                       </h3>
                       <p className="text-[hsl(251,51%,65%)] font-medium mt-1">
@@ -64,53 +66,49 @@ export default function Resume() {
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
                       <p className="text-gray-500">
-                        Implemented RESTful endpoints using standard HTTP
-                        methods (GET, POST, PUT, DELETE) correctly, adhering to
-                        principles of safety and operational consistency for
-                        predictable and reliable API behavior.
+                        API Development: Architected secure, scalable RESTful
+                        APIs with JWT authentication, ensuring operational
+                        consistency and safety.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
                       <p className="text-gray-500">
-                        Implemented JWT token for authentication and
-                        authorization and designed MongoDB data user schema for
-                        store user data and made the system fast.
+                        Asynchronous JavaScript: Leveraged Promises and
+                        async/await to manage complex operations, improve
+                        readability, and maintain a non-blocking event loop.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
                       <p className="text-gray-500">
-                        Managed complex asynchronous operations by leveraging
-                        Promises and async/await to refactor callbacks, improve
-                        code readability, and handle errors effectively,
-                        ensuring a non-blocking event loop
+                        Performance Optimization: Introduced lazy loading + code
+                        splitting; reduced initial JS payload ~45% and improved
+                        TTI ~35%.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
                       <p className="text-gray-500">
-                        Implemented lazy loading to efficiently fetch and
-                        display 1,000+ data records from the database by using
-                        pagination in the backend and infinite scroll on the
-                        frontend.
+                        Database Management: Refactored Mongoose schemas &
+                        indexes; improved heavy query runtime ~40% and
+                        stabilized memory under load.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
                       <p className="text-gray-500">
-                        Developed a custom middleware to manage the DB
-                        connection lifecycle, checking the connection's
-                        readyState to prevent redundant initializations and
-                        ensure a persistent, reusable connection for all
-                        incoming API requests.
+                        State Management: Standardized state with Redux Toolkit;
+                        lowered bugs from prop-drilling and improved developer
+                        velocity ~20%.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
                       <p className="text-gray-500">
-                        Experience in using AI Agents like (Gemini Code Assist,
-                        Gemini CLI, VO, Claude, etc.)
+                        AI-Enhanced Workflow: Experienced in using AI agents
+                        (Gemini Code Assist, Gemini CLI, Codex, Claude, V0) to
+                        accelerate development and problem-solving.
                       </p>
                     </div>
                   </div>
@@ -124,14 +122,16 @@ export default function Resume() {
                     <div className="w-10 h-10 rounded-full bg-[hsl(253,100%,94%)] flex items-center justify-center">
                       <GraduationCap className="w-6 h-6 text-[hsl(251,51%,65%)]" />
                     </div>
-                    <h2 className="text-2xl font-bold">Education</h2>
+                    <h2 className="text-2xl text-gray-700 font-bold">
+                      Education
+                    </h2>
                   </div>
 
                   {/* Education Card */}
                   <div className="bg-white rounded-lg p-6  border border-purple-100 shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200 mb-9">
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">
+                        <h3 className="text-xl font-bold text-gray-700">
                           Bachelor of Science
                         </h3>
                         <p className="text-[hsl(251,51%,65%)]  mt-1">
@@ -155,7 +155,7 @@ export default function Resume() {
                       <BookOpen className="w-6 h-6 text-[hsl(251,51%,65%)]" />
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-900">
+                    <h3 className="text-xl font-bold text-gray-700">
                       Additional Certifications
                     </h3>
                   </div>

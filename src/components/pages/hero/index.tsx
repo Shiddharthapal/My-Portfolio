@@ -37,7 +37,7 @@ export default function Hero() {
           <span className="inline-block bg-[hsl(260,60%,94%)] px-6 py-1 rounded-full text-[hsl(257,30%,50%)] font-semibold">
             Welcome my portfolio
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-700 font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Shiddhartha

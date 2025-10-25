@@ -64,7 +64,7 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8">
                 About{" "}
                 <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Me
@@ -78,21 +78,21 @@ export default function About() {
               <div className="max-w-md bg-white rounded-lg">
                 {/* Fullname */}
                 <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-800 font-medium">
+                  <div className="w-32 text-gray-700 font-medium">
                     Fullname:
                   </div>
-                  <div className="flex-1 text-gray-700">Shiddhartha Pal</div>
+                  <div className="flex-1 text-gray-600">Shiddhartha Pal</div>
                 </div>
 
                 {/* Address */}
                 <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-800 font-medium">Address:</div>
-                  <div className="flex-1 text-gray-700">Dhaka, Bangladesh</div>
+                  <div className="w-32 text-gray-700 font-medium">Address:</div>
+                  <div className="flex-1 text-gray-600">Dhaka, Bangladesh</div>
                 </div>
 
                 {/* Email */}
                 <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-800 font-medium">Email:</div>
+                  <div className="w-32 text-gray-700 font-medium">Email:</div>
                   <div className="flex-1 text-[hsl(251,85%,75%)] ">
                     shiddhartpal01355@gmail.com
                   </div>
@@ -100,7 +100,7 @@ export default function About() {
 
                 {/* Phone */}
                 <div className="flex text-lg mb-8">
-                  <div className="w-32 text-gray-800 font-medium">Phone:</div>
+                  <div className="w-32 text-gray-700 font-medium">Phone:</div>
                   <div className="flex-1 text-[hsl(251,85%,75%)]">
                     +8801860680768
                   </div>
@@ -115,7 +115,7 @@ export default function About() {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-[hsl(264,45%,96%)] flex flex-col items-center rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                    className="bg-[hsl(264,45%,96%)] flex flex-col items-center rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg hover:shadow-[hsl(254,49%,86%)] transition-all duration-300 transform hover:-translate-y-1"
                   >
                     {/* Icon */}
                     <div

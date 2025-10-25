@@ -93,7 +93,7 @@ export default function SkillsSection() {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-4xl text-gray-700 font-bold mb-4">
               My{" "}
               <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Skills
@@ -111,10 +111,10 @@ export default function SkillsSection() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab.toLowerCase())}
-                className={`text-md font-medium px-3 py-1 rounded-lg transition-all ${
+                className={`text-md font-medium text-gray-600 px-3 py-1 rounded-lg transition-all ${
                   activeTab === tab.toLowerCase()
-                    ? "bg-white focus:outline-none  text-gray-900 shadow-sm"
-                    : "text-gray-500 hover:text-gray-700"
+                    ? "bg-white focus:outline-none  text-gray-600 shadow-sm"
+                    : "text-gray-400 hover:text-gray-600"
                 }`}
               >
                 {tab}

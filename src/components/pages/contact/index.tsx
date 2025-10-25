@@ -96,7 +96,7 @@ export default function Contact() {
         >
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h1 className="text-4xl font-bold mb-4">
+              <h1 className="text-4xl text-gray-700 font-bold mb-4">
                 Get In{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Touch
@@ -123,7 +123,7 @@ export default function Contact() {
 
                     {/* Main Card */}
                     <div className="bg-white  rounded-2xl p-8 shadow-2xl">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-3xl font-bold text-gray-700 mb-4">
                         Contact Information
                       </h2>
 
@@ -141,7 +141,7 @@ export default function Contact() {
                             <Mail className="w-5 h-5 text-[hsl(251,51%,65%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-0">
+                            <h3 className="font-semibold text-gray-700 mb-0">
                               Email
                             </h3>
                             <a
@@ -159,7 +159,7 @@ export default function Contact() {
                             <Phone className="w-5 h-5 text-[hsl(251,51%,65%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-0">
+                            <h3 className="font-semibold text-gray-700 mb-0">
                               Phone
                             </h3>
                             <a
@@ -177,7 +177,7 @@ export default function Contact() {
                             <MapPin className="w-5 h-5 text-[hsl(251,51%,65%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900 mb-0">
+                            <h3 className="font-semibold text-gray-700 mb-0">
                               Location
                             </h3>
                             <p className="text-[hsl(251,51%,65%)] text-lg">
@@ -189,7 +189,7 @@ export default function Contact() {
 
                       {/* Social Links */}
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-4">
+                        <h3 className="font-semibold text-gray-700 mb-4">
                           Connect with me
                         </h3>
                         <div className="flex gap-4">
@@ -227,7 +227,7 @@ export default function Contact() {
               {/* Right Section - Contact Form */}
               <div className="flex flex-col border border-gray-400 rounded-2xl">
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h2 className="text-3xl font-bold text-foreground mb-8">
+                  <h2 className="text-3xl text-gray-700 font-bold text-foreground mb-8">
                     Send me a message
                   </h2>
 
@@ -237,7 +237,7 @@ export default function Contact() {
                       <div>
                         <label
                           htmlFor="name"
-                          className="block text-sm font-medium text-foreground mb-2"
+                          className="block text-sm text-gray-700 font-medium text-foreground mb-2"
                         >
                           Full Name
                         </label>
@@ -256,7 +256,7 @@ export default function Contact() {
                       <div>
                         <label
                           htmlFor="email"
-                          className="block text-sm font-medium text-foreground mb-2"
+                          className="block text-sm text-gray-700 font-medium text-foreground mb-2"
                         >
                           Email Address
                         </label>
@@ -278,7 +278,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="subject"
-                        className="block text-sm font-medium text-foreground mb-2"
+                        className="block text-sm font-medium text-gray-700 text-foreground mb-2"
                       >
                         Subject
                       </label>
@@ -299,7 +299,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-foreground mb-2"
+                        className="block text-sm text-gray-700 font-medium text-foreground mb-2"
                       >
                         Your Message
                       </label>
@@ -338,7 +338,7 @@ export default function Contact() {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:bg-gradient-to-l text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isLoading ? (
                         <>
