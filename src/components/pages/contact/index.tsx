@@ -32,6 +32,13 @@ export default function Contact() {
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
+  const formdata = {
+    name: "Shiddhartha Pal",
+    email: "shiddhartpal01355@gmail.com",
+    phone: "+8801860680768",
+    Location: "Bagerhat, Bangladesh",
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -79,7 +86,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="contact" className="py-2 dark:bg-gray-900">
       <main className="min-h-screen bg-background">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,100 +94,121 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="container mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Left Section - Contact Information */}
-              <div className="flex flex-col">
-                {/* Gradient Header */}
-                <div className="h-24 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 rounded-t-3xl mb-6" />
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold mb-4">
+                Get In{" "}
+                <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Touch
+                </span>
+              </h1>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Feel free to reach out for opportunities, collaborations, or
+                just to say hi! I'm always open to discussing new projects and
+                ideas.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+              <div className="min-h-screen rounded-2xl border border-gray-300  relative">
+                {/* Split Background - Vertical Split */}
+                <div className="absolute inset-0 flex flex-col overflow-hidden rounded-2xl">
+                  <div className="h-1/3 bg-gradient-to-br from-blue-300 to-purple-600"></div>
+                  <div className="h-1/2 bg-white"></div>
+                </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h2 className="text-3xl font-bold text-foreground mb-4">
-                    Contact Information
-                  </h2>
+                {/* Content Container */}
+                <div className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-10">
+                  <div className="w-full max-w-2xl">
+                    {/* Gradient Header */}
 
-                  <p className="text-muted-foreground mb-8 leading-relaxed">
-                    Feel free to reach out for opportunities, collaborations, or
-                    just to say hi! I'm always open to discussing new projects
-                    and ideas.
-                  </p>
+                    {/* Main Card */}
+                    <div className="bg-white  rounded-2xl p-8 shadow-2xl">
+                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                        Contact Information
+                      </h2>
 
-                  {/* Contact Details */}
-                  <div className="space-y-6 mb-8">
-                    {/* Email */}
-                    <div className="flex items-start gap-4">
-                      <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
-                        <Mail className="w-6 h-6 text-purple-600" />
+                      <p className="text-gray-600 mb-8 leading-relaxed">
+                        Feel free to reach out for opportunities,
+                        collaborations, or just to say hi! I'm always open to
+                        discussing new projects and ideas.
+                      </p>
+
+                      {/* Contact Details */}
+                      <div className="space-y-6 mb-8">
+                        {/* Email */}
+                        <div className="flex items-start gap-4">
+                          <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
+                            <Mail className="w-6 h-6 text-purple-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-gray-900 mb-1">
+                              Email
+                            </h3>
+                            <a
+                              href={formdata.email}
+                              className="text-blue-500 hover:underline"
+                            >
+                              {formdata.email.replace("mailto:", "")}
+                            </a>
+                          </div>
+                        </div>
+
+                        {/* Phone */}
+                        <div className="flex items-start gap-4">
+                          <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
+                            <Phone className="w-6 h-6 text-purple-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-gray-900 mb-1">
+                              Phone
+                            </h3>
+                            <a
+                              href={formdata.phone}
+                              className="text-blue-500 hover:underline"
+                            >
+                              {formdata.phone.replace("tel:", "")}
+                            </a>
+                          </div>
+                        </div>
+
+                        {/* Location */}
+                        <div className="flex items-start gap-4">
+                          <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
+                            <MapPin className="w-6 h-6 text-purple-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-gray-900 mb-1">
+                              Location
+                            </h3>
+                            <p className="text-blue-500">{formdata.Location}</p>
+                          </div>
+                        </div>
                       </div>
+
+                      {/* Social Links */}
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">
-                          Email
+                        <h3 className="font-semibold text-gray-900 mb-4">
+                          Connect with me
                         </h3>
-                        <a
-                          href="mailto:abhamid8586@gmail.com"
-                          className="text-blue-500 hover:underline"
-                        >
-                          abhamid8586@gmail.com
-                        </a>
+                        <div className="flex gap-4">
+                          <a
+                            href="https://github.com/Shiddharthapal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-purple-100 focus:outline-none p-4 rounded-full hover:bg-purple-200 transition"
+                          >
+                            <Github className="w-6 h-6 text-purple-600" />
+                          </a>
+                          <a
+                            href="https://www.linkedin.com/in/shiddharthapal/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-purple-100 p-4 rounded-full hover:bg-purple-200 transition"
+                          >
+                            <Linkedin className="w-6 h-6 text-purple-600" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-
-                    {/* Phone */}
-                    <div className="flex items-start gap-4">
-                      <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
-                        <Phone className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">
-                          Phone
-                        </h3>
-                        <a
-                          href="tel:+8801985-308586"
-                          className="text-blue-500 hover:underline"
-                        >
-                          +8801985-308586
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Location */}
-                    <div className="flex items-start gap-4">
-                      <div className="bg-purple-100 p-3 rounded-full flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">
-                          Location
-                        </h3>
-                        <p className="text-blue-500">Khulna, Bangladesh</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Social Links */}
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-4">
-                      Connect with me
-                    </h3>
-                    <div className="flex gap-4">
-                      <a
-                        href="#"
-                        className="bg-purple-100 p-4 rounded-full hover:bg-purple-200 transition"
-                      >
-                        <Github className="w-6 h-6 text-purple-600" />
-                      </a>
-                      <a
-                        href="#"
-                        className="bg-purple-100 p-4 rounded-full hover:bg-purple-200 transition"
-                      >
-                        <Linkedin className="w-6 h-6 text-purple-600" />
-                      </a>
-                      <a
-                        href="#"
-                        className="bg-purple-100 p-4 rounded-full hover:bg-purple-200 transition"
-                      >
-                        <MessageCircle className="w-6 h-6 text-purple-600" />
-                      </a>
                     </div>
                   </div>
                 </div>
