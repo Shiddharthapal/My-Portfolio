@@ -80,7 +80,10 @@ export default function SkillsSection() {
   const skills = SKILLS_DATA[activeTab as keyof typeof SKILLS_DATA];
 
   return (
-    <section id="skills" className="w-full bg-[hsl(264,45%,96%)] px-4 py-20">
+    <section
+      id="skills"
+      className="w-full bg-[hsl(264,45%,96%)] px-4 mt-6 py-20"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

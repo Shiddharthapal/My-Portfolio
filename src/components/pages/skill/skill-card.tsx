@@ -29,21 +29,23 @@ interface SkillCardProps {
 }
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  code: <Code2 className="w-8 h-8 text-purple-400" />,
-  layers: <Layers className="w-8 h-8 text-purple-400" />,
-  file: <FileText className="w-8 h-8 text-purple-4000" />,
-  zap: <Zap className="w-8 h-8 text-purple-400" />,
-  users: <Users className="w-8 h-8 text-purple-400" />,
-  squareterminal: <SquareTerminal className="w-8 h-8 text-purple-400" />,
-  fileterminal: <FileTerminal className="w-8 h-8 text-purple-400" />,
-  paintbrush: <Paintbrush className="w-8 h-8 text-purple-400" />,
-  workflow: <Workflow className="w-8 h-8 text-purple-400" />,
-  bot: <Bot className="w-8 h-8 text-purple-400" />,
-  box: <Box className="w-8 h-8 text-purple-400" />,
-  lock: <Lock className="w-8 h-8 text-purple-400" />,
-  gitmerge: <GitMerge className="w-8 h-8 text-purple-400" />,
-  cloud: <Cloud className="w-8 h-8 text-purple-400" />,
-  setting: <Settings className="w-8 h-8 text-purple-400" />,
+  code: <Code2 className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  layers: <Layers className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  file: <FileText className="w-8 h-8 text-[hsl(251,85%,75%)]0" />,
+  zap: <Zap className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  users: <Users className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  squareterminal: (
+    <SquareTerminal className="w-8 h-8 text-[hsl(251,85%,75%)]" />
+  ),
+  fileterminal: <FileTerminal className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  paintbrush: <Paintbrush className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  workflow: <Workflow className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  bot: <Bot className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  box: <Box className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  lock: <Lock className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  gitmerge: <GitMerge className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  cloud: <Cloud className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  setting: <Settings className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
 };
 
 export default function SkillCard({ skill }: SkillCardProps) {
