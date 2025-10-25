@@ -41,7 +41,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="min-h-screen  py-5">
+    <section id="about" className="min-h-screen px-2 py-5">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,9 @@ export default function About() {
           transition={{ duration: 0.5 }}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative">
+            <div className="relative max-w-md mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-blue-500 to-purple-500 rounded-lg translate-x-6 translate-y-6"></div>
+
               <motion.img
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -58,7 +60,7 @@ export default function About() {
                 transition={{ duration: 0.5 }}
                 src="/about_me.jpg"
                 alt="About Me"
-                className="rounded-lg shadow-lg w-full max-w-md mx-auto"
+                className="rounded-lg shadow-lg w-full relative z-10"
               />
             </div>
             <div>
