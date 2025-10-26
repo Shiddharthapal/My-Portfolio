@@ -64,35 +64,43 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8">
+              <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8 dark:text-[hsl(0,0%,96%)]">
                 About{" "}
                 <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Me
                 </span>{" "}
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6">
                 I’m a passionate Full-Stack developer with a strong foundation
                 in problem solving with strong DSA and experience in MERN. I am
                 also skilled in using AI tools like AI agents etc.
               </p>
-              <div className="max-w-md bg-white rounded-lg">
+              <div className="max-w-md bg-white dark:bg-[hsl(260,29%,10%)] rounded-lg">
                 {/* Fullname */}
                 <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-700 font-medium">
+                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
                     Fullname:
                   </div>
-                  <div className="flex-1 text-gray-600">Shiddhartha Pal</div>
+                  <div className="flex-1 text-gray-600 dark:text-[hsl(0,0%,96%)]">
+                    Shiddhartha Pal
+                  </div>
                 </div>
 
                 {/* Address */}
                 <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-700 font-medium">Address:</div>
-                  <div className="flex-1 text-gray-600">Dhaka, Bangladesh</div>
+                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
+                    Address:
+                  </div>
+                  <div className="flex-1 text-gray-600 dark:text-[hsl(0,0%,96%)]">
+                    Dhaka, Bangladesh
+                  </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-700 font-medium">Email:</div>
+                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
+                    Email:
+                  </div>
                   <div className="flex-1 text-[hsl(251,85%,75%)] ">
                     shiddhartpal01355@gmail.com
                   </div>
@@ -100,7 +108,9 @@ export default function About() {
 
                 {/* Phone */}
                 <div className="flex text-lg mb-8">
-                  <div className="w-32 text-gray-700 font-medium">Phone:</div>
+                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
+                    Phone:
+                  </div>
                   <div className="flex-1 text-[hsl(251,85%,75%)]">
                     +8801860680768
                   </div>
@@ -119,23 +129,26 @@ export default function About() {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-[hsl(264,45%,96%)] flex flex-col items-center rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg hover:shadow-[hsl(254,49%,86%)] transition-all duration-300 transform hover:-translate-y-1"
+                    className="bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] flex flex-col items-center 
+                    rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg dark:shadow-md  hover:shadow-[hsl(254,49%,86%)] 
+                     dark:hover:shadow-[hsl(253,27%,39%)] transition-all 
+                    duration-300 transform hover:-translate-y-1"
                   >
                     {/* Icon */}
                     <div
-                      className={`${stat.bgColor} w-10 h-6 rounded-xl flex items-center justify-center mb-2`}
+                      className={`${stat.bgColor} dark:bg-[hsl(260,30%,14%)] w-10 h-6 rounded-xl flex items-center justify-center mb-2`}
                     >
                       <stat.icon className={`w-6 h-6 ${stat.color}`} />
                     </div>
 
                     {/* Count */}
-                    <div className="text-2xl font-bold text-gray-700 ">
+                    <div className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] ">
                       {stat.count}
                       {stat.suffix}
                     </div>
 
                     {/* Label */}
-                    <div className="text-gray-500 flex flex-col items-center text-sm">
+                    <div className="text-gray-500 dark:text-[hsl(261,15%,70%)] flex flex-col items-center text-sm">
                       <div>{stat.label1}</div>
                       {stat.label2 && <div>{stat.label2}</div>}
                     </div>
