@@ -57,7 +57,9 @@ export default function SkillCard({ skill }: SkillCardProps) {
     flex flex-col items-center justify-center text-center min-h-32"
     >
       <div className="mb-3">{ICON_MAP[skill.icon] || ICON_MAP.code}</div>
-      <h3 className="text-gray-900 font-semibold text-sm">{skill.name}</h3>
+      <h3 className="text-gray-900 dark:text-[hsl(0,0%,96%)] font-semibold text-sm">
+        {skill.name}
+      </h3>
     </div>
   );
 }
