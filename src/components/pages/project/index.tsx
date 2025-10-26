@@ -11,26 +11,45 @@ export default function ProjectsPage() {
       description:
         "MediCare+ is a modern, responsive, and interactive Medical Center Fullstack web application. This platform is built for users to take live medication from home.",
       image: "/MediCare+.png",
-      tags: ["React", "Node.js", "REST APIs", "MongoDB", "Bunny CDN", "Astro"],
+      alt: "MediCare+",
+      tags: [
+        "Node.js",
+        "React",
+        "REST APIs",
+        "MongoDB",
+        "TypeScript",
+        "JavaScript",
+        "Bunny CDN",
+        "Astro",
+      ],
       link: "https://github.com/Shiddharthapal/MediCare-",
       featured: true,
     },
     {
       id: 2,
-      title: "Food Hunter",
+      title: "Contest Tracker",
       description:
-        "Food Hunter is a modern, responsive, and interactive food ordering Fullstack web application. This platform is built for users to explore, filter, and order delicious food.",
-      image: "/food-ordering-restaurant-website.jpg",
-      tags: ["React", "JavaScript", "TypeScript"],
+        "Contest Tracker is a responsive, and interactive contest tracking Fullstack web application. It's built for users to explore their details that are merge from different platform like codeforces (api available).",
+      image: "/ContestTracker.png",
+      alt: "Contest Tracker",
+      tags: [
+        "React",
+        "Node.js",
+        "REST APIs",
+        "MongoDB",
+        "Tailwind CSS",
+        "Astro",
+      ],
+      link: "https://github.com/Shiddharthapal/Codeforces-Portfolio",
       featured: true,
     },
     {
       id: 3,
-      title: "E-Commerce Platform",
+      title: "Ant-Tube",
       description:
-        "A comprehensive e-commerce solution with advanced filtering, cart management, and secure checkout. Built with modern web technologies for optimal performance.",
-      image: "/ecommerce-shopping-platform.jpg",
-      tags: ["Next.js", "TypeScript", "Tailwind"],
+        "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
+      image: "/VideoStreaming.png",
+      tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind"],
       featured: true,
     },
   ];
@@ -77,7 +96,7 @@ export default function ProjectsPage() {
                     {/* Project Image - Left Side */}
                     <div className="relative h-auto w-1/2 flex-shrink-0 bg-muted overflow-hidden">
                       <img
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image || project.alt}
                         alt={project.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
@@ -112,7 +131,7 @@ export default function ProjectsPage() {
                           Live Demo
                         </button>
                         <a
-                          href={project?.link || "MediCare+"}
+                          href={project?.link}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
