@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { GitBranch, Github } from "lucide-react";
 
 export default function ProjectsPage() {
   const projects = [
@@ -45,13 +46,13 @@ export default function ProjectsPage() {
         >
           <section className="py-16 px-2 sm:px-2 lg:px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl text-gray-700  font-bold mb-4">
+              <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)]  font-bold mb-4">
                 My{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Projects
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] text-muted-foreground max-w-2xl mx-auto">
                 Explore my recent web development projects showcasing my
                 expertise in the MERN stack and project management.
               </p>
@@ -61,7 +62,7 @@ export default function ProjectsPage() {
           {/* Featured Projects Section */}
           <section className="py-0 ">
             <div className="max-w-full mx-7">
-              <h2 className="text-2xl text-gray-700  font-bold text-center mb-8">
+              <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-center mb-8">
                 Featured Projects
               </h2>
 
@@ -69,7 +70,8 @@ export default function ProjectsPage() {
                 {projects.map((project) => (
                   <Card
                     key={project.id}
-                    className="overflow-hidden border-none flex flex-row shadow-md hover:shadow-lg hover:shadow-[hsl(254,49%,86%)] transition-shadow duration-300"
+                    className="overflow-hidden border-none flex flex-row shadow-md hover:shadow-lg dark:hover:shadow-md 
+                    hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)] transition-shadow duration-300"
                   >
                     {/* Project Image - Left Side */}
                     <div className="relative h-auto w-1/2 flex-shrink-0 bg-muted overflow-hidden">
@@ -82,10 +84,10 @@ export default function ProjectsPage() {
 
                     {/* Project Content - Right Side */}
                     <div className="p-4 pr-4 flex-1 flex flex-col">
-                      <h3 className="text-2xl font-bold mb-2 line-clamp-2">
+                      <h3 className="text-2xl dark:text-[hsl(0,0%,96%)] font-bold mb-2 line-clamp-2">
                         {project.title}
                       </h3>
-                      <p className="text-muted-foreground text-lg mb-8 line-clamp-2 flex-1">
+                      <p className="text-muted-foreground text-lg mb-8 line-clamp-2 flex-1 dark:text-[hsl(261,15%,70%)]">
                         {project.description}
                       </p>
 
@@ -95,18 +97,28 @@ export default function ProjectsPage() {
                           <Badge
                             key={tag}
                             variant="secondary"
-                            className="text-sm bg-purple-100"
+                            className="text-sm bg-purple-100 dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(0,0%,96%)]"
                           >
                             {tag}
                           </Badge>
                         ))}
                       </div>
-                      <button
-                        className="mt-6 px-4 py-2 bg-gradient-to-l from-blue-400 to-purple-400 text-white 
+                      <div className="flex flex-row gap-4 mt-6">
+                        <button
+                          className=" px-4 py-2 bg-gradient-to-l from-blue-400 to-purple-400 text-white 
                       rounded-lg font-medium hover:bg-gradient-to-r  transition-all duration-200 focus:outline-none"
-                      >
-                        Live Demo
-                      </button>
+                        >
+                          Live Demo
+                        </button>
+                        <button
+                          className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300
+                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
+                         font-semibold rounded-xl transition-all duration-300"
+                        >
+                          <Github className="w-5 h-5" />
+                          View Code
+                        </button>
+                      </div>
                     </div>
                   </Card>
                 ))}
