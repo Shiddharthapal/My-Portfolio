@@ -3,7 +3,7 @@ import Projects from "../project";
 import Skill from "../skill";
 import Contact from "../contact";
 import About from "../about";
-import Resume from "../resume";
+import Exprience from "../exprience";
 
 export default function Home() {
   console.log("hi");
@@ -13,7 +13,7 @@ export default function Home() {
       <About />
       <Skill />
       <Projects />
-      <Resume />
+      <Exprience />
       <Contact />
     </div>
   );
