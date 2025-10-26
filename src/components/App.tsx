@@ -6,6 +6,7 @@ import Project from "./pages/project";
 import Hero from "./pages/hero";
 import Skills from "./pages/skill";
 import CarsorRing from "./cursor";
+import { ThemeProvider } from "@/lib/theme-context";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,18 +18,20 @@ import Layout from "../layouts/Layout";
 export default function App() {
   return (
     <BrowserRouter>
-      <CarsorRing />
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/hero" element={<Hero />} />
-          <Route path="/skill" element={<Skills />} />
-        </Route>
-      </Routes>
+      <ThemeProvider>
+        <CarsorRing />
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/hero" element={<Hero />} />
+            <Route path="/skill" element={<Skills />} />
+          </Route>
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

@@ -8,7 +8,7 @@ import Resume from "../resume";
 export default function Home() {
   console.log("hi");
   return (
-    <div className="bg-[hsl(270,20%,98%)]">
+    <div className="bg-[hsl(270,20%,98%)] dark:bg-[hsl(260,29%,10%)]">
       <Hero />
       <About />
       <Skill />

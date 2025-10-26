@@ -1,25 +1,11 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { useTheme } from "@/lib/theme-context";
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const [theme, setTheme] = useState(() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    return "light";
-  });
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-    }
-    localStorage.setItem("theme", theme || "light");
-  }, [theme]);
-
+  const { theme, toggleTheme } = useTheme();
   const navLinks = [
     { name: "Home", section: "home" },
     { name: "About", section: "about" },
@@ -87,7 +73,7 @@ export default function Navbar() {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.section)}
-                className="focus:outline-none text-foreground hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
+                className="focus:outline-none text-foreground text-gray-700 dark:text-white hover:text-[hsl(251,48%,55%)] dark:hover:text-[hsl(251,48%,55%)] transition-colors duration-200 text-sm font-medium"
               >
                 {link.name}
               </button>
@@ -97,14 +83,16 @@ export default function Navbar() {
           {/* Right Side - Theme Toggle & Resume Button */}
           <div className="flex items-center space-x-4">
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-lg focus:outline-none hover:bg-accent transition-colors duration-200"
+              onClick={toggleTheme}
+              className="p-2 rounded-lg focus:outline-none  hover:rounded-full hover:bg-[hsl(260,60%,94%)]
+               dark:hover:bg-[hsl(260,29%,20%)]
+               transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
-                <Sun className="w-5 h-5 text-foreground" />
+                <Sun className="w-5 h-5 text-foreground dark:text-white " />
               ) : (
-                <Moon className="w-5 h-5 text-foreground" />
+                <Moon className="w-5 h-5 text-foreground  text-gray-700 " />
               )}
             </button>
             <a
