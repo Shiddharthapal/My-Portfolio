@@ -102,7 +102,9 @@ export default function Navbar() {
             >
               <button
                 onClick={() => scrollToSection("resume")}
-                className="px-6 py-2 focus:outline-none bg-gradient-to-l from-blue-400 to-purple-400 text-white rounded-lg hover:bg-gradient-to-r transition-colors duration-200 font-medium text-sm"
+                className="px-6 py-2 focus:outline-none bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg
+                 hover:bg-gradient-to-br transition-colors duration-200 dark:text-black
+                  font-medium text-sm"
               >
                 Resume
               </button>

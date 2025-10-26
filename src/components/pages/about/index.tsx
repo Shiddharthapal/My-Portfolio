@@ -118,9 +118,8 @@ export default function About() {
 
                 {/* Contact Button */}
                 <button
-                  className="px-8 py-3 bg-gradient-to-l from-blue-400 to-purple-400 text-white 
-                rounded-lg font-medium hover:bg-gradient-to-r transition-all duration-200
-                "
+                  className="px-8 py-3 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white 
+                  rounded-lg hover:bg-gradient-to-br transition-colors duration-200"
                 >
                   Contact Me
                 </button>
