@@ -7,11 +7,12 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: "Aronyo",
+      title: "MediCare+",
       description:
-        "Aronyo is a modern, responsive, and interactive Plant selling Fullstack web application. This platform is built for users to explore, filter, and order fancy plants.",
-      image: "/portfolio.jpg",
-      tags: ["React", "JavaScript", "TypeScript", "node.js"],
+        "MediCare+ is a modern, responsive, and interactive Medical Center Fullstack web application. This platform is built for users to take live medication from home.",
+      image: "/MediCare+.png",
+      tags: ["React", "Node.js", "REST APIs", "MongoDB", "Bunny CDN", "Astro"],
+      link: "https://github.com/Shiddharthapal/MediCare-",
       featured: true,
     },
     {
@@ -83,11 +84,11 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Project Content - Right Side */}
-                    <div className="p-4 pr-4 flex-1 flex flex-col">
+                    <div className="px-4 pb-4 dark:bg-[hsl(262,31%,12%)] flex-1 flex flex-col">
                       <h3 className="text-2xl dark:text-[hsl(0,0%,96%)] font-bold mb-2 line-clamp-2">
                         {project.title}
                       </h3>
-                      <p className="text-muted-foreground text-lg mb-8 line-clamp-2 flex-1 dark:text-[hsl(261,15%,70%)]">
+                      <p className="text-muted-foreground text-md  line-clamp-2 flex-1 dark:text-[hsl(261,15%,70%)]">
                         {project.description}
                       </p>
 
@@ -110,14 +111,20 @@ export default function ProjectsPage() {
                         >
                           Live Demo
                         </button>
-                        <button
-                          className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300
+                        <a
+                          href={project?.link || "MediCare+"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button
+                            className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
                          dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
                          font-semibold rounded-xl transition-all duration-300"
-                        >
-                          <Github className="w-5 h-5" />
-                          View Code
-                        </button>
+                          >
+                            <Github className="w-5 h-5" />
+                            View Code
+                          </button>
+                        </a>
                       </div>
                     </div>
                   </Card>
