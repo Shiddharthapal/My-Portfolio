@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/lib/theme-context";
 
 export default function Navbar() {
@@ -101,7 +100,6 @@ export default function Navbar() {
               rel="noopener noreferrer"
             >
               <button
-                onClick={() => scrollToSection("resume")}
                 className="px-6 py-2 focus:outline-none bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg
                  hover:bg-gradient-to-br transition-colors duration-200 dark:text-black
                   font-medium text-sm"

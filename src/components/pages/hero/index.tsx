@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [jumpOffsets, setJumpOffsets] = useState([0, 0, 0]);
+  const navigate = useNavigate();
   const badges = [
     { id: 1, label: "Problem Solver", angle: 45 },
     { id: 2, label: "Full-Stack Developer", angle: 180 },
@@ -35,6 +37,44 @@ export default function Hero() {
     }, 300);
     return () => clearInterval(interval);
   }, []);
+
+  const scrollToSection = (sectionId) => {
+    // First navigate to home if not already there
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        performScroll(sectionId);
+      }, 100);
+    } else {
+      performScroll(sectionId);
+    }
+
+    if (window.history.replaceState) {
+      window.history.replaceState(null, "", "/");
+    }
+  };
+
+  const performScroll = (sectionId) => {
+    if (sectionId === "home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 64; // Height of fixed navbar (h-16 = 4rem = 64px)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section
@@ -72,14 +112,16 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="#contact"
+              key="contact"
+              onClick={() => scrollToSection("contact")}
               className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg hover:bg-gradient-to-br transition-colors duration-200"
             >
               Get in Touch
             </a>
 
             <a
-              href="#projects"
+              key="projects"
+              onClick={() => scrollToSection("projects")}
               className="px-4 py-2 border border-[hsl(257,30%,50%)] text-gray-700 rounded-lg 
               hover:bg-[hsl(260,60%,94%)] dark:text-[hsl(0,0%,96%)] dark:hover:bg-[hsl(260,29%,20%)] transition-colors duration-200"
             >

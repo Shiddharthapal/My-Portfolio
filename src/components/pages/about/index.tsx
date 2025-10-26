@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { Briefcase, FileText, User, Code, Brain } from "lucide-react";
+import { Briefcase, FileText, Code, Brain } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
+  const navigate = useNavigate();
   const stats = [
     {
       icon: Briefcase,
@@ -39,6 +41,44 @@ export default function About() {
       bgColor: "bg-purple-50",
     },
   ];
+
+  const scrollToSection = (sectionId) => {
+    // First navigate to home if not already there
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        performScroll(sectionId);
+      }, 100);
+    } else {
+      performScroll(sectionId);
+    }
+
+    if (window.history.replaceState) {
+      window.history.replaceState(null, "", "/");
+    }
+  };
+
+  const performScroll = (sectionId) => {
+    if (sectionId === "home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 64; // Height of fixed navbar (h-16 = 4rem = 64px)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section id="about" className="min-h-screen px-2 py-5">
@@ -118,6 +158,8 @@ export default function About() {
 
                 {/* Contact Button */}
                 <button
+                  key="contact"
+                  onClick={() => scrollToSection("contact")}
                   className="px-8 py-3 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white 
                   rounded-lg hover:bg-gradient-to-br transition-colors duration-200"
                 >
