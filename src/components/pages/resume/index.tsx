@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export default function Resume() {
   return (
     <section id="resume" className="py-20">
-      <main className="min-h-screen bg-[hsl(258,50%,96%)] py-16 px-4">
+      <main className="min-h-screen bg-[hsl(260,30%,14%)] py-16 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,13 +20,13 @@ export default function Resume() {
           <div className="max-w-7xl mx-3">
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="text-4xl text-gray-700 font-bold mb-4">
+              <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
                 Experience &{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Education
                 </span>
               </h1>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] text-lg max-w-2xl mx-auto">
                 My professional journey and educational background that have
                 shaped my career in web development and project management.
               </p>
@@ -37,26 +37,33 @@ export default function Resume() {
               {/* Work Experience Column */}
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-[hsl(253,100%,94%)] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[hsl(260, 30%, 14%)] flex items-center justify-center">
                     <Briefcase className="w-6 h-6 text-[hsl(251,51%,65%)]" />
                   </div>
-                  <h2 className="text-2xl text-gray-700 font-bold">
+                  <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)]  font-bold">
                     Work Experience
                   </h2>
                 </div>
 
                 {/* Experience Card */}
-                <div className="bg-white rounded-lg mb-6 p-6 border border-purple-100 shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200">
+                <div
+                  className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-lg mb-6 p-6 border border-purple-100
+                 dark:border-[hsl(255,41%,19%)] shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200
+                 dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]"
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-700">
+                      <h3 className="text-xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
                         Full Stack Developer
                       </h3>
                       <p className="text-[hsl(251,51%,65%)] font-medium mt-1">
                         DecodeIT.org
                       </p>
                     </div>
-                    <span className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] px-3 py-1 rounded-full">
+                    <span
+                      className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] dark:bg-[hsl(259,30%,18%)] 
+                    dark:text-[hsl(0,0%,96%)]  px-3 py-1 rounded-full"
+                    >
                       Mar, 2025 - Present
                     </span>
                   </div>
@@ -119,26 +126,33 @@ export default function Resume() {
               <div>
                 <div className="">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(253,100%,94%)] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-[hsl(260,30%,14%)] flex items-center justify-center">
                       <GraduationCap className="w-6 h-6 text-[hsl(251,51%,65%)]" />
                     </div>
-                    <h2 className="text-2xl text-gray-700 font-bold">
+                    <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold">
                       Education
                     </h2>
                   </div>
 
                   {/* Education Card */}
-                  <div className="bg-white rounded-lg p-6  border border-purple-100 shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200 mb-9">
+                  <div
+                    className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-lg p-6  border border-purple-100
+                   dark:border-[hsl(255,41%,19%)] shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200
+                   dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)] mb-9"
+                  >
                     <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-700">
+                        <h3 className="text-xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
                           Bachelor of Science
                         </h3>
                         <p className="text-[hsl(251,51%,65%)]  mt-1">
                           Daffofil International University
                         </p>
                       </div>
-                      <span className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] px-3 py-1 rounded-full">
+                      <span
+                        className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
+                      dark:bg-[hsl(259,30%,18%)]  dark:text-[hsl(0,0%,96%)] px-3 py-1 rounded-full"
+                      >
                         2022 - 2026
                       </span>
                     </div>
@@ -151,11 +165,11 @@ export default function Resume() {
                 {/* Additional Certifications */}
                 <div className=" rounded-lg  ">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[hsl(253,100%,94%)] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full dark:bg-[hsl(260,30%,14%)] flex items-center justify-center">
                       <BookOpen className="w-6 h-6 text-[hsl(251,51%,65%)]" />
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-700">
+                    <h3 className="text-xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
                       Additional Certifications
                     </h3>
                   </div>
@@ -190,7 +204,9 @@ export default function Resume() {
                     ].map((cert, index) => (
                       <div
                         key={index}
-                        className="bg-white rounded-xl  shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200 px-6 py-2 border border-purple-100"
+                        className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-xl  shadow-sm
+                         hover:shadow-lg transition-shadow hover:shadow-purple-200 px-6 py-2 border border-purple-100
+                          dark:border-[hsl(255,41%,19%)] dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]"
                       >
                         <div className="flex flex-row h-full">
                           <div className="flex-1">
@@ -201,8 +217,11 @@ export default function Resume() {
                               {cert.org}
                             </p>
                           </div>
-                          <div className="pt-4  border-gray-100">
-                            <span className="inline-block px-2 text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] rounded-full">
+                          <div className="pt-4  border-gray-100 ">
+                            <span
+                              className="inline-block px-2 text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
+                            dark:bg-[hsl(259,30%,18%)]  dark:text-[hsl(0,0%,96%)] rounded-full"
+                            >
                               {cert.year}
                             </span>
                           </div>
