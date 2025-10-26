@@ -166,10 +166,24 @@ export default function Hero() {
           {/*  Container for the profile - no min-h-screen */}
           <div className="relative">
             {/* Outer Glow Ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 blur-2xl opacity-30 scale-110" />
+            <motion.div
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-300 blur-2xl scale-80"
+              animate={{
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
 
             {/* White Border Ring */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-8 border-white shadow-2xl overflow-hidden bg-gradient-to-br from-blue-400 to-blue-500">
+            <div
+              className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-8 border-white dark:border-[hsl(232,31%,25%)]
+                shadow-2xl overflow-hidden 
+            bg-gradient-to-br from-blue-400 to-blue-500"
+            >
               <img
                 src="/about_me.jpg"
                 alt="About Me"
