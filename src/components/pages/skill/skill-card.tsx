@@ -3,7 +3,7 @@
 import type React from "react";
 
 import {
-  Code2,
+  Code,
   Layers,
   FileText,
   Zap,
@@ -18,6 +18,9 @@ import {
   Lock,
   GitMerge,
   Settings,
+  Rocket,
+  Infinity,
+  Webhook,
 } from "lucide-react";
 
 interface SkillCardProps {
@@ -29,7 +32,7 @@ interface SkillCardProps {
 }
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  code: <Code2 className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  code: <Code className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
   layers: <Layers className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
   file: <FileText className="w-8 h-8 text-[hsl(251,85%,75%)]0" />,
   zap: <Zap className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
@@ -46,6 +49,9 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   gitmerge: <GitMerge className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
   cloud: <Cloud className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
   setting: <Settings className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  rocket: <Rocket className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  infinity: <Infinity className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  webhook: <Webhook className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
 };
 
 export default function SkillCard({ skill }: SkillCardProps) {
