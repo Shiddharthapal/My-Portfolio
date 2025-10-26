@@ -86,7 +86,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-2 dark:bg-gray-900">
+    <section id="contact" className="py-2">
       <main className="min-h-screen bg-background">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -96,24 +96,24 @@ export default function Contact() {
         >
           <div className="container  px-7">
             <div className="text-center mb-16">
-              <h1 className="text-4xl text-gray-700 font-bold mb-4">
+              <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
                 Get In{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Touch
                 </span>
               </h1>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] text-lg max-w-2xl mx-auto">
                 Feel free to reach out for opportunities, collaborations, or
                 just to say hi! I'm always open to discussing new projects and
                 ideas.
               </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-              <div className="min-h-screen rounded-2xl border border-gray-300  relative">
+              <div className="min-h-screen rounded-2xl border border-gray-300 dark:border-[hsl(255,41%,19%)]  relative">
                 {/* Split Background - Vertical Split */}
                 <div className="absolute inset-0 flex flex-col overflow-hidden rounded-2xl">
                   <div className="h-1/3 bg-gradient-to-br from-blue-300 to-purple-600"></div>
-                  <div className="h-1/2 bg-white"></div>
+                  <div className="h-1/2 bg-white dark:bg-[hsl(262,31%,12%)]"></div>
                 </div>
 
                 {/* Content Container */}
@@ -122,12 +122,12 @@ export default function Contact() {
                     {/* Gradient Header */}
 
                     {/* Main Card */}
-                    <div className="bg-white  rounded-2xl p-8 shadow-2xl">
-                      <h2 className="text-3xl font-bold text-gray-700 mb-4">
+                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl p-8 shadow-2xl">
+                      <h2 className="text-3xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                         Contact Information
                       </h2>
 
-                      <p className="text-gray-600 mb-6 leading-relaxed">
+                      <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 leading-relaxed">
                         Feel free to reach out for opportunities,
                         collaborations, or just to say hi! I'm always open to
                         discussing new projects and ideas.
@@ -137,16 +137,16 @@ export default function Contact() {
                       <div className="space-y-6 mb-4">
                         {/* Email */}
                         <div className="flex items-start gap-4">
-                          <div className="bg-[hsl(260,60%,94%)] p-3 rounded-full flex-shrink-0">
-                            <Mail className="w-5 h-5 text-[hsl(251,51%,65%)]" />
+                          <div className="bg-[hsl(260,60%,94%)] dark:bg-[hsl(259,30%,18%)] p-3 rounded-full flex-shrink-0">
+                            <Mail className="w-5 h-5 text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-700 mb-0">
+                            <h3 className="font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-0">
                               Email
                             </h3>
                             <a
                               href={formdata.email}
-                              className="text-[hsl(251,51%,65%)] text-lg hover:underline"
+                              className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-lg hover:underline"
                             >
                               {formdata.email.replace("mailto:", "")}
                             </a>
@@ -155,16 +155,16 @@ export default function Contact() {
 
                         {/* Phone */}
                         <div className="flex items-start gap-4">
-                          <div className="bg-[hsl(260,60%,94%)] p-3 rounded-full flex-shrink-0">
-                            <Phone className="w-5 h-5 text-[hsl(251,51%,65%)]" />
+                          <div className="bg-[hsl(260,60%,94%)] dark:bg-[hsl(259,30%,18%)] p-3 rounded-full flex-shrink-0">
+                            <Phone className="w-5 h-5 text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-700 mb-0">
+                            <h3 className="font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)]  mb-0">
                               Phone
                             </h3>
                             <a
                               href={formdata.phone}
-                              className="text-[hsl(251,51%,65%)] text-lg hover:underline"
+                              className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-lg hover:underline"
                             >
                               {formdata.phone.replace("tel:", "")}
                             </a>
@@ -173,14 +173,14 @@ export default function Contact() {
 
                         {/* Location */}
                         <div className="flex items-start gap-4">
-                          <div className="bg-[hsl(260,60%,94%)] p-3 rounded-full flex-shrink-0">
-                            <MapPin className="w-5 h-5 text-[hsl(251,51%,65%)]" />
+                          <div className="bg-[hsl(260,60%,94%)] dark:bg-[hsl(259,30%,18%)] p-3 rounded-full flex-shrink-0">
+                            <MapPin className="w-5 h-5 text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)]" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-700 mb-0">
+                            <h3 className="font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-0">
                               Location
                             </h3>
-                            <p className="text-[hsl(251,51%,65%)] text-lg">
+                            <p className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-lg">
                               {formdata.Location}
                             </p>
                           </div>
@@ -189,7 +189,7 @@ export default function Contact() {
 
                       {/* Social Links */}
                       <div>
-                        <h3 className="font-semibold text-gray-700 mb-4">
+                        <h3 className="font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                           Connect with me
                         </h3>
                         <div className="flex gap-4">
@@ -197,25 +197,28 @@ export default function Contact() {
                             href="https://github.com/Shiddharthapal"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] transition"
+                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)]  transition"
                           >
-                            <Github className="w-5 h-5 text-gray-700 hover:text-white" />
+                            <Github className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
                           </a>
                           <a
                             href="https://www.linkedin.com/in/shiddharthapal/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] transition"
+                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)]
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)] transition"
                           >
-                            <Linkedin className="w-5 h-5 text-gray-700 hover:text-white" />
+                            <Linkedin className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
                           </a>
                           <a
                             href="https://wa.me/01860680768"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] transition"
+                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)] transition"
                           >
-                            <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white" />
+                            <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
                           </a>
                         </div>
                       </div>
@@ -225,9 +228,9 @@ export default function Contact() {
               </div>
 
               {/* Right Section - Contact Form */}
-              <div className="flex flex-col border border-gray-400 rounded-2xl">
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h2 className="text-3xl text-gray-700 font-bold text-foreground mb-8">
+              <div className="flex flex-col border border-gray-400 dark:border-[hsl(255,41%,19%)] rounded-2xl">
+                <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl p-8 shadow-lg">
+                  <h2 className="text-3xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-8">
                     Send me a message
                   </h2>
 
@@ -237,7 +240,7 @@ export default function Contact() {
                       <div>
                         <label
                           htmlFor="name"
-                          className="block text-sm text-gray-700 font-medium text-foreground mb-2"
+                          className="block text-sm text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium text-foreground mb-2"
                         >
                           Full Name
                         </label>
@@ -248,7 +251,8 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Enter your name"
-                          className="w-full px-4 py-2 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)]"
+                          className="w-full px-4 py-2 border border-input  dark:border-[hsl(255,41%,19%)] rounded-lg bg-[hsl(270,20%,98%)] dark:bg-[hsl(260,29%,10%)] 
+                          text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-[hsl(248,44%,57%)]"
                           required
                           disabled={isLoading}
                         />
@@ -256,7 +260,7 @@ export default function Contact() {
                       <div>
                         <label
                           htmlFor="email"
-                          className="block text-sm text-gray-700 font-medium text-foreground mb-2"
+                          className="block text-sm text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium text-foreground mb-2"
                         >
                           Email Address
                         </label>
@@ -267,7 +271,9 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="Enter your email"
-                          className="w-full px-4 py-2 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)]"
+                          className="w-full px-4 py-2 border border-input dark:border-[hsl(255,41%,19%)] rounded-lg bg-[hsl(270,20%,98%)] 
+                          dark:bg-[hsl(260,29%,10%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1
+                           focus:ring-[hsl(248,44%,57%)]"
                           required
                           disabled={isLoading}
                         />
@@ -278,7 +284,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="subject"
-                        className="block text-sm font-medium text-gray-700 text-foreground mb-2"
+                        className="block text-sm font-medium text-gray-700 dark:text-[hsl(0,0%,96%)] text-foreground mb-2"
                       >
                         Subject
                       </label>
@@ -289,7 +295,9 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="Enter subject line"
-                        className="w-full px-4 py-2 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)]"
+                        className="w-full px-4 py-2 border border-input dark:border-[hsl(255,41%,19%)] rounded-lg bg-[hsl(270,20%,98%)]
+                         dark:bg-[hsl(260,29%,10%)] text-foreground placeholder-muted-foreground focus:outline-none 
+                         focus:ring-1 focus:ring-[hsl(248,44%,57%)]"
                         required
                         disabled={isLoading}
                       />
@@ -299,7 +307,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm text-gray-700 font-medium text-foreground mb-2"
+                        className="block text-sm text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium text-foreground mb-2"
                       >
                         Your Message
                       </label>
@@ -310,7 +318,9 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="Enter your message"
                         rows={6}
-                        className="w-full px-4 py-3 border border-input rounded-lg bg-[hsl(270,20%,98%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(248,44%,57%)] resize-none"
+                        className="w-full px-4 py-3 border border-input dark:border-[hsl(255,41%,19%)] rounded-lg bg-[hsl(270,20%,98%)]
+                         dark:bg-[hsl(260,29%,10%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1
+                          focus:ring-[hsl(248,44%,57%)] resize-none"
                         required
                         disabled={isLoading}
                       />
