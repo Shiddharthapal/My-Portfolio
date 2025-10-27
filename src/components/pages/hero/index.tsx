@@ -146,8 +146,7 @@ export default function Hero() {
               <Linkedin className="w-5 h-5 text-gray-700 dark:text-[hsl(0,0%,96%)]" />
             </a>
             <a
-              href="mailto:shiddhartpal01355@gmail.com"
-              target="_blank"
+              href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
               rel="noopener noreferrer"
               className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]     transition"
             >

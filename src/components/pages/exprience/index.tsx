@@ -149,16 +149,26 @@ export default function Resume() {
                           Daffofil International University
                         </p>
                       </div>
-                      <span
-                        className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
+                      <div className="flex flex-col  gap-2">
+                        <span
+                          className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
+                      dark:bg-[hsl(259,30%,18%)]  dark:text-[hsl(0,0%,96%)] px-3 py-1 rounded-full
+                        blur-sm hover:blur-none transition-all duration-300 cursor-pointer"
+                        >
+                          CGPA: 3.82
+                        </span>
+                        <span
+                          className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
                       dark:bg-[hsl(259,30%,18%)]  dark:text-[hsl(0,0%,96%)] px-3 py-1 rounded-full"
-                      >
-                        2022 - 2026
-                      </span>
+                        >
+                          2022 - 2026
+                        </span>
+                      </div>
                     </div>
                     <p className="text-gray-500">
                       Studies BSc in Software Engineering with strong analytical
-                      thinking and problem-solving skills.
+                      thinking, problem-solving skills and professional
+                      experience.
                     </p>
                   </div>
                 </div>

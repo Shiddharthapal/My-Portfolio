@@ -161,12 +161,12 @@ export default function About() {
                   key="contact"
                   onClick={() => scrollToSection("contact")}
                   className="px-8 py-3 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white 
-                  rounded-lg hover:bg-gradient-to-br transition-colors duration-200"
+                  rounded-lg hover:bg-gradient-to-br transition-colors duration-200 focus:outline-none"
                 >
                   Contact Me
                 </button>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-9">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-9">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
