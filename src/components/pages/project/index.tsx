@@ -1,131 +1,159 @@
-import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { GitBranch, Github } from "lucide-react";
 
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  category: string;
-  demoLink: string;
-  codeLink: string;
-};
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Video Streaming Platform",
-    description:
-      "A full-featured Video Streaming Platform with videos, user dashboard LogIn and LogOut feature.",
-    image: "/videoStream.webp",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "MongoDB",
-      "Redux",
-      "Tailwind CSS",
-      "HTML5",
-      "Bunny CDN",
-    ],
-    category: "Full Stack",
-    demoLink: "Loading...",
-    codeLink: "Invalid URL",
-  },{
-    id: 2,
-    title: "Contest Tracker",
-    description: "It shows all details of a contestent like (Total submission, Last month submission, Total perticipation, Ranking Graph, Score etc.).",
-    image: "/contestTracker.jpg",
-    technologies: ["React", "TypeScript", "REST APIs", "Redux", "MongoDB", "HTML5/CSS3"],
-    category: "Full Stack",
-    demoLink: "Loading...",
-    codeLink: "Invalid URL",
-  },
-  {
-    id: 3,
-    title: "E-Commerce Web App",
-    description:
-      "A collaborative task management application with real-time updates and team features.",
-    image: "/preview.webp",
-    technologies: ["React", "TypeScript", "HTML5", "Tailwind CSS"],
-    category: "Web App",
-    demoLink: "Loading...",
-    codeLink: "Invalid URL",
-  }
-];
-
-const categories = ["All", "Full Stack", "Web App", "Frontend"];
-
-export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+export default function ProjectsPage() {
+  const projects = [
+    {
+      id: 1,
+      title: "MediCare+",
+      description:
+        "MediCare+ is a modern, responsive, and interactive Medical Center Fullstack web application. This platform is built for users to take live medication from home.",
+      image: "/MediCare+.png",
+      alt: "MediCare+",
+      tags: [
+        "Node.js",
+        "React",
+        "REST APIs",
+        "MongoDB",
+        "TypeScript",
+        "JavaScript",
+        "Bunny CDN",
+        "Astro",
+      ],
+      link: "https://github.com/Shiddharthapal/MediCare-",
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Contest Tracker",
+      description:
+        "Contest Tracker is a responsive, and interactive contest tracking Fullstack web application. It's built for users to explore their details that are merge from different platform like codeforces (api available).",
+      image: "/ContestTracker.png",
+      alt: "Contest Tracker",
+      tags: [
+        "React",
+        "Node.js",
+        "REST APIs",
+        "MongoDB",
+        "Tailwind CSS",
+        "Astro",
+      ],
+      link: "https://github.com/Shiddharthapal/Codeforces-Portfolio",
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "Ant-Tube",
+      description:
+        "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
+      image: "/VideoStreaming.png",
+      tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind"],
+      link: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
+      featured: true,
+    },
+  ];
 
   return (
-    <div className=" mx-auto px-4 py-16 bg-primary">
-      <h1 className="text-4xl font-bold text-white mb-8 text-center">
-        My Projects
-      </h1>
-
-      {/* Category Filter */}
-      <div className="flex justify-center gap-4 mb-12">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full ${
-              selectedCategory === category
-                ? "bg-blue-600 text-white"
-                : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-            } transition duration-300`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      {/* Projects Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
-          >
-            <div className="relative h-52">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileHover={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
-                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent p-6 flex flex-col justify-end"
-              >
-                <div className="text-white">
-                  <h3 className="text-xl font-bold mb-2">
-                    Title: {project.title}
-                  </h3>
-                  <p className="text-gray-200">{project.description}</p>
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1  text-gray-400 text-sm rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+    <section id="projects" className="py-3">
+      <main className="min-h-screen bg-background">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <section className="py-16 px-2 sm:px-2 lg:px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)]  font-bold mb-4">
+                My{" "}
+                <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Projects
+                </span>
+              </h1>
+              <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] text-muted-foreground max-w-2xl mx-auto">
+                Explore my recent web development projects showcasing my
+                expertise in the MERN stack and project management.
+              </p>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+          </section>
+
+          {/* Featured Projects Section */}
+          <section className="py-0 ">
+            <div className="max-w-full mx-7">
+              <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-center mb-8">
+                Featured Projects
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-9">
+                {projects.map((project) => (
+                  <Card
+                    key={project.id}
+                    className="overflow-hidden border-none flex flex-row shadow-md hover:shadow-lg dark:hover:shadow-md 
+                    hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)] transition-shadow duration-300"
+                  >
+                    {/* Project Image - Left Side */}
+                    <div className="relative h-auto w-1/2 flex-shrink-0 bg-muted overflow-hidden">
+                      <img
+                        src={project.image || project.alt}
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* Project Content - Right Side */}
+                    <div className="px-4 pb-4 dark:bg-[hsl(262,31%,12%)] flex-1 flex flex-col">
+                      <h3 className="text-2xl dark:text-[hsl(0,0%,96%)] font-bold mb-2 line-clamp-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground text-md  line-clamp-2 flex-1 dark:text-[hsl(261,15%,70%)]">
+                        {project.description}
+                      </p>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2 mt-auto">
+                        {project.tags.map((tag) => (
+                          <Badge
+                            key={tag}
+                            variant="secondary"
+                            className="text-sm bg-purple-100 dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(0,0%,96%)]"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex flex-row gap-4 mt-6">
+                        <button
+                          className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg 
+                          hover:bg-gradient-to-br transition-colors duration-200 focus:outline-none"
+                        >
+                          Live Demo
+                        </button>
+                        <a
+                          href={project?.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button
+                            className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
+                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
+                         font-semibold rounded-xl transition-all duration-300"
+                          >
+                            <Github className="w-5 h-5" />
+                            View Code
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+        </motion.div>
+      </main>
+    </section>
   );
 }
