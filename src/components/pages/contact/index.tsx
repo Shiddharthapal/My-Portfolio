@@ -94,7 +94,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="container  px-7">
+          <div className="  px-7">
             <div className="text-center mb-16">
               <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
                 Get In{" "}

@@ -90,15 +90,18 @@ export default function About() {
           transition={{ duration: 0.5 }}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-bl from-blue-400 to-purple-400 rounded-lg translate-x-6 translate-y-6"></div>
+            <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%] mt-4 md:w-[85%] ">
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-purple-800
+              dark: rounded-lg translate-x-6 translate-y-6"
+              ></div>
 
               <motion.img
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                src="/about_me.jpg"
+                src="/about.jpg"
                 alt="About Me"
                 className="rounded-lg shadow-lg w-full relative z-10"
               />
