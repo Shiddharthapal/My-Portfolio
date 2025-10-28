@@ -86,8 +86,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-2">
-      <main className="min-h-screen bg-background">
+    <section
+      id="contact"
+      className="  mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
+    >
+      <main className=" bg-background">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +149,7 @@ export default function Contact() {
                             </h3>
                             <a
                               href={formdata.email}
-                              className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-lg hover:underline"
+                              className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-sm sm:text-lg  hover:underline"
                             >
                               {formdata.email.replace("mailto:", "")}
                             </a>

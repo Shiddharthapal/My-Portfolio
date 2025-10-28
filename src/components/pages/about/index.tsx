@@ -81,8 +81,11 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="min-h-screen px-2 py-5">
-      <div className="container mx-auto px-4">
+    <section
+      id="about"
+      className="min-h-screen  flex items-center justify-center px-2 py-5"
+    >
+      <div className=" mx-auto items-center max-w-7xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,4 +1,0 @@
-13:24:35 [ERROR] Cannot destructure property 'basename' of 'React10.useContext(...)' as it is null.
-  Stack trace:
-    at C:\All Projects ,Code\Projects\My Portfolio\C:\All Projects ,Code\Projects\My Portfolio\node_modules\.pnpm\react-router@7.2.0_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\react-router\dist\development\index.js:7446:11    
-    [...] See full stack trace in the browser, or rerun with --verbose.

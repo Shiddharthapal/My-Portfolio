@@ -9,8 +9,11 @@ import { motion } from "framer-motion";
 
 export default function Resume() {
   return (
-    <section id="resume" className="py-20">
-      <main className="min-h-screen bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] py-16 px-4">
+    <section
+      id="resume"
+      className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] py-20"
+    >
+      <main className="  mx-auto  py-16 px-4 items-center max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

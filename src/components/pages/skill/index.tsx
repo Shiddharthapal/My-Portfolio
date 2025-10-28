@@ -104,58 +104,56 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="w-full bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 py-20"
+      className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 py-20"
     >
-      <div className="flex justify-center px-1">
+      <div className=" sm:mx-5 2xl:mx-auto  items-center max-w-7xl px-1">
         {" "}
         {/* Use flex + justify-center instead of mx-auto */}
-        <div className="w-full max-w-7xl mx-7">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
-                My{" "}
-                <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Skills
-                </span>
-              </h1>
-              <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] text-lg max-w-2xl mx-auto">
-                I've worked with a range of technologies in the web development
-                world, from back-end to front-end and project management.
-              </p>
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
+              My{" "}
+              <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Skills
+              </span>
+            </h1>
+            <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] text-lg max-w-2xl mx-auto">
+              I've worked with a range of technologies in the web development
+              world, from back-end to front-end and project management.
+            </p>
+          </div>
 
-            {/* Tabs */}
-            <div className="flex justify-center mb-12">
-              <div className="inline-flex items-center  gap-2 flex-wrap bg-[hsl(270,33%,96%)] dark:bg-[hsl(259,31%,12%)] rounded-lg p-1.5">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab.toLowerCase())}
-                    className={`text-md font-medium text-gray-600 px-3 py-1 rounded-lg transition-all ${
-                      activeTab === tab.toLowerCase()
-                        ? "bg-white dark:bg-[hsl(260,29%,10%)] focus:outline-none  text-gray-600 dark:text-[hsl(0,0%,96%)] shadow-sm"
-                        : "text-gray-400 dark:text-[hsl(261,15%,70%)] hover:text-gray-600 ]"
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                ))}
-              </div>
-            </div>
-            {/* Skills Grid */}
-            <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {skills.map((skill) => (
-                <SkillCard key={skill.name} skill={skill} />
+          {/* Tabs */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex items-center  gap-2 flex-wrap bg-[hsl(270,33%,96%)] dark:bg-[hsl(259,31%,12%)] rounded-lg p-1.5">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab.toLowerCase())}
+                  className={`text-md font-medium text-gray-600 px-3 py-1 rounded-lg transition-all ${
+                    activeTab === tab.toLowerCase()
+                      ? "bg-white dark:bg-[hsl(260,29%,10%)] focus:outline-none  text-gray-600 dark:text-[hsl(0,0%,96%)] shadow-sm"
+                      : "text-gray-400 dark:text-[hsl(261,15%,70%)] hover:text-gray-600 ]"
+                  }`}
+                >
+                  {tab}
+                </button>
               ))}
             </div>
-          </motion.div>
-        </div>
+          </div>
+          {/* Skills Grid */}
+          <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {skills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
