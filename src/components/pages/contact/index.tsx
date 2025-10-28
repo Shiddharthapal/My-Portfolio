@@ -126,7 +126,7 @@ export default function Contact() {
 
                     {/* Main Card */}
                     <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl p-8 shadow-2xl">
-                      <h2 className="text-3xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
+                      <h2 className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                         Contact Information
                       </h2>
 
@@ -233,7 +233,7 @@ export default function Contact() {
               {/* Right Section - Contact Form */}
               <div className="flex flex-col border border-gray-400 dark:border-[hsl(255,41%,19%)] rounded-2xl">
                 <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl p-8 shadow-lg">
-                  <h2 className="text-3xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-8">
+                  <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-8">
                     Send me a message
                   </h2>
 

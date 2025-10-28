@@ -180,7 +180,7 @@ export default function Hero() {
             {/* White Border Ring */}
             <div
               className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-8 border-white dark:border-[hsl(232,31%,25%)]
-                shadow-2xl overflow-hidden 
+                shadow-2xl overflow-hidden mb-10 sm:mb-5
             bg-gradient-to-br from-blue-400 to-blue-500"
             >
               <img
@@ -193,10 +193,25 @@ export default function Hero() {
             {/* Floating Badges */}
             {badges.map((badge, index) => {
               const isActive = index === activeIndex;
+              const isMobile = window.innerWidth < 768;
+
               // ✅ Responsive radius based on screen size
-              const radius = window.innerWidth < 768 ? 170 : 240;
+              const radius = isMobile ? 170 : 240;
+
+              //calculate base angle
+              let angleDeg = badge.angle;
+
+              //modification: Left side badges move to 130°
+              if (isMobile) {
+                // If badge is on the left side (90° to 270°)
+                if (angleDeg > 90 && angleDeg < 270) {
+                  angleDeg = 130; // Fix left side badges at 130°
+                }
+                // Right side badges stay at their original angles
+              }
+
               // Add rotation to the badge angle for spinning effect
-              const angleRad = (badge.angle * Math.PI) / 180;
+              const angleRad = (angleDeg * Math.PI) / 180;
               const x = Math.cos(angleRad) * radius;
               const y = Math.sin(angleRad) * radius;
 

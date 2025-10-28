@@ -6,6 +6,7 @@ import Project from "./pages/project";
 import Hero from "./pages/hero";
 import Skills from "./pages/skill";
 import CarsorRing from "./cursor";
+import Footer from "./pages/footer";
 import { ThemeProvider } from "@/lib/theme-context";
 import {
   BrowserRouter as Router,

@@ -1,9 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { GitBranch, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 export default function ProjectsPage() {
+  const isMobile = window.innerWidth < 768;
   const projects = [
     {
       id: 1,
@@ -60,7 +61,7 @@ export default function ProjectsPage() {
       id="projects"
       className="min-h-screen flex items-center justify-center py-3 px-6"
     >
-      <main className="  mx-auto items-center max-w-7xl  bg-background">
+      <main className=" mx-auto items-center max-w-7xl  bg-background">
         <div>
           {/* Header Section */}
           <motion.div
@@ -128,28 +129,53 @@ export default function ProjectsPage() {
                             </Badge>
                           ))}
                         </div>
-                        <div className="flex flex-row gap-4 mt-6">
-                          <button
-                            className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg 
-                          hover:bg-gradient-to-br transition-colors duration-200 focus:outline-none"
-                          >
-                            Live Demo
-                          </button>
-                          <a
-                            href={project?.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                        {isMobile ? (
+                          <div className="flex flex-col gap-4 mt-6">
                             <button
-                              className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
-                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
-                         font-semibold rounded-xl transition-all duration-300"
+                              className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
+                          hover:bg-gradient-to-br font-semibold transition-colors duration-300 rounded-xl focus:outline-none "
                             >
-                              <Github className="w-5 h-5" />
-                              View Code
+                              Live Demo
                             </button>
-                          </a>
-                        </div>
+                            <a
+                              href={project?.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <button
+                                className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
+                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
+                         font-semibold rounded-xl transition-all duration-300   "
+                              >
+                                <Github className="w-5 h-5" />
+                                View Code
+                              </button>
+                            </a>
+                          </div>
+                        ) : (
+                          <div className="flex flex-row gap-4 mt-6">
+                            <button
+                              className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
+                          hover:bg-gradient-to-br font-semibold transition-colors duration-300 rounded-xl focus:outline-none "
+                            >
+                              Live Demo
+                            </button>
+                            <a
+                              href={project?.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <button
+                                className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
+                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
+                         font-semibold rounded-xl transition-all duration-300 "
+                              >
+                                <Github className="w-5 h-5" />
+                                View Code
+                              </button>
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </Card>
                   ))}
