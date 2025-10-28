@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       id="projects"
       className="min-h-screen flex items-center justify-center py-3 px-6"
     >
-      <main className=" container mx-auto items-center max-w-7xl  bg-background">
+      <main className="  mx-auto items-center max-w-7xl  bg-background">
         <div>
           {/* Header Section */}
           <motion.div

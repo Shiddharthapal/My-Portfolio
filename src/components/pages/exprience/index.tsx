@@ -13,7 +13,7 @@ export default function Resume() {
       id="resume"
       className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] py-20"
     >
-      <main className=" container mx-auto  py-16 px-4 items-center max-w-7xl">
+      <main className="  mx-auto  py-16 px-4 items-center max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

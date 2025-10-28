@@ -82,7 +82,7 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center px-6 "
     >
       {/*  Main Container with 2 columns */}
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
         {/* Left Side - Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

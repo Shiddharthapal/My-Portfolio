@@ -88,7 +88,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className=" container mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
+      className="  mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
     >
       <main className=" bg-background">
         <motion.div

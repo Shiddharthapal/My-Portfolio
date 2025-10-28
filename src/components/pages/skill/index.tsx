@@ -106,7 +106,7 @@ export default function SkillsSection() {
       id="skills"
       className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 py-20"
     >
-      <div className="container sm:mx-5  items-center max-w-7xl px-1">
+      <div className=" sm:mx-5 2xl:mx-auto  items-center max-w-7xl px-1">
         {" "}
         {/* Use flex + justify-center instead of mx-auto */}
         <motion.div
