@@ -6,7 +6,6 @@ import About from "../about";
 import Exprience from "../exprience";
 
 export default function Home() {
-  console.log("hi");
   return (
     <div className="bg-[hsl(270,20%,98%)] dark:bg-[hsl(260,29%,10%)]">
       <Hero />

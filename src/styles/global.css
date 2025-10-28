@@ -31,6 +31,16 @@ body {
   color: var(--foreground);
 }
 
+body,
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /* Animation classes */
 .fade-in {
   animation: fadeIn 0.5s ease-in;

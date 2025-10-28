@@ -58,70 +58,77 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-border z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 2xl:p-0">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-2xl focus:outline-none font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
+              className="text-2xl 2xl:text-3xl  focus:outline-none font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
             >
               Shiddhartha.
             </button>
           </div>
+          <div className="flex justify-center">
+            {/* Navigation Links */}
+            <div className="hidden md:flex items-center justify-end space-x-8">
+              {navLinks.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.section)}
+                  className="focus:outline-none text-foreground text-gray-700 dark:text-white hover:text-[hsl(251,48%,55%)]
+                 dark:hover:text-[hsl(251,48%,55%)] transition-colors duration-200 text-sm 2xl:text-lg  font-medium"
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center justify-end space-x-8">
-            {navLinks.map((link) => (
+            {/* Right Side - Theme Toggle & Resume Button */}
+            <div className="flex items-center space-x-4">
+              {/* Mobile Menu Button */}
               <button
-                key={link.name}
-                onClick={() => scrollToSection(link.section)}
-                className="focus:outline-none text-foreground text-gray-700 dark:text-white hover:text-[hsl(251,48%,55%)] dark:hover:text-[hsl(251,48%,55%)] transition-colors duration-200 text-sm font-medium"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden p-2 rounded-lg focus:outline-none hover:rounded-full hover:bg-[hsl(260,60%,94%)]
+               dark:hover:bg-[hsl(260,29%,20%)] transition-colors duration-200 2xl:text-lg"
+                aria-label="Toggle menu"
               >
-                {link.name}
+                {isMobileMenuOpen ? (
+                  <X className="w-5 h-5 text-foreground dark:text-white" />
+                ) : (
+                  <Menu className="w-5 h-5 text-foreground text-gray-700 dark:text-white" />
+                )}
               </button>
-            ))}
-          </div>
 
-          {/* Right Side - Theme Toggle & Resume Button */}
-          <div className="flex items-center space-x-4">
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg focus:outline-none hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(260,29%,20%)] transition-colors duration-200"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5 text-foreground dark:text-white" />
-              ) : (
-                <Menu className="w-5 h-5 text-foreground text-gray-700 dark:text-white" />
-              )}
-            </button>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg focus:outline-none hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(260,29%,20%)] transition-colors duration-200"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="w-5 h-5 text-foreground dark:text-white" />
-              ) : (
-                <Moon className="w-5 h-5 text-foreground text-gray-700" />
-              )}
-            </button>
-
-            {/* Resume Button - Hidden on mobile */}
-            <a
-              href="https://drive.google.com/file/d/1n1Xp_JiZSKVS30ihKnZ7AK-UqM93i0yF/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:block"
-            >
-              <button className="px-6 py-2 focus:outline-none bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg hover:bg-gradient-to-br transition-colors duration-200 dark:text-black font-medium text-sm">
-                Resume
+              {/* Theme Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg focus:outline-none hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(260,29%,20%)] transition-colors duration-200"
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? (
+                  <Sun className="w-5 h-5 text-foreground dark:text-white" />
+                ) : (
+                  <Moon className="w-5 h-5 text-foreground text-gray-700" />
+                )}
               </button>
-            </a>
+
+              {/* Resume Button - Hidden on mobile */}
+              <a
+                href="https://drive.google.com/file/d/1n1Xp_JiZSKVS30ihKnZ7AK-UqM93i0yF/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:block"
+              >
+                <button
+                  className="px-6 py-2 focus:outline-none bg-gradient-to-tl from-cyan-500 to-purple-800
+               text-white rounded-lg hover:bg-gradient-to-br transition-colors duration-200 dark:text-black 
+               font-medium text-sm 2xl:text-lg "
+                >
+                  Resume
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
