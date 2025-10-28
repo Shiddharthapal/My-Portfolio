@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       id="projects"
       className="min-h-screen flex items-center justify-center py-3 px-6"
     >
-      <main className="  mx-auto items-center max-w-7xl  bg-background">
+      <main className="  mx-2 sm:mx-auto items-center max-w-7xl  bg-background">
         <div>
           {/* Header Section */}
           <motion.div
@@ -130,8 +130,8 @@ export default function ProjectsPage() {
                         </div>
                         <div className="flex flex-row gap-4 mt-6">
                           <button
-                            className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg 
-                          hover:bg-gradient-to-br transition-colors duration-200 focus:outline-none"
+                            className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
+                          hover:bg-gradient-to-br transition-colors duration-300 rounded-xl focus:outline-none text-xs sm:text-md 2xl:text-lg"
                           >
                             Live Demo
                           </button>
@@ -143,7 +143,7 @@ export default function ProjectsPage() {
                             <button
                               className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
                          dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
-                         font-semibold rounded-xl transition-all duration-300"
+                         font-semibold rounded-xl transition-all duration-300 text-xs sm:text-md 2xl:text-lg"
                             >
                               <Github className="w-5 h-5" />
                               View Code
