@@ -4,6 +4,7 @@ import Skill from "../skill";
 import Contact from "../contact";
 import About from "../about";
 import Exprience from "../exprience";
+import PortfolioFooter from "../footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Exprience />
       <Contact />
+      <PortfolioFooter />
     </div>
   );
 }
