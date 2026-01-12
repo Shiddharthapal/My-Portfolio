@@ -49,7 +49,7 @@ export default function ProjectsPage() {
       title: "Ant-Tube",
       description:
         "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
-      image: "/VideoStreaming.png",
+      image: "/image.png",
       tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind"],
       link: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
       featured: true,

@@ -57,11 +57,17 @@ export default function Resume() {
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
-                        Full Stack Developer
+                        Junior Software Engineer
                       </h3>
-                      <p className="text-[hsl(251,51%,65%)] font-medium mt-1">
+                      <a
+                        href="https://www.decodeit.org/"
+                        target="_blank"
+
+                        rel="noopener noreferrer"
+                        className="text-[hsl(251,51%,65%)] font-medium mt-1 hover:underline outline-none"
+                      >
                         DecodeIT.org
-                      </p>
+                      </a>
                     </div>
                     <span
                       className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] dark:bg-[hsl(259,30%,18%)] 
