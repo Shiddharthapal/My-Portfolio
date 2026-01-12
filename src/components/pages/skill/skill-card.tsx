@@ -21,6 +21,7 @@ import {
   Rocket,
   Infinity,
   Webhook,
+  Video,
 } from "lucide-react";
 
 interface SkillCardProps {
@@ -52,6 +53,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   rocket: <Rocket className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
   infinity: <Infinity className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
   webhook: <Webhook className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
+  video: <Video className="w-8 h-8 text-[hsl(251,85%,75%)]" />,
 };
 
 export default function SkillCard({ skill }: SkillCardProps) {
