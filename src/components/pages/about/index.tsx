@@ -24,7 +24,7 @@ export default function About() {
     },
     {
       icon: Brain,
-      count: 500,
+      count: 740,
       suffix: "+",
       label1: "Problem Solve",
       label2: "",
@@ -33,7 +33,7 @@ export default function About() {
     },
     {
       icon: Code,
-      count: 20,
+      count: 52,
       suffix: "K+",
       label1: "Lines of Code",
       label2: "",
