@@ -24,7 +24,7 @@ export default function About() {
     },
     {
       icon: Brain,
-      count: 740,
+      count: 741,
       suffix: "+",
       label1: "Problem Solve",
       label2: "",
@@ -83,7 +83,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen  flex items-center justify-center px-2 py-5"
+      className="min-h-screen flex items-center justify-center px-2 py-5"
     >
       <div className=" mx-auto items-center max-w-7xl px-4">
         <motion.div
@@ -147,9 +147,15 @@ export default function About() {
                   <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
                     Email:
                   </div>
-                  <div className="flex-1 text-[hsl(251,85%,75%)] ">
+                  <a
+              href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-[hsl(251,85%,75%)]  focus:outline-none hover:underline   transition"
+            >
                     shiddhartpal01355@gmail.com
-                  </div>
+       
+                  </a>
                 </div>
 
                 {/* Phone */}

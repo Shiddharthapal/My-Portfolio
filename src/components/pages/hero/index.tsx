@@ -104,7 +104,7 @@ export default function Hero() {
             </span>
           </h1>
           <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-500 dark:text-[hsl(261,15%,70%)]">
-           Junior Software Engineer | Competitive Programmer | Full-Stack Web Application | MERN | Next.js • Astro | MySQL | AI Agent | Cloud 
+           Software Engineer | Full-Stack Developer (MERN Stack)
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-[hsl(261,15%,70%)]">
             I build modern, responsive web applications with a focus on user
