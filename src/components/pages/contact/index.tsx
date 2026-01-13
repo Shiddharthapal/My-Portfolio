@@ -125,7 +125,7 @@ export default function Contact() {
                     {/* Gradient Header */}
 
                     {/* Main Card */}
-                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl p-8 shadow-2xl">
+                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl px-8 py-4 md:p-8 shadow-2xl">
                       <h2 className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                         Contact Information
                       </h2>
@@ -183,12 +183,9 @@ export default function Contact() {
                             <h3 className="font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-0">
                               Location
                             </h3>
-                           
-                            <a
-                  href="https://maps.app.goo.gl/92FYi46N3v55ASNp8"
-                   className="text-[hsl(261,7%,46%)] font-medium focus:outline-none hover:underline dark:text-[hsl(251,75%,72%)] text-lg">
-                  {formdata.Location}
-                </a>
+                            <p className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-lg">
+                              {formdata.Location}
+                            </p>
                           </div>
                         </div>
                       </div>
