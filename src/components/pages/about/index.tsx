@@ -24,7 +24,7 @@ export default function About() {
     },
     {
       icon: Brain,
-      count: 500,
+      count: 740,
       suffix: "+",
       label1: "Problem Solve",
       label2: "",
@@ -33,7 +33,7 @@ export default function About() {
     },
     {
       icon: Code,
-      count: 20,
+      count: 52,
       suffix: "K+",
       label1: "Lines of Code",
       label2: "",
@@ -117,7 +117,7 @@ export default function About() {
                 </span>{" "}
               </h2>
               <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6">
-                I’m a passionate Full-Stack developer with a strong foundation
+                I’m a passionate Software Engineer with a strong foundation
                 in problem solving with strong DSA and experience in MERN. I am
                 also skilled in using AI tools like AI agents etc.
               </p>

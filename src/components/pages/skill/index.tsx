@@ -27,6 +27,7 @@ const SKILLS_DATA = {
     { name: "Redis", icon: "code", category: "backend" },
     { name: "Rate Limit", icon: "infinity", category: "backend" },
     { name: "Aggregation Pipeline", icon: "code", category: "backend" },
+    { name: "Web RTC", icon: "video", category: "tools" },
     { name: "Git", icon: "gitmerge", category: "tools" },
     { name: "GitHub", icon: "gitmerge", category: "tools" },
     { name: "GitHub Actions", icon: "gitmerge", category: "tools" },
@@ -72,6 +73,7 @@ const SKILLS_DATA = {
     { name: "Aggregation Pipeline", icon: "code", category: "backend" },
   ],
   tools: [
+    { name: "Web RTC", icon: "video", category: "tools" },
     { name: "Git", icon: "gitmerge", category: "tools" },
     { name: "GitHub", icon: "gitmerge", category: "tools" },
     { name: "GitHub Actions", icon: "gitmerge", category: "tools" },
