@@ -70,7 +70,7 @@ export default function PortfolioFooter() {
               Shiddhartha.
             </h2>
             <p className="text-[hsl(261,7%,46%)] text-md font-medium leading-relaxed dark:text-[hsl(261,15%,70%)]">
-              A passionate Full Stack Developer specialized in MERN stack with
+              A passionate Software Engineer specialized in MERN stack with
               extensive experience in project management.
             </p>
           </div>
@@ -138,9 +138,11 @@ export default function PortfolioFooter() {
                   size={20}
                   className="flex-shrink-0 text-[hsl(251,85%,75%)]"
                 />
-                <span className="text-[hsl(261,7%,46%)] font-medium dark:text-[hsl(261,15%,70%)]">
-                  Khulna, Bangladesh
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/92FYi46N3v55ASNp8"
+                   className="text-[hsl(261,7%,46%)] font-medium focus:outline-none hover:underline dark:text-[hsl(261,15%,70%)]">
+                  Bagerhat, Bangladesh
+                </a>
               </li>
             </ul>
 

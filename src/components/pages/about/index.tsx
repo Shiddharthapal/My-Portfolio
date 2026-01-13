@@ -26,7 +26,7 @@ export default function About() {
       icon: Brain,
       count: 741,
       suffix: "+",
-      label1: "Problem Solve",
+      label1: "Problems Solve",
       label2: "",
       color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
@@ -117,15 +117,15 @@ export default function About() {
                 </span>{" "}
               </h2>
               <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6">
-                I’m a passionate Software Engineer with a strong foundation
-                in problem solving with strong DSA and experience in MERN. I am
-                also skilled in using AI tools like AI agents etc.
+                I’m a passionate Software Engineer and Competitive Programmer with a strong foundation in problem-solving and 
+                Data Structures & Algorithms (DSA). I specialize in building full-stack web applications using the MERN stack, 
+                Next.js, and Astro, with experience in MySQL, cloud technologies, and AI-driven solutions such as AI agents.
               </p>
               <div className="max-w-md bg-white dark:bg-[hsl(260,29%,10%)] rounded-lg">
                 {/* Fullname */}
                 <div className="flex text-lg mb-3">
                   <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
-                    Fullname:
+                    Full name:
                   </div>
                   <div className="flex-1 text-gray-600 dark:text-[hsl(0,0%,96%)]">
                     Shiddhartha Pal

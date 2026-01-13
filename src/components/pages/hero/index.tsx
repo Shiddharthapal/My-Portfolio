@@ -10,7 +10,7 @@ export default function Hero() {
   const navigate = useNavigate();
   const badges = [
     { id: 1, label: "Problem Solver", angle: 45 },
-    { id: 2, label: "Full-Stack Developer", angle: 180 },
+    { id: 2, label: "Software Engineer", angle: 180 },
     { id: 3, label: "Project Management", angle: 315 },
   ];
 
@@ -90,13 +90,15 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <span
-            className="inline-block bg-[hsl(260,60%,94%)] px-6 py-1 rounded-full text-[hsl(257,30%,50%)] font-semibold
-          dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(257,30%,50%)]
-          "
-          >
-            Welcome my portfolio
-          </span>
+          <span className="relative inline-block bg-[hsl(260,60%,94%)] px-6 py-1 mt-2 rounded-full text-[hsl(257,30%,50%)] font-semibold dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(257,30%,50%)]">
+  {/* Animated dot with pulse effect */}
+  <span className="absolute -top-0 -right-0 flex h-3 w-3">
+    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
+  </span>
+  
+  Welcome my portfolio
+</span>
           <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-600 dark:text-[hsl(0,0%,96%)] font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
