@@ -183,9 +183,12 @@ export default function Contact() {
                             <h3 className="font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-0">
                               Location
                             </h3>
-                            <p className="text-[hsl(251,51%,65%)] dark:text-[hsl(251,75%,72%)] text-lg">
-                              {formdata.Location}
-                            </p>
+                           
+                            <a
+                  href="https://maps.app.goo.gl/92FYi46N3v55ASNp8"
+                   className="text-[hsl(261,7%,46%)] font-medium focus:outline-none hover:underline dark:text-[hsl(251,75%,72%)] text-lg">
+                  {formdata.Location}
+                </a>
                           </div>
                         </div>
                       </div>

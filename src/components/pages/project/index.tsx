@@ -20,6 +20,7 @@ export default function ProjectsPage() {
         "MongoDB",
         "TypeScript",
         "JavaScript",
+        "Web RTC",
         "Bunny CDN",
         "Astro",
       ],
@@ -50,7 +51,7 @@ export default function ProjectsPage() {
       description:
         "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
       image: "/image.png",
-      tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind"],
+      tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind CSS"],
       link: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
       featured: true,
     },
