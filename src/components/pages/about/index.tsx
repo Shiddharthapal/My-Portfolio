@@ -24,7 +24,7 @@ export default function About() {
     },
     {
       icon: Brain,
-      count: 741,
+      count: 746,
       suffix: "+",
       label1: "Problems Solve",
       label2: "",

@@ -69,7 +69,7 @@ const platforms: PlatformData[] = [
   {
     name: "LeetCode",
    icon: <Code className="w-8 h-8" />,
-    problemsSolved: 143,
+    problemsSolved: 148,
     link: "https://leetcode.com/u/shiddhartha_pal29/",
     color: "from-yellow-400 to-orange-500",
     description: "Data Structures & Algorithms",
