@@ -116,7 +116,7 @@ export default function Navbar() {
 
               {/* Resume Button - Hidden on mobile */}
               <a
-                href="https://drive.google.com/file/d/1n1Xp_JiZSKVS30ihKnZ7AK-UqM93i0yF/view?usp=sharing"
+                href="https://drive.google.com/file/d/1g7jmMiWy3dvcIJUJMz6mDOPKtpuqEmHZ/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:block"
