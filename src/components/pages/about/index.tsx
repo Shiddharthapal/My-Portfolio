@@ -30,16 +30,7 @@ export default function About() {
       label2: "",
       color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
-    },
-    {
-      icon: Code,
-      count: 52,
-      suffix: "K+",
-      label1: "Lines of Code",
-      label2: "",
-      color: "text-[hsl(251,85%,75%)]",
-      bgColor: "bg-purple-50",
-    },
+    }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -94,12 +85,6 @@ export default function About() {
         >
           <div className=" gap-8 items-center">
             <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%] mt-4 md:w-[85%] ">
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-purple-800
-              dark: rounded-lg translate-x-6 translate-y-6"
-              ></div>
-
-              
             </div>
             <div>
               <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8 dark:text-[hsl(0,0%,96%)]">
@@ -121,19 +106,8 @@ export default function About() {
                   more
                 </button>
               </p>
-              <div className="max-w-md bg-white dark:bg-[hsl(260,29%,10%)] rounded-lg">
-
-                {/* Contact Button */}
-                <button
-                  key="contact"
-                  onClick={() => scrollToSection("contact")}
-                  className="px-8 py-3 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white 
-                  rounded-lg hover:bg-gradient-to-br transition-colors duration-200 focus:outline-none"
-                >
-                  Contact Me
-                </button>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-9">
+              
+              <div className="grid grid-cols-3 gap-6 mt-9">
                 {stats.map((stat, index) => (
                   <div
                     key={index}

@@ -7,7 +7,6 @@ import Hero from "./pages/hero";
 import Skills from "./pages/skill";
 import Dream from "./pages/about/dream";
 import CarsorRing from "./cursor";
-import Footer from "./pages/footer";
 import { ThemeProvider } from "@/lib/theme-context";
 import {
   BrowserRouter as Router,
