@@ -101,7 +101,7 @@ export default function About() {
                 <button
                   type="button"
                   onClick={() => navigate("/dream")}
-                  className="ml-2 inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+                  className="ml-2 focus:outline-none inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
                 >
                   more
                 </button>

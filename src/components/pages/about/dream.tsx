@@ -10,7 +10,7 @@ export default function Dream() {
         <button
           type="button"
           onClick={() => navigate("/")}
-          className="mb-6 inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+          className="mb-6 focus:outline-none inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
         >
           ← Back
         </button>
