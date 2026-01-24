@@ -6,37 +6,52 @@ import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [jumpOffsets, setJumpOffsets] = useState([0, 0, 0]);
+  const [jumpOffsets, setJumpOffsets] = useState([0, 0, 0, 0, 0, 0]);
   const navigate = useNavigate();
   const badges = [
-    { id: 1, label: "Problem Solver", angle: 45 },
-    { id: 2, label: "Software Engineer", angle: 180 },
-    { id: 3, label: "Project Management", angle: 315 },
-  ];
+  { id: 1, label: "DSA", angle: 0 },
+  { id: 2, label: "Node.js", angle: 60 },
+  { id: 3, label: "React.js", angle: 120 },
+  { id: 4, label: "MongoDB", angle: 180 },
+  { id: 5, label: "Next.js", angle: 240 },
+  { id: 6, label: "Astro", angle: 300 }
+]
 
-  // Optional: Auto-rotate badges
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % badges.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-  useEffect(() => {
-    const directions = [1, 1, 1];
-    const offsets = [0, 3.33, 6.66]; // Stagger start positions for serial effect
 
-    const interval = setInterval(() => {
-      const newOffsets = offsets.map((offset, i) => {
-        let newOffset = offset + directions[i] * 4;
-        if (newOffset >= 10) directions[i] = -3; // Jump up to 10px
-        if (newOffset <= 0) directions[i] = 3; // Jump down to 0px
-        offsets[i] = newOffset;
-        return newOffset;
-      });
-      setJumpOffsets([...newOffsets]);
-    }, 300);
-    return () => clearInterval(interval);
-  }, []);
+ // 1) Active badge rotation (depends on badges length)
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % badges.length);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [badges.length]);
+
+// 2) Floating / jumping offsets (auto matches badges length)
+useEffect(() => {
+  // start each badge at a slightly different offset (staggered)
+  const offsets = Array.from({ length: badges.length }, (_, i) => (i % 6) * 2);
+  const directions = Array.from({ length: badges.length }, () => 1);
+
+  // initialize state once immediately
+  setJumpOffsets(offsets);
+
+  const interval = setInterval(() => {
+    const newOffsets = offsets.map((offset, i) => {
+      let next = offset + directions[i] * 1.2; // speed (smaller = smoother)
+
+      if (next >= 10) directions[i] = -1;
+      if (next <= 0) directions[i] = 1;
+
+      offsets[i] = next;
+      return next;
+    });
+
+    setJumpOffsets([...newOffsets]);
+  }, 30); // smoother than 300ms
+
+  return () => clearInterval(interval);
+}, [badges.length]);
 
   const scrollToSection = (sectionId) => {
     // First navigate to home if not already there
@@ -181,7 +196,7 @@ export default function Hero() {
 
             {/* White Border Ring */}
             <div
-              className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-8 border-white dark:border-[hsl(232,31%,25%)]
+              className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-8 border-white dark:border-[hsl(232,31%,25%)]
                 shadow-2xl overflow-hidden mb-10 sm:mb-5
             bg-gradient-to-br from-blue-400 to-blue-500"
             >
@@ -198,7 +213,7 @@ export default function Hero() {
               const isMobile = window.innerWidth < 768;
 
               // ✅ Responsive radius based on screen size
-              const radius = isMobile ? 170 : 240;
+              const radius = isMobile ? 170 : 200;
 
               //calculate base angle
               let angleDeg = badge.angle;
@@ -220,7 +235,7 @@ export default function Hero() {
               return (
                 <div
                   key={badge.id}
-                  className={`absolute top-1/2 left-1/2 transition-all duration-500 ${
+                  className={`absolute top-1/2 left-1/2 transition-all duration-75 ${
                     isActive ? "scale-110" : "scale-100"
                   }`}
                   style={{
@@ -233,21 +248,17 @@ export default function Hero() {
                     className={`
                       px-3 py-2 md:px-5 md:py-2.5 bg-white dark:bg-[hsl(223,26%,14%)] rounded-full shadow-lg
                       dark:shadow-md border-2 transition-all duration-300 
-                      ${
-                        isActive
-                          ? "border-[hsl(257,30%,50%)]  shadow-[hsl(254,49%,86%)] dark:border-[hsl(257,66%,76%)]"
-                          : "border-gray-200"
-                      }
+                       border-[hsl(257,30%,50%)]  shadow-[hsl(254,49%,86%)] dark:border-[hsl(257,66%,76%)]"
+                          
+                      
                     `}
                   >
                     <span
                       className={`
                         text-xs md:text-sm font-semibold whitespace-nowrap
-                        ${
-                          isActive
-                            ? "text-[hsl(257,30%,50%)] dark:text-[hsl(0,0%,96%)]"
-                            : "text-gray-700"
-                        }
+                        text-[hsl(257,30%,50%)] dark:text-[hsl(0,0%,96%)]
+                             text-gray-700"
+                        
                       `}
                     >
                       {badge.label}
