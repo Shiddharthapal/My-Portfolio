@@ -121,10 +121,18 @@ export default function SkillsSection() {
               ))}
             </div>
           </div>
-          {/* Skills Grid */}
-          <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {/* Skills Grid (desktop) / Slider (mobile, tablet) */}
+          <div
+            className="flex gap-6 custom-x-scrollbar pb-2
+            lg:grid lg:grid-cols-6 lg:gap-6 lg:overflow-visible"
+          >
             {skills.map((skill) => (
-              <SkillCard key={skill.name} skill={skill} />
+              <div
+                key={skill.name}
+                className="snap-start shrink-0 basis-[calc(50%-0.75rem)] md:basis-[calc(25%-0.75rem)] lg:basis-auto lg:shrink"
+              >
+                <SkillCard skill={skill} />
+              </div>
             ))}
           </div>
         </motion.div>
