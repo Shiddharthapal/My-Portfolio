@@ -5,47 +5,19 @@ import SkillCard from "./skill-card";
 import { motion } from "framer-motion";
 
 const SKILLS_DATA = {
-  all: [
-    { name: "ReactJs", icon: "code", category: "frontend" },
+  core: [
+    { name: "React.js", icon: "code", category: "frontend" },
     { name: "Redux", icon: "workflow", category: "frontend" },
-    { name: "Hooks", icon: "webhook", category: "frontend" },
     { name: "Astro", icon: "rocket", category: "frontend" },
-    { name: "NextJs", icon: "code", category: "frontend" },
+    { name: "Next.js", icon: "code", category: "frontend" },
     { name: "JavaScript", icon: "squareterminal", category: "frontend" },
     { name: "TypeScript", icon: "squareterminal", category: "frontend" },
-    { name: "HTML/CSS", icon: "fileterminal", category: "frontend" },
-    { name: "Tailwind CSS", icon: "paintbrush", category: "frontend" },
-    { name: "Styled Component", icon: "paintbrush", category: "frontend" },
-    { name: "Framer Motion", icon: "code", category: "frontend" },
-    { name: "Webpack", icon: "code", category: "frontend" },
     { name: "Node.js", icon: "code", category: "backend" },
     { name: "REST APIs", icon: "workflow", category: "backend" },
     { name: "MongoDB", icon: "box", category: "backend" },
-    { name: "Mongoose", icon: "box", category: "backend" },
     { name: "MySQL", icon: "box", category: "backend" },
-    { name: "JWT/RBAC", icon: "lock", category: "backend" },
-    { name: "Redis", icon: "code", category: "backend" },
-    { name: "Rate Limit", icon: "infinity", category: "backend" },
-    { name: "Aggregation Pipeline", icon: "code", category: "backend" },
-    { name: "Web RTC", icon: "video", category: "tools" },
-    { name: "Git", icon: "gitmerge", category: "tools" },
     { name: "GitHub", icon: "gitmerge", category: "tools" },
-    { name: "GitHub Actions", icon: "gitmerge", category: "tools" },
     { name: "AI Agent", icon: "bot", category: "tools" },
-    { name: "AWS", icon: "cloud", category: "tools" },
-    { name: "Bunny CDN", icon: "cloud", category: "tools" },
-    { name: "CI/CD", icon: "gitmerge", category: "tools" },
-    { name: "Postman", icon: "setting", category: "tools" },
-    { name: "Vercel", icon: "setting", category: "tools" },
-    { name: "Netlify", icon: "setting", category: "tools" },
-    { name: "VS Code", icon: "setting", category: "tools" },
-    { name: "Problem Solving", icon: "code", category: "softskills" },
-    { name: "Communication", icon: "users", category: "softskills" },
-    { name: "Team Work", icon: "users", category: "softskills" },
-    { name: "Team Leadership", icon: "users", category: "softskills" },
-    { name: "Decision Making", icon: "users", category: "softskills" },
-    { name: "Adaptability", icon: "users", category: "softskills" },
-    { name: "Quick Learning", icon: "code", category: "softskills" },
   ],
   frontend: [
     { name: "ReactJs", icon: "code", category: "frontend" },
@@ -98,9 +70,9 @@ const SKILLS_DATA = {
 };
 
 export default function SkillsSection() {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("core");
 
-  const tabs = ["All", "Frontend", "Backend", "Tools", "SoftSkills"];
+  const tabs = ["Core", "Frontend", "Backend", "Tools", "SoftSkills"];
   const skills = SKILLS_DATA[activeTab as keyof typeof SKILLS_DATA];
 
   return (
