@@ -5,6 +5,7 @@ import Exprience from "./pages/exprience";
 import Project from "./pages/project";
 import Hero from "./pages/hero";
 import Skills from "./pages/skill";
+import Dream from "./pages/about/dream";
 import CarsorRing from "./cursor";
 import Footer from "./pages/footer";
 import { ThemeProvider } from "@/lib/theme-context";
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/resume" element={<Exprience />} />
             <Route path="/hero" element={<Hero />} />
             <Route path="/skill" element={<Skills />} />
+            <Route path="/dream" element={<Dream />} />
           </Route>
         </Routes>
       </ThemeProvider>

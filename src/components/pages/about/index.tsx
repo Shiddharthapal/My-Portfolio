@@ -109,9 +109,17 @@ export default function About() {
                 </span>{" "}
               </h2>
               <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6">
-                I’m a passionate Software Engineer and Competitive Programmer with a strong foundation in problem-solving and 
-                Data Structures & Algorithms (DSA). I specialize in building full-stack web applications using the MERN stack, 
-                Next.js, and Astro, with experience in MySQL, cloud technologies, and AI-driven solutions such as AI agents.
+                I come from a small rural village where dreams are often bigger
+                than the resources around you. My father is a businessman who
+                studied only up to class 5, and my mother is a homemaker who
+                studied till class 9.
+                <button
+                  type="button"
+                  onClick={() => navigate("/dream")}
+                  className="ml-2 inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+                >
+                  more
+                </button>
               </p>
               <div className="max-w-md bg-white dark:bg-[hsl(260,29%,10%)] rounded-lg">
 
