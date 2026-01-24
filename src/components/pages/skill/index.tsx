@@ -1,26 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SkillCard from "./skill-card";
 import { motion } from "framer-motion";
 
 const SKILLS_DATA = {
-  core: [
+  coreskills: [
     { name: "React.js", icon: "code", category: "frontend" },
     { name: "Redux", icon: "workflow", category: "frontend" },
-    { name: "Astro", icon: "rocket", category: "frontend" },
-    { name: "Next.js", icon: "code", category: "frontend" },
-    { name: "JavaScript", icon: "squareterminal", category: "frontend" },
-    { name: "TypeScript", icon: "squareterminal", category: "frontend" },
     { name: "Node.js", icon: "code", category: "backend" },
     { name: "REST APIs", icon: "workflow", category: "backend" },
     { name: "MongoDB", icon: "box", category: "backend" },
+    { name: "Next.js", icon: "code", category: "frontend" },
+    { name: "Astro", icon: "rocket", category: "frontend" },
+    { name: "TypeScript", icon: "squareterminal", category: "frontend" },
     { name: "MySQL", icon: "box", category: "backend" },
-    { name: "GitHub", icon: "gitmerge", category: "tools" },
-    { name: "AI Agent", icon: "bot", category: "tools" },
   ],
   frontend: [
-    { name: "ReactJs", icon: "code", category: "frontend" },
+    { name: "React.Js", icon: "code", category: "frontend" },
     { name: "Redux", icon: "workflow", category: "frontend" },
     { name: "Hooks", icon: "webhook", category: "frontend" },
     { name: "Astro", icon: "rocket", category: "frontend" },
@@ -29,7 +26,6 @@ const SKILLS_DATA = {
     { name: "TypeScript", icon: "squareterminal", category: "frontend" },
     { name: "HTML/CSS", icon: "fileterminal", category: "frontend" },
     { name: "Tailwind CSS", icon: "paintbrush", category: "frontend" },
-    { name: "Styled Component", icon: "paintbrush", category: "frontend" },
     { name: "Framer Motion", icon: "code", category: "frontend" },
     { name: "Webpack", icon: "code", category: "frontend" },
   ],
@@ -62,17 +58,15 @@ const SKILLS_DATA = {
     { name: "Problem Solving", icon: "code", category: "softskills" },
     { name: "Communication", icon: "users", category: "softskills" },
     { name: "Team Work", icon: "users", category: "softskills" },
-    { name: "Team Leadership", icon: "users", category: "softskills" },
     { name: "Decision Making", icon: "users", category: "softskills" },
-    { name: "Adaptability", icon: "users", category: "softskills" },
-    { name: "Quick Learning", icon: "code", category: "softskills" },
   ],
 };
 
 export default function SkillsSection() {
-  const [activeTab, setActiveTab] = useState("core");
+  const [activeTab, setActiveTab] = useState("coreskills");
+  const sliderRef = useRef<HTMLDivElement | null>(null);
 
-  const tabs = ["Core", "Frontend", "Backend", "Tools", "SoftSkills"];
+  const tabs = ["CoreSkills", "Frontend", "Backend", "Tools", "SoftSkills"];
   const skills = SKILLS_DATA[activeTab as keyof typeof SKILLS_DATA];
 
   return (
@@ -121,9 +115,21 @@ export default function SkillsSection() {
               ))}
             </div>
           </div>
+
           {/* Skills Grid (desktop) / Slider (mobile, tablet) */}
           <div
-            className="flex gap-6 custom-x-scrollbar pb-2
+            ref={sliderRef}
+            onWheel={(event) => {
+              if (!sliderRef.current) return;
+              if (window.innerWidth >= 1024) return;
+              if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+              event.preventDefault();
+              sliderRef.current.scrollBy({
+                left: event.deltaY,
+                behavior: "auto",
+              });
+            }}
+            className="flex gap-6 custom-x-scrollbar scroll-smooth pb-2
             lg:grid lg:grid-cols-6 lg:gap-6 lg:overflow-visible"
           >
             {skills.map((skill) => (
