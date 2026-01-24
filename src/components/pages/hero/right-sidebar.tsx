@@ -33,7 +33,7 @@ export default function RightSidebar({ isOpen, onClose }: RightSidebarProps) {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-blue-200 dark:border-slate-700">
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
-            Menu
+            Video Resume
           </h2>
           <button
             onClick={onClose}
@@ -45,64 +45,23 @@ export default function RightSidebar({ isOpen, onClose }: RightSidebarProps) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              Navigation
-            </h3>
-            <nav className="space-y-3">
-              {["Home", "About", "Projects", "Skills", "Contact"].map(
-                (item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      onClose();
-                    }}
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
-                  >
-                    {item}
-                  </a>
-                )
-              )}
-            </nav>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-              Quick Links
-            </h3>
-            <div className="space-y-3">
-              {[
-                { label: "GitHub", url: "https://github.com/Shiddharthapal" },
-                {
-                  label: "LinkedIn",
-                  url: "https://www.linkedin.com/in/shiddharthapal/",
-                },
-                {
-                  label: "Email",
-                  url: "mailto:shiddhartpal01355@gmail.com",
-                },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
+        <div className="p-6">
+          <div className="w-full overflow-hidden rounded-xl shadow-lg aspect-video bg-black/5 dark:bg-white/5">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/NZ7Pq2msfWk?autoplay=1&mute=1&playsinline=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
         </div>
 
         {/* Footer */}
         <div className="p-6 border-t border-blue-200 dark:border-slate-700">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            © 2024 Shiddhartha. All rights reserved.
+            © 2026 Shiddhartha. All rights reserved.
           </p>
         </div>
       </motion.div>
