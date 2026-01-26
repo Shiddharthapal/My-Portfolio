@@ -213,7 +213,7 @@ export default function ProjectDetailsPage() {
               <div className="mt-2 flex items-center gap-4">
                 {project?.projectlink && (<a href={project?.projectlink} target="_blank" rel="noopener noreferrer">
                   <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
-                   font-semibold rounded-xl focus:outline-none">
+                   hover:bg-gradient-to-br font-semibold rounded-xl focus:outline-none">
                     Live Demo
                   </button>
                 </a>
