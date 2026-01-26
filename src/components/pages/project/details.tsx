@@ -20,6 +20,64 @@ export default function ProjectDetailsPage() {
     [slug]
   );
 
+  const description = projectdata?.description ?? project?.description ?? "";
+
+  const descriptionBlocks = useMemo(() => {
+    if (!description) return [];
+
+    const isHeading = (line: string) =>
+      line.length <= 48 && !/[.!?]$/.test(line);
+
+    return description
+      .split(/\n\s*\n/)
+      .map((block) => block.trim())
+      .filter(Boolean)
+      .map((block) => {
+        const lines = block
+          .split("\n")
+          .map((line) => line.trim())
+          .filter(Boolean);
+
+        if (lines.length === 0) {
+          return { type: "paragraph", text: "" } as const;
+        }
+
+        const isListOnly = lines.every((line) => line.startsWith("-"));
+        const hasHeadingWithList =
+          lines.length > 1 &&
+          !lines[0].startsWith("-") &&
+          lines.slice(1).every((line) => line.startsWith("-"));
+
+        if (isListOnly) {
+          return {
+            type: "list",
+            items: lines.map((line) => line.replace(/^-+\s*/, "")),
+          } as const;
+        }
+
+        if (hasHeadingWithList) {
+          return {
+            type: "sectionList",
+            heading: lines[0],
+            items: lines.slice(1).map((line) => line.replace(/^-+\s*/, "")),
+          } as const;
+        }
+
+        if (lines.length > 1 && isHeading(lines[0])) {
+          return {
+            type: "sectionText",
+            heading: lines[0],
+            text: lines.slice(1).join(" "),
+          } as const;
+        }
+
+        return { type: "paragraph", text: lines.join(" ") } as const;
+      })
+      .filter((block) =>
+        block.type === "paragraph" ? block.text.length > 0 : true
+      );
+  }, [description]);
+
   if (!project) {
     return (
       <section className="min-h-screen flex items-center justify-center px-6 py-10">
@@ -59,7 +117,7 @@ export default function ProjectDetailsPage() {
             onClick={() => navigate(-1)}
             className="text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
           >
-            ← Back
+            {"<- Back"}
           </button>
         </div>
 
@@ -70,9 +128,57 @@ export default function ProjectDetailsPage() {
               <h1 className="text-3xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
                 {project.title}
               </h1>
-              <p className="text-muted-foreground dark:text-[hsl(261,15%,70%)]">
-                {projectdata.description}
-              </p>
+              <div className="flex flex-col gap-4 text-muted-foreground dark:text-[hsl(261,15%,70%)]">
+                {descriptionBlocks.map((block, index) => {
+                  if (block.type === "paragraph") {
+                    return <p key={index}>{block.text}</p>;
+                  }
+
+                  if (block.type === "list") {
+                    return (
+                      <ul key={index} className="space-y-2">
+                        {block.items.map((item) => (
+                          <li key={item} className="flex items-start gap-2">
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-purple-500" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  }
+
+                  if (block.type === "sectionList") {
+                    return (
+                      <div key={index} className="space-y-2">
+                        <h2 className="text-lg font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)]">
+                          {block.heading}
+                        </h2>
+                        <ul className="space-y-2">
+                          {block.items.map((item) => (
+                            <li key={item} className="flex items-start gap-2">
+                              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-purple-500" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  }
+
+                  if (block.type === "sectionText") {
+                    return (
+                      <div key={index} className="space-y-2">
+                        <h2 className="text-lg font-semibold text-gray-700 dark:text-[hsl(0,0%,96%)]">
+                          {block.heading}
+                        </h2>
+                        <p>{block.text}</p>
+                      </div>
+                    );
+                  }
+
+                  return null;
+                })}
+              </div>
 
               {project.highlights && project.highlights.length > 0 && (
                 <div>
