@@ -199,7 +199,7 @@ export default function ProjectDetailsPage() {
               )}
 
               <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
+                {projectdata?.tags.map((tag) => (
                   <Badge
                     key={tag}
                     variant="secondary"
