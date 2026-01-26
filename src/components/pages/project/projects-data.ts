@@ -73,15 +73,15 @@ export const projects: ProjectData[] = [
   },
   {
     id: 3,
-    slug: "ant-tube",
-    title: "Ant-Tube",
+    slug: "diu_course_tube",
+    title: "DIU Course Tube",
     description:
-      "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
+      "DIU Course Tube is a modern, YouTube‑style web app built",
     longDescription:
-      "Ant-Tube is a video streaming platform that supports uploads, subscriptions, comments, and responsive playback. The project focuses on performance, smooth browsing, and a creator-friendly workflow while keeping the UI lightweight.",
+      "DIU Course Tube is a video streaming platform that supports uploads, subscriptions, comments, and responsive playback. The project focuses on performance, smooth browsing, and a creator-friendly workflow while keeping the UI lightweight.",
     image: "/image.png",
-    alt: "Ant-Tube",
-    tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind CSS"],
+    alt: "DIU Course Tube",
+    tags: ["Node.js","React","TypeScript", "MongoDB","Cloud(BunnyCDN)","Astro", "Tailwind CSS"],
     githublink: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
     featured: true,
     highlights: [

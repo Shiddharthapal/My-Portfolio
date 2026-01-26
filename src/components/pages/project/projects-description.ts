@@ -6,6 +6,7 @@ export type ProjectData = {
 
   link: string;
   featured: boolean;
+  tags: string[];
   highlights?: string[];
 };
 
@@ -95,6 +96,17 @@ API routes live under src/pages/api and run on the server.`,
       "Role-based dashboards for patients and staff",
       "Appointment scheduling with realtime updates",
       "Media delivery optimized with CDN",
+    ],
+    tags: [
+      "Node.js",
+      "React",
+      "REST APIs",
+      "MongoDB",
+      "TypeScript",
+      "SOCKET.IO",
+      "Web RTC",
+      "Cloud(Bunny CDN)",
+      "Astro",
     ],
   },
   {
@@ -228,13 +240,162 @@ This project ships well on Netlify, Vercel, or any Node-compatible platform that
       "Contest discovery with filters",
       "Clean dashboards for progress tracking",
     ],
+    tags: [
+        "React",
+        "Node.js",
+        "REST APIs",
+        "External APIs",
+        "MongoDB",
+        "Tailwind CSS",
+        "Astro",
+        "TypeScript",
+      ],
   },
   {
     id: 3,
-    slug: "ant-tube",
-    title: "Ant-Tube",
+    slug: "diu_course_tube",
+    title: "DIU Course Tube",
     description:
-      "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
+      `
+      DIU Course Tube is a modern, YouTube‑style web app built for creators who want a clean, focused place to publish videos and grow a community.
+      
+      Purpose
+      Make video publishing feel effortless, while keeping ownership and performance in the creator’s hands. Users can register, upload videos with resumable, reliable progress tracking, publish instantly to a fast CDN, and build a channel where viewers can watch, comment, and subscribe.
+      At its core, DIU Course Tube plays two roles:
+      For creators: it’s a lightweight studio—upload, manage, and showcase your videos without the noise.
+      For viewers: it’s a smooth, distraction‑free theater—discover content, watch in high quality, and connect through comments and subscriptions.
+
+      A Short Story About DIU Course Tube
+      Imagine a place where videos don’t get buried. Where your upload doesn’t fail at 98%, and your first viewer feels like a real human connection—not a metric. That’s DIU Course Tube.
+      It begins with a simple upload screen: pick a file, name your story, and watch the progress bar climb. Behind the scenes, DIU Course Tube talks to Bunny CDN for fast delivery and stores your video metadata in MongoDB—so every upload becomes a living, shareable page. The moment it’s ready, 
+      your video has a home: a clean watch page with a subscribe button, a comment thread, and a player that just works.
+      Creators get their own dashboard to manage their videos. Viewers get a familiar home feed and an easy way to follow channels they care about. No clutter. No guesswork. Just a platform designed for momentum—so the next upload feels easier than the last.
+
+      DIU Course Tube is built for people who want to build a channel, not a fight with a platform.
+
+      Key features
+- User authentication with JWT
+- Video uploads via Bunny Stream + TUS resumable uploads
+- Public home feed listing all videos
+- Creator dashboard and “My Videos” library
+- Watch page with embedded Bunny player
+- Subscribe/unsubscribe to channels
+- Commenting system (supports threaded replies via parentId)
+
+
+Tech stack
+- Frontend: React + TypeScript, React Router, Redux Toolkit, Tailwind CSS
+- Backend: Astro API routes
+- Storage/Streaming: Bunny Stream (Bunny CDN)
+- Database: MongoDB + Mongoose
+- Auth: JWT
+- Uploads: tus-js-client
+
+Architecture overview
+- Astro serves a single React app (src/components/App.tsx) and exposes API routes under src/pages/api.
+- Video metadata is stored in MongoDB.
+- Videos are created in Bunny Stream and uploaded with TUS to https://video.bunnycdn.com/tusupload.
+- Watch pages use Bunny’s iframe embed for playback.
+
+Getting started
+
+Prerequisites
+- Node.js 18+ (recommended)
+- MongoDB instance
+- Bunny Stream account (API key + library ID)
+
+
+Install
+bash
+
+- npm install
+
+
+Configure environment variables
+
+bash
+
+- cp .env.example .env
+
+
+Update .env with your values:
+MONGODB_URI=...
+JWT_SECRET=...
+BUNNY_STREAM_API_KEY=...
+BUNNY_STREAM_LIBRARY_ID=...
+BUNNY_STREAM_HOSTNAME=...
+
+Run locally
+
+bash
+
+- npm run dev
+
+
+
+
+Scripts
+bash
+- npm run dev       # start dev server
+- npm run build     # build for production
+- npm run preview   # preview the production build
+- npm run prettier  # format files
+
+Frontend routes
+- / Home feed (all videos)
+- /login Login
+- /register Register
+- /watch_video/:_id Watch page
+- /user User dashboard (protected)
+- /user/my_videos Creator library (protected)
+- /user/upload_videos Upload page (protected)
+
+API routes
+- POST /api/register Create a new user
+- POST /api/login Authenticate and return JWT
+- POST /api/subscribe?userId=... Subscribe/unsubscribe to a channel
+- GET /api/video/my_videos List all videos (public)
+- GET /api/video/my_videos_user List current user’s videos (auth)
+- POST /api/video/upload Initialize Bunny video + return TUS headers (auth)
+- GET /api/video/get-video-details?_id=... Fetch video + channel + comments
+- POST /api/video/comment Add a comment (auth)
+
+Upload flow
+1. Client calls POST /api/video/upload with title + file type.
+2. Server creates a Bunny video entry and returns TUS upload headers.
+3. Client uploads the file directly to Bunny via TUS.
+4. Metadata is stored in MongoDB, and the video becomes available for playback.
+
+Data models (MongoDB)
+
+User:
+- email, password, name
+- subscribes (array of channel IDs)
+- subscribeCount
+
+Video:
+- title, description, userId
+- guid, libraryId, thumbnailUrl, duration, status
+- comments (userId, comment, parentId, createdAt)
+
+
+Project structure
+
+src/
+  components/        React UI + pages
+  layouts/           Astro + app layouts
+  pages/
+    api/             Astro API routes
+  lib/               Bunny CDN + DB utilities
+  model/             Mongoose schemas
+  redux/             Redux store and slices
+  styles/            Global styles
+
+
+Notes
+- Authentication state is stored in Redux and persisted for user data and auth status.
+- The UploadCard component includes drag-and-drop and client-side validation (size/format) and can be reused if needed.
+      `,
     link: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
     featured: true,
     highlights: [
@@ -242,5 +403,6 @@ This project ships well on Netlify, Vercel, or any Node-compatible platform that
       "Playback with comments and subscriptions",
       "Responsive, media-first UI",
     ],
+    tags: ["Node.js","React","TypeScript", "MongoDB","Cloud(BunnyCDN)","Astro", "Tailwind CSS"],
   },
 ];
