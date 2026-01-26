@@ -219,13 +219,24 @@ export default function ProjectDetailsPage() {
                 </a>
                 )}
 
-                {project?.githublink && (<a href={project.githublink} target="_blank" rel="noopener noreferrer">
-                  <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-[hsl(252,37%,55%)] text-gray-700
-                   dark:text-[hsl(0,0%,96%)] rounded-xl focus:outline-none">
-                    <Github className="w-5 h-5" />
-                    View Code
-                  </button>
-                </a>
+                {project?.githublink && (
+                  <a
+                   href={project.githublink}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                 >
+                   <button
+                     className="group flex items-center gap-2 px-4 py-2 border border-gray-300
+                     dark:border-[hsl(252,37%,55%)] text-gray-700 dark:text-[hsl(0,0%,96%)]
+                     rounded-xl focus:outline-none"
+                   >
+                     <Github
+                       className="w-5 h-5 transition-transform duration-500 ease-in-out
+                       group-hover:rotate-[360deg]"
+                     />
+                     View Code
+                   </button>
+                 </a>
                 )}
               </div>
             </div>
