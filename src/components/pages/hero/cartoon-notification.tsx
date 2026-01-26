@@ -40,7 +40,7 @@ export default function CartoonNotification({
             <div className="text-center">
               <div className="text-4xl mb-2">👋</div>
               <p className="font-bold text-gray-800 text-lg">Welcome!</p>
-              <p className="text-gray-700 text-sm mt-1">Let's build something awesome!</p>
+              <p className="text-gray-700 text-sm mt-1">This is Shiddhartha</p>
             </div>
 
             {/* Sparkles */}

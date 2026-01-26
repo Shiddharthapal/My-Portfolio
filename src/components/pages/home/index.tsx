@@ -11,9 +11,9 @@ export default function Home() {
     <div className="bg-[hsl(270,20%,98%)] dark:bg-[hsl(260,29%,10%)]">
       <Hero />
       <About />
+      <Exprience />
       <Skill />
       <Projects />
-      <Exprience />
       <Contact />
       <PortfolioFooter />
     </div>

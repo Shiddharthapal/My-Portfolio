@@ -104,7 +104,7 @@ const platforms: PlatformData[] = [
       id="resume"
       className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] py-20"
     >
-      <main className="  mx-auto  py-16 px-4 items-center max-w-7xl">
+      <main className="  mx-auto pt-2 pb-14 px-4 items-center max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -352,7 +352,7 @@ const platforms: PlatformData[] = [
                       dark:bg-[hsl(259,30%,18%)]  dark:text-[hsl(0,0%,96%)] px-3 py-1 rounded-full
                         "
                         >
-                          CGPA:  3.82 / 4.00
+                          CGPA:  3.77 / 4.00
                         </span>
                         <span
                           className="text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
