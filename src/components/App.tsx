@@ -3,6 +3,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Exprience from "./pages/exprience";
 import Project from "./pages/project";
+import ProjectDetails from "./pages/project/details";
 import Hero from "./pages/hero";
 import Skills from "./pages/skill";
 import Dream from "./pages/about/dream";
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Exprience />} />
             <Route path="/project" element={<Project />} />
+            <Route path="/project/:slug" element={<ProjectDetails />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/hero" element={<Hero />} />
             <Route path="/skill" element={<Skills />} />

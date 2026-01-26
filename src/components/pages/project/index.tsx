@@ -2,60 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
+import { Link } from "react-router-dom";
+import { projects } from "./projects-data";
 
 export default function ProjectsPage() {
   const isMobile = window.innerWidth < 768;
-  const projects = [
-    {
-      id: 1,
-      title: "MediCare+",
-      description:
-        "MediCare+ is a modern, responsive, and interactive Medical Center Fullstack web application. This platform is built for users to take live medication from home.",
-      image: "/MediCare+.png",
-      alt: "MediCare+",
-      tags: [
-        "Node.js",
-        "React",
-        "REST APIs",
-        "MongoDB",
-        "TypeScript",
-        "JavaScript",
-        "Web RTC",
-        "Bunny CDN",
-        "Astro",
-      ],
-      link: "https://github.com/Shiddharthapal/MediCare-",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "Contest Tracker",
-      description:
-        "Contest Tracker is a responsive, and interactive contest tracking Fullstack web application. It's built for users to explore their details that are merge from different platform like codeforces (api available).",
-      image: "/ContestTracker.png",
-      alt: "Contest Tracker",
-      tags: [
-        "React",
-        "Node.js",
-        "REST APIs",
-        "MongoDB",
-        "Tailwind CSS",
-        "Astro",
-      ],
-      link: "https://github.com/Shiddharthapal/Codeforces-Portfolio",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "Ant-Tube",
-      description:
-        "A modern video streaming platform featuring video uploads, playback, comments, and user subscriptions. Built with Node.js, React, Astro for seamless performance and engaging user experience.",
-      image: "/image.png",
-      tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind CSS"],
-      link: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
-      featured: true,
-    },
-  ];
 
   return (
     <section
@@ -97,11 +48,11 @@ export default function ProjectsPage() {
                   {projects.map((project) => (
                     <Card
                       key={project.id}
-                      className="overflow-hidden border-none flex flex-row shadow-md hover:shadow-lg dark:hover:shadow-md 
+                      className="overflow-hidden border-none flex flex-col md:flex-row shadow-md hover:shadow-lg dark:hover:shadow-md 
                     hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)] transition-shadow duration-300"
                     >
                       {/* Project Image - Left Side */}
-                      <div className="relative h-auto w-1/2 flex-shrink-0 bg-muted overflow-hidden">
+                      <div className="relative h-auto w-full md:w-1/2 flex-shrink-0 bg-muted overflow-hidden">
                         <img
                           src={project.image || project.alt}
                           alt={project.title}
@@ -114,8 +65,14 @@ export default function ProjectsPage() {
                         <h3 className="text-2xl dark:text-[hsl(0,0%,96%)] font-bold mb-2 line-clamp-2">
                           {project.title}
                         </h3>
-                        <p className="text-muted-foreground text-md  line-clamp-2 flex-1 dark:text-[hsl(261,15%,70%)]">
+                        <p className="text-muted-foreground text-md line-clamp-2 flex-1 dark:text-[hsl(261,15%,70%)]">
                           {project.description}
+                          <Link
+                            to={`/project/${project.slug}`}
+                            className="ml-2 inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+                          >
+                            more
+                          </Link>
                         </p>
 
                         {/* Tags */}
