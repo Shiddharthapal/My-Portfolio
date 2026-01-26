@@ -69,7 +69,7 @@ export default function ProjectsPage() {
                           {project.description}
                           <Link
                             to={`/project/${project.slug}`}
-                            className="ml-2 inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+                            className="ml-2 focus:outline-none inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
                           >
                             more
                           </Link>
@@ -89,49 +89,71 @@ export default function ProjectsPage() {
                         </div>
                         {isMobile ? (
                           <div className="flex flex-col gap-4 mt-6">
-                            <button
-                              className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
-                          hover:bg-gradient-to-br font-semibold transition-colors duration-300 rounded-xl focus:outline-none "
-                            >
-                              Live Demo
-                            </button>
-                            <a
-                              href={project?.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <button
-                                className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
-                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
-                         font-semibold rounded-xl transition-all duration-300   "
+                            {project?.projectlink && (
+                              <a 
+                                href={project?.projectlink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
                               >
-                                <Github className="w-5 h-5" />
-                                View Code
-                              </button>
-                            </a>
+                                <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
+                                hover:bg-gradient-to-br font-semibold rounded-xl focus:outline-none">
+                                  Live Demo
+                                </button>
+                              </a>
+                            )}
+                            {project?.githublink && (
+                              <a
+                                href={project.githublink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <button
+                                  className="group flex items-center gap-2 px-4 py-2 border border-gray-300
+                                  dark:border-[hsl(252,37%,55%)] text-gray-700 dark:text-[hsl(0,0%,96%)]
+                                  rounded-xl focus:outline-none"
+                                >
+                                  <Github
+                                    className="w-5 h-5 transition-transform duration-500 ease-in-out
+                                    group-hover:rotate-[360deg]"
+                                  />
+                                  View Code
+                                </button>
+                              </a>
+                            )}
                           </div>
                         ) : (
                           <div className="flex flex-row gap-4 mt-6">
-                            <button
-                              className=" px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
-                          hover:bg-gradient-to-br font-semibold transition-colors duration-300 rounded-xl focus:outline-none "
-                            >
-                              Live Demo
-                            </button>
-                            <a
-                              href={project?.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <button
-                                className="flex items-center gap-2 px-4 py-2 bg-transparent border border-gray-300 focus:outline-none
-                         dark:border-[hsl(252,37%,55%)] hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-[hsl(0,0%,96%)] 
-                         font-semibold rounded-xl transition-all duration-300 "
+                            {project?.projectlink && (
+                              <a 
+                                href={project?.projectlink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
                               >
-                                <Github className="w-5 h-5" />
-                                View Code
-                              </button>
-                            </a>
+                                <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
+                                hover:bg-gradient-to-br font-semibold rounded-xl focus:outline-none">
+                                  Live Demo
+                                </button>
+                              </a>
+                            )}
+                            {project?.githublink && (
+                              <a
+                                href={project.githublink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <button
+                                  className="group flex items-center gap-2 px-4 py-2 border border-gray-300
+                                  dark:border-[hsl(252,37%,55%)] text-gray-700 dark:text-[hsl(0,0%,96%)]
+                                  rounded-xl focus:outline-none"
+                                >
+                                  <Github
+                                    className="w-5 h-5 transition-transform duration-500 ease-in-out
+                                    group-hover:rotate-[360deg]"
+                                  />
+                                  View Code
+                                </button>
+                              </a>
+                            )}
                           </div>
                         )}
                       </div>
