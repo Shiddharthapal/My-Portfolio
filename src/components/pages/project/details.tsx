@@ -209,15 +209,22 @@ export default function ProjectDetailsPage() {
               </div>
 
               <div className="mt-2 flex items-center gap-4">
-                <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white font-semibold rounded-xl">
-                  Live Demo
-                </button>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-[hsl(252,37%,55%)] text-gray-700 dark:text-[hsl(0,0%,96%)] rounded-xl">
+                {project?.projectlink && (<a href={project?.projectlink} target="_blank" rel="noopener noreferrer">
+                  <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
+                   font-semibold rounded-xl focus:outline-none">
+                    Live Demo
+                  </button>
+                </a>
+                )}
+
+                {project?.githublink && (<a href={project.githublink} target="_blank" rel="noopener noreferrer">
+                  <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-[hsl(252,37%,55%)] text-gray-700
+                   dark:text-[hsl(0,0%,96%)] rounded-xl focus:outline-none">
                     <Github className="w-5 h-5" />
                     View Code
                   </button>
                 </a>
+                )}
               </div>
             </div>
           </div>
