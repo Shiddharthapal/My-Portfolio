@@ -30,16 +30,7 @@ export default function About() {
       label2: "",
       color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
-    },
-    {
-      icon: Code,
-      count: 52,
-      suffix: "K+",
-      label1: "Lines of Code",
-      label2: "",
-      color: "text-[hsl(251,85%,75%)]",
-      bgColor: "bg-purple-50",
-    },
+    }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -92,22 +83,8 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className=" gap-8 items-center">
             <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%] mt-4 md:w-[85%] ">
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-purple-800
-              dark: rounded-lg translate-x-6 translate-y-6"
-              ></div>
-
-              <motion.img
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                src="/about.jpg"
-                alt="About Me"
-                className="rounded-lg shadow-lg w-full relative z-10"
-              />
             </div>
             <div>
               <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8 dark:text-[hsl(0,0%,96%)]">
@@ -117,68 +94,20 @@ export default function About() {
                 </span>{" "}
               </h2>
               <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6">
-                I’m a passionate Software Engineer and Competitive Programmer with a strong foundation in problem-solving and 
-                Data Structures & Algorithms (DSA). I specialize in building full-stack web applications using the MERN stack, 
-                Next.js, and Astro, with experience in MySQL, cloud technologies, and AI-driven solutions such as AI agents.
-              </p>
-              <div className="max-w-md bg-white dark:bg-[hsl(260,29%,10%)] rounded-lg">
-                {/* Fullname */}
-                <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
-                    Full name:
-                  </div>
-                  <div className="flex-1 text-gray-600 dark:text-[hsl(0,0%,96%)]">
-                    Shiddhartha Pal
-                  </div>
-                </div>
-
-                {/* Address */}
-                <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
-                    Address:
-                  </div>
-                  <div className="flex-1 text-gray-600 dark:text-[hsl(0,0%,96%)]">
-                    Dhaka, Bangladesh
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex text-lg mb-3">
-                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
-                    Email:
-                  </div>
-                  <a
-              href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 text-[hsl(251,85%,75%)]  focus:outline-none hover:underline   transition"
-            >
-                    shiddhartpal01355@gmail.com
-       
-                  </a>
-                </div>
-
-                {/* Phone */}
-                <div className="flex text-lg mb-8">
-                  <div className="w-32 text-gray-700 dark:text-[hsl(0,0%,96%)] font-medium">
-                    Phone:
-                  </div>
-                  <div className="flex-1 text-[hsl(251,85%,75%)]">
-                    +8801860680768
-                  </div>
-                </div>
-
-                {/* Contact Button */}
+                I come from a small rural village where dreams are often bigger
+                than the resources around you. My father is a businessman who
+                studied only up to class 5, and my mother is a homemaker who
+                studied till class 9.
                 <button
-                  key="contact"
-                  onClick={() => scrollToSection("contact")}
-                  className="px-8 py-3 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white 
-                  rounded-lg hover:bg-gradient-to-br transition-colors duration-200 focus:outline-none"
+                  type="button"
+                  onClick={() => navigate("/dream")}
+                  className="ml-2 focus:outline-none inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
                 >
-                  Contact Me
+                  more
                 </button>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-9">
+              </p>
+              
+              <div className="grid grid-cols-3 gap-6 mt-9">
                 {stats.map((stat, index) => (
                   <div
                     key={index}

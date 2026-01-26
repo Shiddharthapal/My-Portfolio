@@ -10,9 +10,9 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", section: "home" },
     { name: "About", section: "about" },
+    { name: "Exprience", section: "resume" },
     { name: "Skills", section: "skills" },
     { name: "Projects", section: "projects" },
-    { name: "Exprience", section: "resume" },
     { name: "Contact", section: "contact" },
   ];
 

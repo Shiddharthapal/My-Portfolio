@@ -1,54 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SkillCard from "./skill-card";
 import { motion } from "framer-motion";
 
 const SKILLS_DATA = {
-  all: [
-    { name: "ReactJs", icon: "code", category: "frontend" },
+  coreskills: [
+    { name: "React.js", icon: "code", category: "frontend" },
     { name: "Redux", icon: "workflow", category: "frontend" },
-    { name: "Hooks", icon: "webhook", category: "frontend" },
-    { name: "Astro", icon: "rocket", category: "frontend" },
-    { name: "NextJs", icon: "code", category: "frontend" },
-    { name: "JavaScript", icon: "squareterminal", category: "frontend" },
-    { name: "TypeScript", icon: "squareterminal", category: "frontend" },
-    { name: "HTML/CSS", icon: "fileterminal", category: "frontend" },
-    { name: "Tailwind CSS", icon: "paintbrush", category: "frontend" },
-    { name: "Styled Component", icon: "paintbrush", category: "frontend" },
-    { name: "Framer Motion", icon: "code", category: "frontend" },
-    { name: "Webpack", icon: "code", category: "frontend" },
     { name: "Node.js", icon: "code", category: "backend" },
     { name: "REST APIs", icon: "workflow", category: "backend" },
     { name: "MongoDB", icon: "box", category: "backend" },
-    { name: "Mongoose", icon: "box", category: "backend" },
+    { name: "Next.js", icon: "code", category: "frontend" },
+    { name: "Astro", icon: "rocket", category: "frontend" },
+    { name: "TypeScript", icon: "squareterminal", category: "frontend" },
     { name: "MySQL", icon: "box", category: "backend" },
-    { name: "JWT/RBAC", icon: "lock", category: "backend" },
-    { name: "Redis", icon: "code", category: "backend" },
-    { name: "Rate Limit", icon: "infinity", category: "backend" },
-    { name: "Aggregation Pipeline", icon: "code", category: "backend" },
-    { name: "Web RTC", icon: "video", category: "tools" },
-    { name: "Git", icon: "gitmerge", category: "tools" },
-    { name: "GitHub", icon: "gitmerge", category: "tools" },
-    { name: "GitHub Actions", icon: "gitmerge", category: "tools" },
-    { name: "AI Agent", icon: "bot", category: "tools" },
-    { name: "AWS", icon: "cloud", category: "tools" },
-    { name: "Bunny CDN", icon: "cloud", category: "tools" },
-    { name: "CI/CD", icon: "gitmerge", category: "tools" },
-    { name: "Postman", icon: "setting", category: "tools" },
-    { name: "Vercel", icon: "setting", category: "tools" },
-    { name: "Netlify", icon: "setting", category: "tools" },
-    { name: "VS Code", icon: "setting", category: "tools" },
-    { name: "Problem Solving", icon: "code", category: "softskills" },
-    { name: "Communication", icon: "users", category: "softskills" },
-    { name: "Team Work", icon: "users", category: "softskills" },
-    { name: "Team Leadership", icon: "users", category: "softskills" },
-    { name: "Decision Making", icon: "users", category: "softskills" },
-    { name: "Adaptability", icon: "users", category: "softskills" },
-    { name: "Quick Learning", icon: "code", category: "softskills" },
   ],
   frontend: [
-    { name: "ReactJs", icon: "code", category: "frontend" },
+    { name: "React.Js", icon: "code", category: "frontend" },
     { name: "Redux", icon: "workflow", category: "frontend" },
     { name: "Hooks", icon: "webhook", category: "frontend" },
     { name: "Astro", icon: "rocket", category: "frontend" },
@@ -57,7 +26,6 @@ const SKILLS_DATA = {
     { name: "TypeScript", icon: "squareterminal", category: "frontend" },
     { name: "HTML/CSS", icon: "fileterminal", category: "frontend" },
     { name: "Tailwind CSS", icon: "paintbrush", category: "frontend" },
-    { name: "Styled Component", icon: "paintbrush", category: "frontend" },
     { name: "Framer Motion", icon: "code", category: "frontend" },
     { name: "Webpack", icon: "code", category: "frontend" },
   ],
@@ -90,17 +58,15 @@ const SKILLS_DATA = {
     { name: "Problem Solving", icon: "code", category: "softskills" },
     { name: "Communication", icon: "users", category: "softskills" },
     { name: "Team Work", icon: "users", category: "softskills" },
-    { name: "Team Leadership", icon: "users", category: "softskills" },
     { name: "Decision Making", icon: "users", category: "softskills" },
-    { name: "Adaptability", icon: "users", category: "softskills" },
-    { name: "Quick Learning", icon: "code", category: "softskills" },
   ],
 };
 
 export default function SkillsSection() {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("coreskills");
+  const sliderRef = useRef<HTMLDivElement | null>(null);
 
-  const tabs = ["All", "Frontend", "Backend", "Tools", "SoftSkills"];
+  const tabs = ["CoreSkills", "Frontend", "Backend", "Tools", "SoftSkills"];
   const skills = SKILLS_DATA[activeTab as keyof typeof SKILLS_DATA];
 
   return (
@@ -108,7 +74,7 @@ export default function SkillsSection() {
       id="skills"
       className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 py-20"
     >
-      <div className=" sm:mx-5 2xl:mx-auto  items-center max-w-7xl px-1">
+      <div className=" sm:mx-5 2xl:mx-auto  items-center w-full px-1">
         {" "}
         {/* Use flex + justify-center instead of mx-auto */}
         <motion.div
@@ -149,10 +115,30 @@ export default function SkillsSection() {
               ))}
             </div>
           </div>
-          {/* Skills Grid */}
-          <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+
+          {/* Skills Grid (desktop) / Slider (mobile, tablet) */}
+          <div
+            ref={sliderRef}
+            onWheel={(event) => {
+              if (!sliderRef.current) return;
+              if (window.innerWidth >= 1024) return;
+              if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+              event.preventDefault();
+              sliderRef.current.scrollBy({
+                left: event.deltaY,
+                behavior: "auto",
+              });
+            }}
+            className="flex gap-6 custom-x-scrollbar scroll-smooth pb-2
+            lg:grid lg:grid-cols-6 lg:gap-6 lg:overflow-visible"
+          >
             {skills.map((skill) => (
-              <SkillCard key={skill.name} skill={skill} />
+              <div
+                key={skill.name}
+                className="snap-start shrink-0 basis-[calc(50%-0.75rem)] md:basis-[calc(25%-0.75rem)] lg:basis-auto lg:shrink"
+              >
+                <SkillCard skill={skill} />
+              </div>
             ))}
           </div>
         </motion.div>

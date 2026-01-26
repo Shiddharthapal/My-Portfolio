@@ -158,6 +158,31 @@ html {
   }
 }
 
+/* Custom scrollbar styles for x */
+  .custom-x-scrollbar {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(251,85%,75%) transparent;
+  }
+
+  /* For Webkit browsers (Chrome, Safari, Edge) */
+  .custom-x-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-x-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-x-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(251,85%,75%);
+    border-radius: 4px;
+  }
+
+  .custom-x-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(251,85%,75%);
+  }
+
 @layer base {
   * {
     @apply border-border;

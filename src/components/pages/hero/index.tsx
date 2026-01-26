@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import RightSidebar from "./right-sidebar";
+import CartoonNotification from "./cartoon-notification";
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [jumpOffsets, setJumpOffsets] = useState([0, 0, 0, 0, 0, 0]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const badges = [
   { id: 1, label: "DSA", angle: 0 },
@@ -96,6 +99,12 @@ useEffect(() => {
       id="hero"
       className="min-h-screen flex items-center justify-center px-6 "
     >
+      <CartoonNotification onMenuOpen={() => setIsSidebarOpen(true)} />
+      <RightSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        
+      />
       {/*  Main Container with 2 columns */}
       <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
         {/* Left Side - Text Content */}
@@ -105,15 +114,16 @@ useEffect(() => {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <span className="relative inline-block bg-[hsl(260,60%,94%)] px-6 py-1 mt-2 rounded-full text-[hsl(257,30%,50%)] font-semibold dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(257,30%,50%)]">
-  {/* Animated dot with pulse effect */}
-  <span className="absolute -top-0 -right-0 flex h-3 w-3">
-    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
-    <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
-  </span>
-  
-  Welcome my portfolio
-</span>
+          <span className="relative inline-block bg-[hsl(260,60%,94%)] px-6 py-1 mt-2 rounded-full 
+          text-[hsl(257,30%,50%)] font-semibold dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(257,30%,50%)]">
+          {/* Animated dot with pulse effect */}
+          <span className="absolute -top-0 -right-0 flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
+          </span>
+
+          Welcome my portfolio
+        </span>
           <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-600 dark:text-[hsl(0,0%,96%)] font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -127,48 +137,41 @@ useEffect(() => {
             I build modern, responsive web applications with a focus on user
             experience and performance.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              key="contact"
-              onClick={() => scrollToSection("contact")}
-              className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white rounded-lg hover:bg-gradient-to-br transition-colors duration-200"
-            >
-              Get in Touch
-            </a>
-
-            <a
-              key="projects"
-              onClick={() => scrollToSection("projects")}
-              className="px-4 py-2 border border-[hsl(257,30%,50%)] text-gray-700 rounded-lg 
-              hover:bg-[hsl(260,60%,94%)] dark:text-[hsl(0,0%,96%)] dark:hover:bg-[hsl(260,29%,20%)] transition-colors duration-200"
-            >
-              View Projects
-            </a>
-          </div>
+          
           <div className="flex gap-4">
             <a
               href="https://github.com/Shiddharthapal"
               target="_blank"
               rel="noopener noreferrer"
-              className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
+              className=" focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
             >
-              <Github className="w-5 h-5 text-gray-700  dark:text-[hsl(0,0%,96%)]" />
+              <Github className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
             </a>
             <a
               href="https://www.linkedin.com/in/shiddharthapal/"
               target="_blank"
               rel="noopener noreferrer"
-              className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]     transition"
+              className=" focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]     transition"
             >
-              <Linkedin className="w-5 h-5 text-gray-700 dark:text-[hsl(0,0%,96%)]" />
+              <Linkedin className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
             </a>
             <a
               href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
               rel="noopener noreferrer"
-              className=" focus:outline-none p-3 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]     transition"
+              className=" focus:outline-none p-4 hover:rounded-full  hover:bg-[hsl(251,85%,75%)] 
+              dark:hover:bg-[hsl(251,85%,75%)] transition"
             >
-              <Mail className="w-5 h-5 text-gray-700 dark:text-[hsl(0,0%,96%)]" />
+              <Mail className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
             </a>
+            <a
+             href="https://wa.me/01860680768"
+             target="_blank"
+             rel="noopener noreferrer"
+             className=" focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
+              dark:hover:bg-[hsl(251,85%,75%)] transition"
+           >
+             <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+           </a>
           </div>
         </motion.div>
 
