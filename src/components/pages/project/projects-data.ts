@@ -7,7 +7,8 @@ export type ProjectData = {
   image: string;
   alt: string;
   tags: string[];
-  link: string;
+  projectlink?: string;
+  githublink?: string;
   featured: boolean;
   highlights?: string[];
 };
@@ -34,7 +35,8 @@ export const projects: ProjectData[] = [
       "Bunny CDN",
       "Astro",
     ],
-    link: "https://github.com/Shiddharthapal/MediCare-",
+    projectlink: "https://aymedicare.netlify.app/",
+    githublink: "https://github.com/Shiddharthapal/MediCare-",
     featured: true,
     highlights: [
       "Role-based dashboards for patients and staff",
@@ -48,19 +50,20 @@ export const projects: ProjectData[] = [
     title: "Contest Tracker",
     description:
       "Contest Tracker is a responsive, and interactive contest tracking Fullstack web application. It's built for users to explore their details that are merge from different platform like codeforces (api available).",
-    longDescription:
+      longDescription:
       "Contest Tracker aggregates contest and user data across competitive programming platforms, with a focus on Codeforces. It provides dashboards, contest discovery, and merged profile insights to help users track progress and plan practice.",
-    image: "/ContestTracker.png",
-    alt: "Contest Tracker",
-    tags: [
-      "React",
-      "Node.js",
-      "REST APIs",
-      "MongoDB",
-      "Tailwind CSS",
-      "Astro",
-    ],
-    link: "https://github.com/Shiddharthapal/Codeforces-Portfolio",
+      image: "/ContestTracker.png",
+      alt: "Contest Tracker",
+      tags: [
+        "React",
+        "Node.js",
+        "REST APIs",
+        "MongoDB",
+        "Tailwind CSS",
+        "Astro",
+      ],
+    projectlink: "https://contestracker.netlify.app/",
+    githublink: "https://github.com/Shiddharthapal/Codeforces-Portfolio",
     featured: true,
     highlights: [
       "Cross-platform user profile aggregation",
@@ -79,7 +82,7 @@ export const projects: ProjectData[] = [
     image: "/image.png",
     alt: "Ant-Tube",
     tags: ["Astro", "React", "Node.js", "TypeScript", "Tailwind CSS"],
-    link: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
+    githublink: "https://drive.google.com/drive/folders/1tpMSZa72x5wwZ4W79UjPbVEgezsRb9Tw?usp=sharing",
     featured: true,
     highlights: [
       "Creator-friendly upload pipeline",
