@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { projects } from "./projects-data";
 import { projectData } from "./projects-description";
+import { Button } from "@/components/ui/button";
 
 export default function ProjectDetailsPage() {
   const { slug } = useParams();
@@ -109,16 +110,17 @@ export default function ProjectDetailsPage() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-8">
+    <section className="min-h-screen flex items-center justify-center bg-purple-100 dark:bg-[hsl(259,30%,18%)] px-6 py-8">
       <main className="mx-auto max-w-5xl pt-10 w-full">
-        <div className="mb-6 flex items-center justify-between">
-          <button
+        <div className="mb-3 flex items-center justify-between">
+          <Button
             type="button"
             onClick={() => navigate(-1)}
-            className="text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+            className="focus:outline-none bg-[hsl(262,31%,12%)] hover:bg-[hsl(259,30%,18%)] hover:text-purple-600
+             text-[hsl(0,0%,96%)] dark:hover:text-purple-400 transition-colors duration-200"
           >
-            {"<- Back"}
-          </button>
+            Back
+          </Button>
         </div>
 
         <Card className="overflow-hidden border-none shadow-md dark:bg-[hsl(262,31%,12%)]">
