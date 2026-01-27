@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import RightSidebar from "./right-sidebar";
 import CartoonNotification from "./cartoon-notification";
@@ -158,8 +158,7 @@ useEffect(() => {
             <a
               href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
               rel="noopener noreferrer"
-              className=" focus:outline-none p-4 hover:rounded-full  hover:bg-[hsl(251,85%,75%)] 
-              dark:hover:bg-[hsl(251,85%,75%)] transition"
+              className="focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
             >
               <Mail className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
             </a>
@@ -167,11 +166,17 @@ useEffect(() => {
              href="https://wa.me/01860680768"
              target="_blank"
              rel="noopener noreferrer"
-             className=" focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
-              dark:hover:bg-[hsl(251,85%,75%)] transition"
+             className=" focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
            >
              <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
            </a>
+          <a
+            href="tel:01860680768"
+            className="focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
+          >
+            <Phone className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+          </a>
+        
           </div>
         </motion.div>
 
