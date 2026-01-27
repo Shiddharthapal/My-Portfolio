@@ -74,7 +74,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-2 py-5"
+      className="min-h-screen flex items-center justify-center px-2 pb-5"
     >
       <div className=" mx-auto items-center max-w-7xl px-4">
         <motion.div
@@ -84,9 +84,9 @@ export default function About() {
           transition={{ duration: 0.5 }}
         >
           <div className=" gap-8 items-center">
-            <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%] mt-4 md:w-[85%] ">
+            <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%]  md:w-[85%] ">
             </div>
-            <div>
+            <div className="text-center">
               <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8 dark:text-[hsl(0,0%,96%)]">
                 About{" "}
                 <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
