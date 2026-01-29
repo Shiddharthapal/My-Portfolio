@@ -236,7 +236,9 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                   <div className="space-y-3">
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600 dark:text-gray-400"
+                      style={{ textAlign: "justify" }}
+                      >
                         <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">API Development:</span> Designed and implemented secure, scalable RESTful APIs using 
                         JWT-based authentication, ensuring consistent authorization, data integrity, 
                         and production-grade security standards.
@@ -244,7 +246,9 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600 dark:text-gray-400"
+                      style={{ textAlign: "justify" }}
+                      >
                         <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">Asynchronous JavaScript:</span> Applied Promises and async/await patterns to manage complex
                          asynchronous workflows, improving
                          code readability while maintaining a highly efficient, non-blocking event loop.
@@ -252,7 +256,9 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600 dark:text-gray-400"
+                      style={{ textAlign: "justify" }}
+                      >
                         <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">Performance Optimization:</span> Implemented lazy loading and code-splitting strategies 
                         to optimize front-end performance, reducing initial JavaScript bundle size  
                         and improving Time to Interactive (TTI).
@@ -260,21 +266,27 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600 dark:text-gray-400"
+                      style={{ textAlign: "justify" }}
+                      >
                         <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">Database Management:</span> Refactored Mongoose schemas and optimized indexing strategies,
                          resulting faster execution of heavy queries and improved memory stability under high load.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600 dark:text-gray-400"
+                      style={{ textAlign: "justify" }}
+                      >
                         <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">State Management:</span> Standardized application state using Redux Toolkit, reducing bugs
                          caused by prop drilling and increasing overall developer velocity.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-600 dark:text-gray-400">
+                      <p className="text-gray-600 dark:text-gray-400"
+                      style={{ textAlign: "justify" }}
+                      >
                         <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">AI-Enhanced Development Workflow:</span> Actively leveraged AI development tools 
                         (Codex, Claude, V0) to accelerate feature development, debugging, and architectural decision-making.
                       </p>
@@ -312,7 +324,9 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                           dark:border-[hsl(255,41%,19%)] dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]"
                       >
                         <div className="flex flex-row h-full">
-                          <div className="flex-1">
+                          <div className="flex-1"
+                          style={{ textAlign: "justify" }}
+                          >
                             <h4 className="font-semibold text-gray-700 dark:text-gray-300 text-md ">
                               {cert.title}
                             </h4>
@@ -320,7 +334,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                               {cert.org}
                             </p>
                           </div>
-                          <div className="pt-4  border-gray-100 ">
+                          <div className="pt-4 pl-2 border-gray-100 ">
                             <span
                               className="inline-block px-2 text-xs font-semibold  text-gray-700 bg-[hsl(253,100%,94%)] 
                             dark:bg-[hsl(259,30%,18%)]  dark:text-[hsl(0,0%,96%)] rounded-full"
@@ -382,7 +396,9 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                         </span>
                       </div>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="text-gray-600 dark:text-gray-400"
+                    style={{ textAlign: "justify" }}
+                    >
                       Studied BSc in Software Engineering with strong analytical
                       thinking, problem-solving skills and professional
                       experience.
