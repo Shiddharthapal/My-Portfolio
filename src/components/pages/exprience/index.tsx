@@ -104,7 +104,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
   return (
     <section
       id="resume"
-      className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] py-20"
+      className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] pt-5 pb-10"
     >
       <main className="  mx-auto pt-2 pb-14 px-4 items-center w-full">
         <motion.div
@@ -236,50 +236,47 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                   <div className="space-y-3">
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-500">
-                        API Development: Architected secure, scalable RESTful
-                        APIs with JWT authentication, ensuring operational
-                        consistency and safety.
+                      <p className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">API Development:</span> Designed and implemented secure, scalable RESTful APIs using 
+                        JWT-based authentication, ensuring consistent authorization, data integrity, 
+                        and production-grade security standards.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-500">
-                        Asynchronous JavaScript: Leveraged Promises and
-                        async/await to manage complex operations, improve
-                        readability, and maintain a non-blocking event loop.
+                      <p className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">Asynchronous JavaScript:</span> Applied Promises and async/await patterns to manage complex
+                         asynchronous workflows, improving
+                         code readability while maintaining a highly efficient, non-blocking event loop.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-500">
-                        Performance Optimization: Introduced lazy loading + code
-                        splitting; reduced initial JS payload ~45% and improved
-                        TTI ~35%.
+                      <p className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">Performance Optimization:</span> Implemented lazy loading and code-splitting strategies 
+                        to optimize front-end performance, reducing initial JavaScript bundle size  
+                        and improving Time to Interactive (TTI).
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-500">
-                        Database Management: Refactored Mongoose schemas &
-                        indexes; improved heavy query runtime ~40% and
-                        stabilized memory under load.
+                      <p className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">Database Management:</span> Refactored Mongoose schemas and optimized indexing strategies,
+                         resulting faster execution of heavy queries and improved memory stability under high load.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-500">
-                        State Management: Standardized state with Redux Toolkit;
-                        lowered bugs from prop-drilling and improved developer
-                        velocity ~20%.
+                      <p className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">State Management:</span> Standardized application state using Redux Toolkit, reducing bugs
+                         caused by prop drilling and increasing overall developer velocity.
                       </p>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[hsl(251,51%,65%)] flex-shrink-0 mt-0.5" />
-                      <p className="text-gray-500">
-                        AI-Enhanced Workflow: Experienced in using AI agents
-                        (Gemini Code Assist, Gemini CLI, Codex, Claude, V0) to
-                        accelerate development and problem-solving.
+                      <p className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-700 dark:text-[hsl(0,0%,96%)] font-semibold">AI-Enhanced Development Workflow:</span> Actively leveraged AI development tools 
+                        (Codex, Claude, V0) to accelerate feature development, debugging, and architectural decision-making.
                       </p>
                     </div>
                   </div>
@@ -385,7 +382,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                         </span>
                       </div>
                     </div>
-                    <p className="text-gray-500">
+                    <p className="text-gray-600 dark:text-gray-400">
                       Studied BSc in Software Engineering with strong analytical
                       thinking, problem-solving skills and professional
                       experience.
@@ -403,7 +400,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                       Additional Certifications
                     </h3>
                   </div>
-                  <div className="space-y-3 h-[300px] custom-scrollbar sm:h-auto">
+                  <div className="space-y-3 h-[250px] custom-scrollbar sm:h-auto">
                     {[
                       {
                         title: "Participated in the ICPC 2024.",
@@ -449,7 +446,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                             <h4 className="font-semibold text-gray-700 dark:text-gray-300  text-md ">
                               {cert.title}
                             </h4>
-                            <p className="text-sm text-gray-500 mb-1">
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
                               {cert.org}
                             </p>
                           </div>

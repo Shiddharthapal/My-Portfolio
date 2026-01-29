@@ -6,6 +6,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { projects } from "./projects-data";
 import { projectData } from "./projects-description";
 import { Button } from "@/components/ui/button";
+import ScrollToTop from "../ScrollToTop";
 
 export default function ProjectDetailsPage() {
   const { slug } = useParams();
@@ -111,6 +112,7 @@ export default function ProjectDetailsPage() {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-purple-100 dark:bg-[hsl(259,30%,18%)] px-6 py-8">
+      <ScrollToTop/>
       <main className="mx-auto max-w-5xl pt-10 w-full">
         <div className="mb-3 flex items-center justify-between">
           <Button

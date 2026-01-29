@@ -93,11 +93,14 @@ export default function About() {
                   Me
                 </span>{" "}
               </h2>
-              <p className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6">
+              <p
+                className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 text-muted-foreground max-w-full pt-1 pb-4"
+                style={{ textAlign: "justify" }}
+              >
                 I come from a small rural village where dreams are often bigger
                 than the resources around you. My father is a businessman who
                 studied only up to class 5, and my mother is a homemaker who
-                studied till class 9.
+                studied till
                 <button
                   type="button"
                   onClick={() => navigate("/dream")}
