@@ -130,6 +130,11 @@ export default function ProjectDetailsPage() {
               <h1 className="text-3xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
                 {project.title}
               </h1>
+              <img
+                src={project.image || project.alt}
+                alt={project.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
               <div className="flex flex-col gap-4 text-muted-foreground dark:text-[hsl(261,15%,70%)]">
                 {descriptionBlocks.map((block, index) => {
                   if (block.type === "paragraph") {
