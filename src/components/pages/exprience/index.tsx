@@ -186,7 +186,8 @@ const platforms: PlatformData[] = [
                 <div
                   className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-lg mb-6 p-6 border border-purple-100
                  dark:border-[hsl(255,41%,19%)] shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200
-                 dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]"
+                 dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]
+                 h-[360px] custom-scrollbar sm:h-auto "
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -382,7 +383,7 @@ const platforms: PlatformData[] = [
                       Additional Certifications
                     </h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3 h-[300px] custom-scrollbar sm:h-auto">
                     {[
                       {
                         title: "Participated in the ICPC 2024.",
