@@ -27,7 +27,6 @@ const SKILLS_DATA = {
     { name: "HTML/CSS", icon: "fileterminal", category: "frontend" },
     { name: "Tailwind CSS", icon: "paintbrush", category: "frontend" },
     { name: "Framer Motion", icon: "code", category: "frontend" },
-    { name: "Webpack", icon: "code", category: "frontend" },
   ],
   backend: [
     { name: "Node.js", icon: "code", category: "backend" },
@@ -37,8 +36,6 @@ const SKILLS_DATA = {
     { name: "MySQL", icon: "box", category: "backend" },
     { name: "JWT", icon: "lock", category: "backend" },
     { name: "Redis", icon: "code", category: "backend" },
-    { name: "Rate Limit", icon: "infinity", category: "backend" },
-    { name: "Aggregation Pipeline", icon: "code", category: "backend" },
   ],
   tools: [
     { name: "Web RTC", icon: "video", category: "tools" },
@@ -52,7 +49,6 @@ const SKILLS_DATA = {
     { name: "Postman", icon: "setting", category: "tools" },
     { name: "Vercel", icon: "setting", category: "tools" },
     { name: "Netlify", icon: "setting", category: "tools" },
-    { name: "VS Code", icon: "setting", category: "tools" },
   ],
   softskills: [
     { name: "Problem Solving", icon: "code", category: "softskills" },
@@ -98,7 +94,7 @@ export default function SkillsSection() {
           </div>
 
           {/* Tabs */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-3 lg:mb-12">
             <div className="inline-flex items-center  gap-2 flex-wrap bg-[hsl(270,33%,96%)] dark:bg-[hsl(259,31%,12%)] rounded-lg p-1.5">
               {tabs.map((tab) => (
                 <button
