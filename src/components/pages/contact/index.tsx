@@ -36,7 +36,7 @@ export default function Contact() {
     name: "Shiddhartha Pal",
     email: "shiddhartpal01355@gmail.com",
     phone: "+8801860680768",
-    Location: "Bagerhat, Bangladesh",
+    Location: "Dhaka, Bangladesh",
   };
 
   const handleChange = (
@@ -197,15 +197,6 @@ export default function Contact() {
                         </h3>
                         <div className="flex gap-4">
                           <a
-                            href="https://github.com/Shiddharthapal"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
-                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)]  transition"
-                          >
-                            <Github className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
-                          </a>
-                          <a
                             href="https://www.linkedin.com/in/shiddharthapal/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -223,6 +214,22 @@ export default function Contact() {
                           >
                             <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
                           </a>
+                          <a
+                             href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
+                             rel="noopener noreferrer"
+                             className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)]
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)] transition"
+                           >
+                             <Mail className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+                           </a>
+                           
+                         <a
+                           href="tel:01860680768"
+                             className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)]
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)] transition"
+                         >
+                           <Phone className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+                         </a>
                         </div>
                       </div>
                     </div>
