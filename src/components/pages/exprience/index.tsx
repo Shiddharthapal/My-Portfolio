@@ -294,7 +294,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                       Achivement
                     </h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3  h-[180px] custom-scrollbar sm:h-auto ">
                     {[
                       {
                         title: "Recognized by Data Science Lab with a Professional Certificate for successful Full Stack Development on the AI-Medicare+ healthcare AI web application",
@@ -386,7 +386,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                       </div>
                     </div>
                     <p className="text-gray-500">
-                      Studies BSc in Software Engineering with strong analytical
+                      Studied BSc in Software Engineering with strong analytical
                       thinking, problem-solving skills and professional
                       experience.
                     </p>
