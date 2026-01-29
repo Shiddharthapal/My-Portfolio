@@ -7,6 +7,7 @@ import {
   LockKeyholeOpen,
    Code, Trophy, Zap, Target
 } from "lucide-react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -22,7 +23,7 @@ import { Button } from "@/components/ui/button"
 
 function ProblemSolvingCard({ platform }: { platform: PlatformData }) {
   return (
-    <Card className="group bg-white dark:bg-[hsl(262,31%,12%)] rounded-xl  shadow-sm
+    <Card className="group bg-white dark:bg-[hsl(262,31%,12%)] snap-start shrink-0 basis-[calc(50%-0.75rem)] md:basis-[calc(25%-0.75rem)] lg:basis-auto lg:shrink rounded-xl  shadow-sm
       hover:shadow-lg transition-shadow hover:shadow-purple-200 px-0 py-0 border border-purple-100
       dark:border-[hsl(255,41%,19%)] dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]">
       <CardHeader className="pb-1">
@@ -99,12 +100,13 @@ const platforms: PlatformData[] = [
     description: "Focused on first solving skills with key skills",
   },
 ]
+const sliderRef = useRef<HTMLDivElement | null>(null);
   return (
     <section
       id="resume"
       className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] py-20"
     >
-      <main className="  mx-auto pt-2 pb-14 px-4 items-center max-w-7xl">
+      <main className="  mx-auto pt-2 pb-14 px-4 items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,9 +142,27 @@ const platforms: PlatformData[] = [
           </div>
 
            {/* Cards Grid */}
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+           <div
+            ref={sliderRef}
+            onWheel={(event) => {
+              if (!sliderRef.current) return;
+              if (window.innerWidth >= 1024) return;
+              if (Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+              event.preventDefault();
+              sliderRef.current.scrollBy({
+                left: event.deltaY,
+                behavior: "auto",
+              });
+            }}
+            className="flex gap-6 custom-x-scrollbar scroll-smooth pb-2
+            lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible"
+          >
              {platforms.map((platform) => (
-               <ProblemSolvingCard key={platform.name} platform={platform} />
+               <ProblemSolvingCard 
+               key={platform.name} 
+               platform={platform} 
+               
+               />
              ))}
            </div>
            
