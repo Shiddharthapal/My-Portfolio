@@ -60,9 +60,8 @@ export default function SkillCard({ skill }: SkillCardProps) {
   return (
     <div
       className="bg-white dark:bg-[hsl(262,31%,12%)] dark:border dark:border-[hsl(255,64%,23%)]
-       rounded-lg p-6 shadow-sm hover:shadow-lg dark:hover:shadow-md hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)]
-        transition-shadow 
-    flex flex-col items-center justify-center text-center min-h-32"
+      rounded-lg p-3 lg:p-6 shadow-sm hover:shadow-lg dark:hover:shadow-md hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)]
+      transition-shadow flex flex-col items-center justify-center text-center min-h-28"
     >
       <div className="mb-3">{ICON_MAP[skill.icon] || ICON_MAP.code}</div>
       <h3 className="text-gray-900 dark:text-[hsl(0,0%,96%)] font-semibold text-sm">
