@@ -19,7 +19,7 @@ export const projects: ProjectData[] = [
     slug: "medicare-plus",
     title: "MediCare+",
     description:
-      "MediCare+ is a modern, responsive, and interactive Medical Center Fullstack web application. This platform is built for ",
+      "MediCare+ is a modern, responsive, and interactive Medical Center Fullstack ",
     longDescription:
       "MediCare+ is a fullstack medical center platform designed to streamline patient discovery, appointment workflows, and clinic operations. The app focuses on clean UX, fast navigation, and role-based features for patients and staff. It integrates realtime communication and scalable media delivery to keep performance smooth under load.",
     image: "/MediCare+.png",
@@ -46,7 +46,7 @@ export const projects: ProjectData[] = [
     slug: "contest-tracker",
     title: "Contest Tracker",
     description:
-      "Contest Tracker is a responsive, and interactive contest tracking Fullstack web application. It's built for users to explore their details that are merge from different platform like codeforces (api available).",
+      "Contest Tracker is a responsive, and interactive contest tracking ",
       longDescription:
       "Contest Tracker aggregates contest and user data across competitive programming platforms, with a focus on Codeforces. It provides dashboards, contest discovery, and merged profile insights to help users track progress and plan practice.",
       image: "/ContestTracker.png",
@@ -73,7 +73,7 @@ export const projects: ProjectData[] = [
     slug: "diu_course_tube",
     title: "DIU Course Tube",
     description:
-      "DIU Course Tube is a modern, YouTube‑style web app built",
+      "DIU Course Tube is a modern, YouTube‑style web ",
     longDescription:
       "DIU Course Tube is a video streaming platform that supports uploads, subscriptions, comments, and responsive playback. The project focuses on performance, smooth browsing, and a creator-friendly workflow while keeping the UI lightweight.",
     image: "/image.png",

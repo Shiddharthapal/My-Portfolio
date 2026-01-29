@@ -48,11 +48,11 @@ export default function ProjectsPage() {
                   {projects.map((project) => (
                     <Card
                       key={project.id}
-                      className="overflow-hidden border-none flex flex-col md:flex-row shadow-md hover:shadow-lg dark:hover:shadow-md 
+                      className="overflow-hidden border-none flex flex-col md:flex-row max-h-[420px] md:max-h-[260px] shadow-md hover:shadow-lg dark:hover:shadow-md 
                     hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)] transition-shadow duration-300"
                     >
                       {/* Project Image - Left Side */}
-                      <div className="relative h-auto w-full md:w-1/2 flex-shrink-0 bg-muted overflow-hidden">
+                      <div className="relative h-[180px] md:h-[260px] w-full md:w-1/2 flex-shrink-0 bg-muted overflow-hidden">
                         <img
                           src={project.image || project.alt}
                           alt={project.title}
@@ -88,7 +88,7 @@ export default function ProjectsPage() {
                           ))}
                         </div>
                         {isMobile ? (
-                          <div className="flex flex-col gap-4 mt-6">
+                          <div className="flex flex-row gap-4 mt-6">
                             {project?.projectlink && (
                               <a 
                                 href={project?.projectlink} 
