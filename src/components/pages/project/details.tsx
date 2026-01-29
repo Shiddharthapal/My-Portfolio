@@ -137,10 +137,11 @@ export default function ProjectDetailsPage() {
                 alt={project.title}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
-              <div className="flex flex-col gap-4 text-muted-foreground dark:text-[hsl(261,15%,70%)]">
+              <div className="flex flex-col gap-4 text-muted-foreground dark:text-[hsl(261,15%,70%)]"
+              style={{ textAlign: "justify" }}>
                 {descriptionBlocks.map((block, index) => {
                   if (block.type === "paragraph") {
-                    return <p key={index}>{block.text}</p>;
+                    return <p key={index} >{block.text}</p>;
                   }
 
                   if (block.type === "list") {
