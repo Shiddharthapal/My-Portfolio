@@ -134,8 +134,7 @@ useEffect(() => {
            Software Engineer | Full-Stack Developer (MERN Stack)
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-[hsl(261,15%,70%)]">
-            I build modern, responsive web applications with a focus on user
-            experience and performance.
+            Experienced software engineer crafting modern, high-performance full-stack web applications with a user-centric approach.
           </p>
           
           <div className="flex gap-4">
