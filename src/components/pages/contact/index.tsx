@@ -327,7 +327,7 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Enter your message"
-                        rows={6}
+                        rows={3}
                         className="w-full px-4 py-3 border border-input dark:border-[hsl(255,41%,19%)] rounded-lg bg-[hsl(270,20%,98%)]
                          dark:bg-[hsl(260,29%,10%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1
                           focus:ring-[hsl(248,44%,57%)] resize-none"

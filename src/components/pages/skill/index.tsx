@@ -68,7 +68,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 py-20 px-3"
+      className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 pt-8 pb-12 px-3"
     >
       <div className=" sm:mx-5 2xl:mx-auto  items-center w-full px-1">
         {" "}
