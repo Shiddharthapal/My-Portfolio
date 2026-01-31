@@ -73,6 +73,8 @@ useEffect(() => {
     }
   };
 
+  const isMobile = window.innerWidth < 768;
+
   const performScroll = (sectionId) => {
     if (sectionId === "home") {
       window.scrollTo({
@@ -106,7 +108,7 @@ useEffect(() => {
         
       />
       {/*  Main Container with 2 columns */}
-      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl ">
         {/* Left Side - Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -116,14 +118,13 @@ useEffect(() => {
         >
           <span className="relative inline-block bg-[hsl(260,60%,94%)] px-6 py-1 mt-2 rounded-full 
           text-[hsl(257,30%,50%)] font-semibold dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(257,30%,50%)]">
-          {/* Animated dot with pulse effect */}
-          <span className="absolute -top-0 -right-0 flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
+            {/* Animated dot with pulse effect */}
+            <span className="absolute -top-0 -right-0 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
+            </span>
+            Welcome my portfolio
           </span>
-
-          Welcome my portfolio
-        </span>
           <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-600 dark:text-[hsl(0,0%,96%)] font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -220,7 +221,7 @@ useEffect(() => {
               const isMobile = window.innerWidth < 768;
 
               // ✅ Responsive radius based on screen size
-              const radius = isMobile ? 170 : 200;
+              const radius = isMobile ? 140 : 200;
 
               //calculate base angle
               let angleDeg = badge.angle;
