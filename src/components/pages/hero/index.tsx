@@ -1,4 +1,4 @@
-import { motion, animate, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
@@ -11,8 +11,6 @@ export default function Hero() {
   const [jumpOffsets, setJumpOffsets] = useState([0, 0, 0, 0, 0, 0]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
-  const spin = useMotionValue(0);
-  const spinReverse = useTransform(spin, (v) => -v);
   const badges = [
   { id: 1, label: "DSA", angle: 0 },
   { id: 2, label: "Node.js", angle: 60 },
@@ -57,16 +55,6 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, [badges.length]);
-
-  useEffect(() => {
-    const controls = animate(spin, 360, {
-      duration: 18,
-      repeat: Infinity,
-      ease: "linear",
-    });
-
-    return () => controls.stop();
-  }, [spin]);
 
   const scrollToSection = (sectionId) => {
     // First navigate to home if not already there
@@ -197,7 +185,6 @@ useEffect(() => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          
           className="relative flex items-center justify-center"
         >
           {/*  Container for the profile - no min-h-screen */}
@@ -218,7 +205,8 @@ useEffect(() => {
             {/* White Border Ring */}
             <div
               className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-8 border-white dark:border-[hsl(232,31%,25%)]
-                shadow-2xl overflow-hidden mb-10 sm:mb-5 bg-gradient-to-br from-blue-400 to-blue-500"
+                shadow-2xl overflow-hidden mb-10 sm:mb-5
+            bg-gradient-to-br from-blue-400 to-blue-500"
             >
               <img
                 src="/about_me.jpg"
@@ -228,10 +216,6 @@ useEffect(() => {
             </div>
 
             {/* Floating Badges */}
-            <motion.div
-              className="absolute inset-0 origin-center"
-              style={{ rotate: spin, transformOrigin: "50% 50%" }}
-            >
             {badges.map((badge, index) => {
               const isActive = index === activeIndex;
               const isMobile = window.innerWidth < 768;
@@ -267,15 +251,15 @@ useEffect(() => {
                       y - jumpOffsets[index]
                     }px))`,
                   }}
-                  
                 >
-                  <motion.div
+                  <div
                     className={`
-                      px-3 py-2 md:px-5 md:py-2.5 bg-white dark:bg-[hsl(223,26%,14%)] rounded-full shadow-lg origin-center
+                      px-3 py-2 md:px-5 md:py-2.5 bg-white dark:bg-[hsl(223,26%,14%)] rounded-full shadow-lg
                       dark:shadow-md border-2 transition-all duration-300 
                        border-[hsl(257,30%,50%)]  shadow-[hsl(254,49%,86%)] dark:border-[hsl(257,66%,76%)]"
-                      `}
-                    style={{ rotate: spinReverse, transformOrigin: "50% 50%" }}
+                          
+                      
+                    `}
                   >
                     <span
                       className={`
@@ -287,11 +271,10 @@ useEffect(() => {
                     >
                       {badge.label}
                     </span>
-                  </motion.div>
+                  </div>
                 </div>
               );
-              })}
-            </motion.div>
+            })}
           </div>
         </motion.div>
       </div>

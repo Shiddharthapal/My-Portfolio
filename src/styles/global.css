@@ -181,7 +181,7 @@ html {
   .custom-scrollbar {
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: hsl(262, 31%, 12%) transparent;
+    scrollbar-color: hsl(251,85%,75%) transparent;
   }
 
   /* For Webkit browsers (Chrome, Safari, Edge) */
@@ -194,12 +194,12 @@ html {
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: hsl(262, 31%, 12%);
+    background-color: hsl(251,85%,75%);
     border-radius: 4px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(262, 31%, 12%);
+    background-color: hsl(251,85%,85%);
   }
 
 
