@@ -19,7 +19,7 @@ export default function RightSidebar({ isOpen, onClose }: RightSidebarProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onClick={onClose}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 "
         />
       )}
 
@@ -37,15 +37,15 @@ export default function RightSidebar({ isOpen, onClose }: RightSidebarProps) {
           </h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-blue-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+            className="p-2 hover:bg-blue-100 dark:hover:bg-slate-700 rounded-lg transition-colors focus:outline-none"
             aria-label="Close sidebar"
           >
-            <X className="w-6 h-6 text-gray-700 dark:text-white" />
+            <X className="w-6 h-6  text-gray-700 dark:text-white" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-2 md:p-6">
           <div className="w-full overflow-hidden rounded-xl shadow-lg aspect-video bg-black/5 dark:bg-white/5">
             <iframe
               className="w-full h-full"

@@ -27,7 +27,6 @@ const SKILLS_DATA = {
     { name: "HTML/CSS", icon: "fileterminal", category: "frontend" },
     { name: "Tailwind CSS", icon: "paintbrush", category: "frontend" },
     { name: "Framer Motion", icon: "code", category: "frontend" },
-    { name: "Webpack", icon: "code", category: "frontend" },
   ],
   backend: [
     { name: "Node.js", icon: "code", category: "backend" },
@@ -37,8 +36,6 @@ const SKILLS_DATA = {
     { name: "MySQL", icon: "box", category: "backend" },
     { name: "JWT", icon: "lock", category: "backend" },
     { name: "Redis", icon: "code", category: "backend" },
-    { name: "Rate Limit", icon: "infinity", category: "backend" },
-    { name: "Aggregation Pipeline", icon: "code", category: "backend" },
   ],
   tools: [
     { name: "Web RTC", icon: "video", category: "tools" },
@@ -52,7 +49,6 @@ const SKILLS_DATA = {
     { name: "Postman", icon: "setting", category: "tools" },
     { name: "Vercel", icon: "setting", category: "tools" },
     { name: "Netlify", icon: "setting", category: "tools" },
-    { name: "VS Code", icon: "setting", category: "tools" },
   ],
   softskills: [
     { name: "Problem Solving", icon: "code", category: "softskills" },
@@ -72,7 +68,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 py-20"
+      className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 pt-8 pb-12 px-3"
     >
       <div className=" sm:mx-5 2xl:mx-auto  items-center w-full px-1">
         {" "}
@@ -84,22 +80,24 @@ export default function SkillsSection() {
           transition={{ duration: 0.5 }}
         >
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
               My{" "}
               <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Skills
               </span>
             </h1>
-            <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] text-lg max-w-2xl mx-auto px-4"
+            style={{ textAlign: "center" }}
+            >
               I've worked with a range of technologies in the web development
               world, from back-end to front-end and project management.
             </p>
           </div>
 
           {/* Tabs */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center  gap-2 flex-wrap bg-[hsl(270,33%,96%)] dark:bg-[hsl(259,31%,12%)] rounded-lg p-1.5">
+          <div className="flex justify-center mb-3 lg:mb-5">
+            <div className="inline-flex items-center  gap-1 lg:gap-2 flex-wrap bg-[hsl(270,33%,96%)] dark:bg-[hsl(259,31%,12%)] rounded-lg p-1.5">
               {tabs.map((tab) => (
                 <button
                   key={tab}

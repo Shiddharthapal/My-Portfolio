@@ -36,7 +36,7 @@ export default function Contact() {
     name: "Shiddhartha Pal",
     email: "shiddhartpal01355@gmail.com",
     phone: "+8801860680768",
-    Location: "Bagerhat, Bangladesh",
+    Location: "Dhaka, Bangladesh",
   };
 
   const handleChange = (
@@ -88,7 +88,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="  mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
+      className=" mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
     >
       <main className=" bg-background">
         <motion.div
@@ -98,7 +98,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
         >
           <div className="  px-7">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
                 Get In{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -125,19 +125,19 @@ export default function Contact() {
                     {/* Gradient Header */}
 
                     {/* Main Card */}
-                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl px-8 py-4 md:p-8 shadow-2xl">
+                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl px-8 py-3 md:p-8 shadow-2xl">
                       <h2 className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                         Contact Information
                       </h2>
 
-                      <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 leading-relaxed">
+                      <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] mb-3 leading-relaxed">
                         Feel free to reach out for opportunities,
                         collaborations, or just to say hi! I'm always open to
                         discussing new projects and ideas.
                       </p>
 
                       {/* Contact Details */}
-                      <div className="space-y-6 mb-4">
+                      <div className="space-y-2 mb-4">
                         {/* Email */}
                         <div className="flex items-start gap-4">
                           <div className="bg-[hsl(260,60%,94%)] dark:bg-[hsl(259,30%,18%)] p-3 rounded-full flex-shrink-0">
@@ -197,15 +197,6 @@ export default function Contact() {
                         </h3>
                         <div className="flex gap-4">
                           <a
-                            href="https://github.com/Shiddharthapal"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
-                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)]  transition"
-                          >
-                            <Github className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
-                          </a>
-                          <a
                             href="https://www.linkedin.com/in/shiddharthapal/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -223,6 +214,22 @@ export default function Contact() {
                           >
                             <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
                           </a>
+                          <a
+                             href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
+                             rel="noopener noreferrer"
+                             className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)]
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)] transition"
+                           >
+                             <Mail className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+                           </a>
+                           
+                         <a
+                           href="tel:01860680768"
+                             className="bg-[hsl(260,60%,94%)] focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)]
+                            dark:bg-[hsl(259,30%,18%)] dark:hover:bg-[hsl(251,85%,75%)] transition"
+                         >
+                           <Phone className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+                         </a>
                         </div>
                       </div>
                     </div>
@@ -233,7 +240,7 @@ export default function Contact() {
               {/* Right Section - Contact Form */}
               <div className="flex flex-col border border-gray-400 dark:border-[hsl(255,41%,19%)] rounded-2xl">
                 <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl p-8 shadow-lg">
-                  <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-8">
+                  <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-4">
                     Send me a message
                   </h2>
 
@@ -320,7 +327,7 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Enter your message"
-                        rows={6}
+                        rows={3}
                         className="w-full px-4 py-3 border border-input dark:border-[hsl(255,41%,19%)] rounded-lg bg-[hsl(270,20%,98%)]
                          dark:bg-[hsl(260,29%,10%)] text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1
                           focus:ring-[hsl(248,44%,57%)] resize-none"

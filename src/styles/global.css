@@ -157,6 +157,51 @@ html {
     --chart-5: 340 75% 55%;
   }
 }
+ /* Apply thin scrollbar styles */
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background-color: hsl(201, 95%, 31%);
+    border-radius: 4px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(201, 95%, 41%);
+  }
+
+  /* For Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(201, 95%, 31%) transparent;
+  }
+
+  /* Custom scrollbar styles */
+  .custom-scrollbar {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(251,85%,75%) transparent;
+  }
+
+  /* For Webkit browsers (Chrome, Safari, Edge) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(251,85%,75%);
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(251,85%,85%);
+  }
+
 
 /* Custom scrollbar styles for x */
   .custom-x-scrollbar {

@@ -67,7 +67,6 @@ Run the Socket.IO server (separate process):
 - pnpm socket:dev
 
 Environment Variables
-Create a .env file based on .env.example. Key values include:
 - MONGODB_URI or PUBLIC_MONGODB_URI
 - JWT_SECRET or PUBLIC_JWT_SECRET
 - BUNNY_STORAGE_ZONE_NAME
@@ -153,11 +152,10 @@ Tech Stack
 - Codeforces API for contests and user stats
 
 App Flow
-
-1) Register or login
-2) Create your profile and attach your Codeforces handle
-3) View your dashboard with stats, graph, and upcoming contests
-4) Explore teammates and compare performance
+-  Register or login
+-  Create your profile and attach your Codeforces handle
+-  View your dashboard with stats, graph, and upcoming contests
+-  Explore teammates and compare performance
 
 API Routes (Astro)
 
@@ -175,60 +173,48 @@ User
 - GET /api/userApi/upComingContest
 
 Project Structure
-
-
-.
-+-- public/
-+-- src/
-+-- components/
-�   �   +-- pages/         # login, register, profile, home
-�   �   +-- ui/            # shared UI primitives
-�   +-- pages/             # Astro pages + API routes
-�   +-- lib/               # DB connection, Codeforces API helpers
-�   +-- model/             # Mongoose schemas
-�   +-- redux/             # auth store and slices
-�   +-- styles/
-+-- astro.config.mjs
-+-- package.json
+- -- public/
+- -- src/
+- +-- components/
+- �   �   +-- pages/         # login, register, profile, home
+- �   �   +-- ui/            # shared UI primitives
+- �   +-- pages/             # Astro pages + API routes
+- �   +-- lib/               # DB connection, Codeforces API helpers
+- �   +-- model/             # Mongoose schemas
+- �   +-- redux/             # auth store and slices
+- �   +-- styles/
+- +-- astro.config.mjs
+- +-- package.json
 
 
 Environment Variables
-
 Create a .env file (see .env.example) and set:
 
+- MONGODB_URI=...
+- JWT_SECRET=...
 
-MONGODB_URI=...
-JWT_SECRET=...
+Email (OTP flow)
+- EMAIL_HOST=smtp.gmail.com
+- EMAIL_PORT=587
+- EMAIL_SECURE=false
+- EMAIL_USER=...
+- EMAIL_PASSWORD=...
+- EMAIL_FROM="Contest Tracker <noreply@yourapp.com>"
 
-# Email (OTP flow)
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_SECURE=false
-EMAIL_USER=...
-EMAIL_PASSWORD=...
-EMAIL_FROM="Contest Tracker <noreply@yourapp.com>"
-
-
-Optional
-
-VITE_API_BASE_URL=...   # If hosting API separately
 
 
 Getting Started
-
-pnpm install
-pnpm dev
+- pnpm install
+- pnpm dev
 
 
 
 Scripts
-
 - pnpm dev - start the dev server
 - pnpm build - build to dist/
 - pnpm preview - preview production build
 
 Deployment
-
 This project ships well on Netlify, Vercel, or any Node-compatible platform that supports Astro server routes.
 
 
@@ -299,8 +285,8 @@ Architecture overview
 - Watch pages use Bunny’s iframe embed for playback.
 
 Getting started
-
 Prerequisites
+
 - Node.js 18+ (recommended)
 - MongoDB instance
 - Bunny Stream account (API key + library ID)
@@ -313,21 +299,19 @@ bash
 
 
 Configure environment variables
-
 bash
 
 - cp .env.example .env
 
 
 Update .env with your values:
-MONGODB_URI=...
-JWT_SECRET=...
-BUNNY_STREAM_API_KEY=...
-BUNNY_STREAM_LIBRARY_ID=...
-BUNNY_STREAM_HOSTNAME=...
+- MONGODB_URI=...
+- JWT_SECRET=...
+- BUNNY_STREAM_API_KEY=...
+- BUNNY_STREAM_LIBRARY_ID=...
+- BUNNY_STREAM_HOSTNAME=...
 
 Run locally
-
 bash
 
 - npm run dev
@@ -337,6 +321,7 @@ bash
 
 Scripts
 bash
+
 - npm run dev       # start dev server
 - npm run build     # build for production
 - npm run preview   # preview the production build
@@ -362,19 +347,20 @@ API routes
 - POST /api/video/comment Add a comment (auth)
 
 Upload flow
-1. Client calls POST /api/video/upload with title + file type.
-2. Server creates a Bunny video entry and returns TUS upload headers.
-3. Client uploads the file directly to Bunny via TUS.
-4. Metadata is stored in MongoDB, and the video becomes available for playback.
+- Client calls POST /api/video/upload with title + file type.
+- Server creates a Bunny video entry and returns TUS upload headers.
+- Client uploads the file directly to Bunny via TUS.
+- Metadata is stored in MongoDB, and the video becomes available for playback.
 
 Data models (MongoDB)
-
 User:
+
 - email, password, name
 - subscribes (array of channel IDs)
 - subscribeCount
 
 Video:
+
 - title, description, userId
 - guid, libraryId, thumbnailUrl, duration, status
 - comments (userId, comment, parentId, createdAt)
@@ -383,14 +369,14 @@ Video:
 Project structure
 
 src/
-  components/        React UI + pages
-  layouts/           Astro + app layouts
-  pages/
-    api/             Astro API routes
-  lib/               Bunny CDN + DB utilities
-  model/             Mongoose schemas
-  redux/             Redux store and slices
-  styles/            Global styles
+ - components/        React UI + pages
+ - layouts/           Astro + app layouts
+ - pages/
+ -   -api/             Astro API routes
+ - lib/               Bunny CDN + DB utilities
+ - model/             Mongoose schemas
+ - redux/             Redux store and slices
+ - styles/            Global styles
 
 
 Notes

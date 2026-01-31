@@ -30,19 +30,23 @@ export default function PortfolioFooter() {
   const quickLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Mail, href:"mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!", label: "Mail" },
     {
       icon: MessageCircle,
       href: "https://wa.me/8801860680768",
       label: "WhatsApp",
+    },
+    {
+      icon: Phone,
+      href:"tel:01860680768",
+      label: "Phone",
     },
   ];
 
@@ -50,7 +54,7 @@ export default function PortfolioFooter() {
     <div className="min-h-screen flex flex-col justify-center dark:bg-[hsl(262,31%,12%)] bg-[hsl(270,20%,98%)]">
       <footer className="w-full max-w-7xl mx-auto px-6 md:px-10 py-7">
         {/* Scroll to Top Button */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-4">
           <button
             onClick={scrollToTop}
             className="w-12 h-12 rounded-full border border-[hsl(251,85%,75%)] bg-transparent text-gray-700 dark:dark:text-[hsl(0,0%,96%)] 
@@ -63,24 +67,24 @@ export default function PortfolioFooter() {
         </div>
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-6">
           {/* Brand Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-1 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
               Shiddhartha.
             </h2>
             <p className="text-[hsl(261,7%,46%)] text-md font-medium leading-relaxed dark:text-[hsl(261,15%,70%)]">
-              A passionate Software Engineer specialized in MERN stack with
-              extensive experience in project management.
+              Experienced software engineer crafting modern, high-performance full-stack web applications with a user-centric approach.
+          
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h2 className="text-xl font-bold mb-5  bg-clip-text  text-gray-700 dark:text-[hsl(0,0%,96%)] ">
+            <h2 className="text-xl font-bold mb-2 bg-clip-text text-gray-700 dark:text-[hsl(0,0%,96%)] ">
               Quick Links
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
@@ -105,49 +109,12 @@ export default function PortfolioFooter() {
 
           {/* Contact Section */}
           <div>
-            <h2 className="text-xl font-bold mb-5 text-gray-700 dark:text-[hsl(0,0%,96%)]  bg-clip-text ">
+            <h2 className="text-xl font-bold mb-2 text-gray-700 dark:text-[hsl(0,0%,96%)]  bg-clip-text ">
               Get in Touch
             </h2>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-slate-300">
-                <Phone
-                  size={20}
-                  className="flex-shrink-0 text-[hsl(251,85%,75%)]"
-                />
-                <a
-                  href="tel:+8801860680768"
-                  className="text-[hsl(261,7%,46%)] dark:text-[hsl(261,15%,70%)] font-medium transition-colors duration-300"
-                >
-                  +8801860680768
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-slate-300">
-                <Mail
-                  size={20}
-                  className="flex-shrink-0 text-[hsl(251,85%,75%)]"
-                />
-                <a
-                  href="mailto:shiddhartpal01355@gmail.com"
-                  className="text-[hsl(261,7%,46%)] dark:text-[hsl(261,15%,70%)] font-medium transition-colors duration-300 break-all"
-                >
-                  shiddhartpal01355@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-slate-300">
-                <MapPin
-                  size={20}
-                  className="flex-shrink-0 text-[hsl(251,85%,75%)]"
-                />
-                <a
-                  href="https://maps.app.goo.gl/92FYi46N3v55ASNp8"
-                   className="text-[hsl(261,7%,46%)] font-medium focus:outline-none hover:underline dark:text-[hsl(261,15%,70%)]">
-                  Bagerhat, Bangladesh
-                </a>
-              </li>
-            </ul>
 
             {/* Social Links */}
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-4 mt-3">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
                 return (
@@ -169,7 +136,7 @@ export default function PortfolioFooter() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-8 border-t border-slate-700/50 text-center text-[hsl(261,7%,46%)] dark:text-[hsl(261,15%,70%)] text-sm">
+        <div className="pt-4 border-t border-slate-700/50 text-center text-[hsl(261,7%,46%)] dark:text-[hsl(261,15%,70%)] text-sm">
           <p>&copy; 2025 Shiddhartha. All Rights Reserved.</p>
         </div>
       </footer>

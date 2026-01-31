@@ -6,6 +6,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { projects } from "./projects-data";
 import { projectData } from "./projects-description";
 import { Button } from "@/components/ui/button";
+import ScrollToTop from "../ScrollToTop";
 
 export default function ProjectDetailsPage() {
   const { slug } = useParams();
@@ -111,6 +112,7 @@ export default function ProjectDetailsPage() {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-purple-100 dark:bg-[hsl(259,30%,18%)] px-6 py-8">
+      <ScrollToTop/>
       <main className="mx-auto max-w-5xl pt-10 w-full">
         <div className="mb-3 flex items-center justify-between">
           <Button
@@ -130,10 +132,16 @@ export default function ProjectDetailsPage() {
               <h1 className="text-3xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)]">
                 {project.title}
               </h1>
-              <div className="flex flex-col gap-4 text-muted-foreground dark:text-[hsl(261,15%,70%)]">
+              <img
+                src={project.image || project.alt}
+                alt={project.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <div className="flex flex-col gap-4 text-muted-foreground dark:text-[hsl(261,15%,70%)]"
+              style={{ textAlign: "justify" }}>
                 {descriptionBlocks.map((block, index) => {
                   if (block.type === "paragraph") {
-                    return <p key={index}>{block.text}</p>;
+                    return <p key={index} >{block.text}</p>;
                   }
 
                   if (block.type === "list") {

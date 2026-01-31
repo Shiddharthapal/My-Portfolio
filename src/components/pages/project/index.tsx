@@ -11,9 +11,9 @@ export default function ProjectsPage() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-3 px-6"
+      className="min-h-screen flex items-center justify-center py-3 px-6 mb-10"
     >
-      <main className=" mx-auto items-center max-w-7xl  bg-background">
+      <main className=" mx-auto items-center w-full px-1  bg-background">
         <div>
           {/* Header Section */}
           <motion.div
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <section className="py-16 px-2 sm:px-2 lg:px-4">
+            <section className="py-5 px-2 sm:px-2 lg:px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)]  font-bold mb-4">
                   My{" "}
@@ -44,15 +44,15 @@ export default function ProjectsPage() {
                   Featured Projects
                 </h2>
 
-                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-9 lg:gap-7">
+                <div className="flex flex-row flex-nowrap gap-6 custom-x-scrollbar scroll-smooth pb-2 overflow-x-auto">
                   {projects.map((project) => (
                     <Card
                       key={project.id}
-                      className="overflow-hidden border-none flex flex-col md:flex-row shadow-md hover:shadow-lg dark:hover:shadow-md 
+                      className="snap-start shrink-0 min-w-[250px] sm:min-w-[350px] md:max-w-[400px] lg:max-w-[550px] overflow-hidden border-none flex flex-col md:flex-row max-h-[420px] md:max-h-[300px] shadow-md hover:shadow-lg dark:hover:shadow-md 
                     hover:shadow-[hsl(254,49%,86%)] dark:hover:shadow-[hsl(253,27%,39%)] transition-shadow duration-300"
                     >
                       {/* Project Image - Left Side */}
-                      <div className="relative h-auto w-full md:w-1/2 flex-shrink-0 bg-muted overflow-hidden">
+                      <div className="relative h-[180px] md:h-[260px] w-full md:w-1/2 flex-shrink-0 bg-muted overflow-hidden">
                         <img
                           src={project.image || project.alt}
                           alt={project.title}
@@ -88,7 +88,7 @@ export default function ProjectsPage() {
                           ))}
                         </div>
                         {isMobile ? (
-                          <div className="flex flex-col gap-4 mt-6">
+                          <div className="flex flex-row gap-4 mt-6">
                             {project?.projectlink && (
                               <a 
                                 href={project?.projectlink} 
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                               >
                                 <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
                                 hover:bg-gradient-to-br font-semibold rounded-xl focus:outline-none">
-                                  Live Demo
+                                  Live 
                                 </button>
                               </a>
                             )}
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
                               >
                                 <button className="px-4 py-2 bg-gradient-to-tl from-cyan-500 to-purple-800 text-white
                                 hover:bg-gradient-to-br font-semibold rounded-xl focus:outline-none">
-                                  Live Demo
+                                  Live
                                 </button>
                               </a>
                             )}

@@ -12,49 +12,69 @@ export default function HalfRectIcon({
   isVisible = true,
 }: HalfRectIconProps) {
   return (
-    <motion.button
-      initial={{ opacity: 0, x: 20 }}
-      animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-      onClick={onClick}
-      className="fixed top-14 right-0 z-50 w-6 h-16 bg-gradient-to-r from-blue-500
-       to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-xl transition-all
-        duration-300 flex items-center justify-center group rounded-l-md"
-      aria-label="Open menu"
+  <motion.button
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={
+    isVisible
+      ? { opacity: 1, scale: 1, rotate: [0, 360, 360] }
+      : { opacity: 0, scale: 0.8, rotate: 0 }
+  }
+  transition={{
+    type: "spring",
+    stiffness: 100,
+    damping: 20,
+    rotate: {
+      duration: 5,
+      times: [0, 0.1, 1],
+      repeat: Infinity,
+      repeatDelay: 9.2,
+      ease: "linear",
+    },
+  }}
+  onClick={onClick}
+  className="fixed top-14 right-4 z-50 w-14 h-14 focus:outline-none
+    bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400
+    rounded-full shadow-[0_8px_0_rgba(0,0,0,0.25)]
+    flex items-center justify-center group"
+  aria-label="Play video"
+  whileHover={{ y: -2 }}
+  whileTap={{ y: 4, scale: 0.95 }}
+>
+  <div className="relative flex items-center justify-center ">
+    {/* Gooey glow */}
+    <motion.div
+      className="absolute w-full h-full rounded-full  bg-pink-300 blur-xl opacity-70"
+      animate={{ scale: [1, 1.2, 1] }}
+      transition={{ duration: 2, repeat: Infinity }}
+    />
+
+    {/* Cartoon Play Icon */}
+    <motion.svg
+      width="26"
+      height="26"
+      viewBox="0 0 24 24"
+      fill="white"
+      className="relative z-10 drop-shadow-md"
+      animate={{ rotate: [0, -5, 5, 0] }}
+      transition={{ duration: 2.5, repeat: Infinity }}
     >
-      {/* Half rectangle visible, half outside */}
-      <div className="relative w-full h-full flex items-center justify-center">
-        {/* Visible part indicator */}
-        <motion.div
-          className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-blue-400 to-transparent"
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
+      <path d="M8 6v12l10-6z" />
+    </motion.svg>
 
-        {/* Icon element */}
-        <motion.svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          className="text-white relative z-10"
-          animate={{ rotate: [0, 5, -5, 0] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          {/* Custom design - opening indicator */}
-          <path d="M9 6L15 12L9 18" strokeLinecap="round" strokeLinejoin="round" />
-          <line x1="5" y1="8" x2="5" y2="16" strokeLinecap="round" />
-        </motion.svg>
+    {/* Sparkles */}
+    <motion.span
+      className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-300 rounded-full"
+      animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+      transition={{ duration: 1.5, repeat: Infinity }}
+    />
+    <motion.span
+      className="absolute -bottom-1 left-0 w-1.5 h-1.5 bg-white rounded-full"
+      animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+      transition={{ duration: 1.8, repeat: Infinity, delay: 0.5 }}
+    />
+  </div>
+</motion.button>
 
-        {/* Tooltip */}
-        <motion.div
-          className="absolute right-full mr-3 bg-gray-900 text-white text-xs font-medium px-3 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity"
-        >
-          Open
-        </motion.div>
-      </div>
-    </motion.button>
+
   );
 }

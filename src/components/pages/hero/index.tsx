@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { FerrisWheel, Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import RightSidebar from "./right-sidebar";
 import CartoonNotification from "./cartoon-notification";
@@ -73,6 +73,8 @@ useEffect(() => {
     }
   };
 
+  const isMobile = window.innerWidth < 768;
+
   const performScroll = (sectionId) => {
     if (sectionId === "home") {
       window.scrollTo({
@@ -106,7 +108,7 @@ useEffect(() => {
         
       />
       {/*  Main Container with 2 columns */}
-      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl ">
         {/* Left Side - Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -116,14 +118,13 @@ useEffect(() => {
         >
           <span className="relative inline-block bg-[hsl(260,60%,94%)] px-6 py-1 mt-2 rounded-full 
           text-[hsl(257,30%,50%)] font-semibold dark:bg-[hsl(259,30%,18%)] dark:text-[hsl(257,30%,50%)]">
-          {/* Animated dot with pulse effect */}
-          <span className="absolute -top-0 -right-0 flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
+            {/* Animated dot with pulse effect */}
+            <span className="absolute -top-0 -right-0 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(257,30%,50%)] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[hsl(257,30%,50%)]"></span>
+            </span>
+            Welcome my portfolio
           </span>
-
-          Welcome my portfolio
-        </span>
           <h1 className="text-4xl  md:text-5xl lg:text-6xl text-gray-600 dark:text-[hsl(0,0%,96%)] font-bold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -134,8 +135,7 @@ useEffect(() => {
            Software Engineer | Full-Stack Developer (MERN Stack)
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-[hsl(261,15%,70%)]">
-            I build modern, responsive web applications with a focus on user
-            experience and performance.
+            Experienced software engineer crafting modern, high-performance full-stack web applications with a user-centric approach.
           </p>
           
           <div className="flex gap-4">
@@ -158,8 +158,7 @@ useEffect(() => {
             <a
               href="mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!"
               rel="noopener noreferrer"
-              className=" focus:outline-none p-4 hover:rounded-full  hover:bg-[hsl(251,85%,75%)] 
-              dark:hover:bg-[hsl(251,85%,75%)] transition"
+              className="focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
             >
               <Mail className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
             </a>
@@ -167,11 +166,26 @@ useEffect(() => {
              href="https://wa.me/01860680768"
              target="_blank"
              rel="noopener noreferrer"
-             className=" focus:outline-none p-4 rounded-full hover:bg-[hsl(251,85%,75%)] 
-              dark:hover:bg-[hsl(251,85%,75%)] transition"
+             className=" focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
            >
              <MessageCircle className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
            </a>
+          <a
+            href="tel:01860680768"
+            className="focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
+          >
+            <Phone className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+          </a>
+          <a
+             href="https://medium.com/@shiddhartpal01355"
+             target="_blank"
+             rel="noopener noreferrer"
+             className=" focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
+           >
+             <FerrisWheel className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+           </a>
+         
+        
           </div>
         </motion.div>
 
@@ -216,7 +230,7 @@ useEffect(() => {
               const isMobile = window.innerWidth < 768;
 
               // ✅ Responsive radius based on screen size
-              const radius = isMobile ? 170 : 200;
+              const radius = isMobile ? 140 : 200;
 
               //calculate base angle
               let angleDeg = badge.angle;
@@ -224,7 +238,7 @@ useEffect(() => {
               //modification: Left side badges move to 130°
               if (isMobile) {
                 // If badge is on the left side (90° to 270°)
-                if (angleDeg > 90 && angleDeg < 270) {
+                if (angleDeg > 90 && angleDeg < 0) {
                   angleDeg = 130; // Fix left side badges at 130°
                 }
                 // Right side badges stay at their original angles
