@@ -88,7 +88,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="  mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
+      className=" mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
     >
       <main className=" bg-background">
         <motion.div
@@ -98,7 +98,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
         >
           <div className="  px-7">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
                 Get In{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -125,19 +125,19 @@ export default function Contact() {
                     {/* Gradient Header */}
 
                     {/* Main Card */}
-                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl px-8 py-4 md:p-8 shadow-2xl">
+                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl px-8 py-3 md:p-8 shadow-2xl">
                       <h2 className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                         Contact Information
                       </h2>
 
-                      <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 leading-relaxed">
+                      <p className="text-gray-600 dark:text-[hsl(261,15%,70%)] mb-3 leading-relaxed">
                         Feel free to reach out for opportunities,
                         collaborations, or just to say hi! I'm always open to
                         discussing new projects and ideas.
                       </p>
 
                       {/* Contact Details */}
-                      <div className="space-y-6 mb-4">
+                      <div className="space-y-2 mb-4">
                         {/* Email */}
                         <div className="flex items-start gap-4">
                           <div className="bg-[hsl(260,60%,94%)] dark:bg-[hsl(259,30%,18%)] p-3 rounded-full flex-shrink-0">
@@ -240,7 +240,7 @@ export default function Contact() {
               {/* Right Section - Contact Form */}
               <div className="flex flex-col border border-gray-400 dark:border-[hsl(255,41%,19%)] rounded-2xl">
                 <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl p-8 shadow-lg">
-                  <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-8">
+                  <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-4">
                     Send me a message
                   </h2>
 

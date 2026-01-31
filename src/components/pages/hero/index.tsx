@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
+import { FerrisWheel, Github, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import RightSidebar from "./right-sidebar";
 import CartoonNotification from "./cartoon-notification";
@@ -176,6 +176,15 @@ useEffect(() => {
           >
             <Phone className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
           </a>
+          <a
+             href="https://medium.com/@shiddhartpal01355"
+             target="_blank"
+             rel="noopener noreferrer"
+             className=" focus:outline-none p-4 hover:rounded-full hover:bg-[hsl(260,60%,94%)] dark:hover:bg-[hsl(259,30%,18%)]    transition"
+           >
+             <FerrisWheel className="w-5 h-5 text-gray-700 hover:text-white dark:text-[hsl(0,0%,96%)]" />
+           </a>
+         
         
           </div>
         </motion.div>

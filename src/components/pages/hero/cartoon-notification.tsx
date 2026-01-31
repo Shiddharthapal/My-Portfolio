@@ -63,7 +63,7 @@ export default function CartoonNotification({
       </motion.div>
 
       {/* Menu Button (shows after notification vanishes) */}
-      <HalfRectIcon onClick={onMenuOpen} isVisible={!isVisible} />
+      <HalfRectIcon onClick={onMenuOpen} isVisible={!isVisible}  />
     </>
   );
 }
