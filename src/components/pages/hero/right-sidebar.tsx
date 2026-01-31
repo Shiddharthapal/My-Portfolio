@@ -40,12 +40,12 @@ export default function RightSidebar({ isOpen, onClose }: RightSidebarProps) {
             className="p-2 hover:bg-blue-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
             aria-label="Close sidebar"
           >
-            <X className="w-6 h-6 text-gray-700 dark:text-white" />
+            <X className="w-6 h-6  text-gray-700 dark:text-white focus:outline-none" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-2 md:p-6">
           <div className="w-full overflow-hidden rounded-xl shadow-lg aspect-video bg-black/5 dark:bg-white/5">
             <iframe
               className="w-full h-full"
