@@ -106,7 +106,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
       id="resume"
       className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] pt-5 pb-10"
     >
-      <main className="  mx-auto pt-2 pb-14 px-4 items-center w-full">
+      <main className="mx-auto pt-2 pb-14 px-4 items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
