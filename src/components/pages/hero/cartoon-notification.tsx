@@ -25,9 +25,9 @@ export default function CartoonNotification({
     <>
       {/* Welcome Notification */}
       <motion.div
-        initial={{ opacity: 0, x: 50, y: -50 }}
-        animate={isVisible ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 50, y: -50 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
+        initial={{ opacity: 0, x: -50, y: 50 }}
+        animate={isVisible ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: -50, y: 50 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-8 right-8 z-50"
       >
         <div className="relative">

@@ -228,7 +228,7 @@ useEffect(() => {
               //modification: Left side badges move to 130°
               if (isMobile) {
                 // If badge is on the left side (90° to 270°)
-                if (angleDeg > 90 && angleDeg < 270) {
+                if (angleDeg > 90 && angleDeg < 0) {
                   angleDeg = 130; // Fix left side badges at 130°
                 }
                 // Right side badges stay at their original angles
