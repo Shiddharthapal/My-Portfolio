@@ -14,8 +14,23 @@ export default function HalfRectIcon({
   return (
   <motion.button
   initial={{ opacity: 0, scale: 0.8 }}
-  animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-  transition={{ type: "spring", stiffness: 200, damping: 12 }}
+  animate={
+    isVisible
+      ? { opacity: 1, scale: 1, rotate: [0, 360, 360] }
+      : { opacity: 0, scale: 0.8, rotate: 0 }
+  }
+  transition={{
+    type: "spring",
+    stiffness: 100,
+    damping: 20,
+    rotate: {
+      duration: 5,
+      times: [0, 0.1, 1],
+      repeat: Infinity,
+      repeatDelay: 9.2,
+      ease: "linear",
+    },
+  }}
   onClick={onClick}
   className="fixed top-14 right-4 z-50 w-14 h-14 focus:outline-none
     bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400
