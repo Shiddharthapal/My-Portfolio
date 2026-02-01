@@ -10,15 +10,41 @@ import '../styles/global.css';
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+
+  <!-- Responsive for all browsers -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>Shiddhartha Pal | Software Engineer</title>
+
+  <!-- SEO Description (used by all browsers + Google) -->
+  <meta name="description" content="Shiddhartha Pal is a Software Engineer from Bangladesh. B.Sc. in Software Engineering from Daffodil International University, currently based in Dhaka | Bagerhat." />
+
+  <!-- Author -->
+  <meta name="author" content="Shiddhartha Pal">
+
+  <!-- Browser Compatibility (mainly for Edge/IE) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta property="og:url" content="https://shiddharthapal.netlify.app" />
+
+  <!-- Theme color (Chrome, Edge, Android) -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Disable auto-translate (optional) -->
+  <meta name="google" content="notranslate">
     <link rel="icon" type="image/svg+xml" href="/a8Pr1t01 (2).svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{"Shiddhartha"}</title>
   </head>
   <body>
     <slot />
+    <div class="page-footer">
+    <p><strong>Shiddhartha Pal</strong> — Software Engineer</p>
+    <p>B.Sc. in Software Engineering, Daffodil International University</p>
+    <p>Dhaka, Bangladesh</p>
+  </div>
   </body>
 </html>
 
