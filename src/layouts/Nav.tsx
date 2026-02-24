@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/lib/theme-context";
@@ -56,6 +56,39 @@ export default function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const logoWrap = document.getElementById("logo-wrap");
+    const resumeWrap = document.getElementById("resume-wrap");
+    if (!logoWrap && !resumeWrap) return;
+
+    let lastScrollY = window.scrollY;
+    const THRESHOLD = 60;
+    const setExpanded = (expanded: boolean) => {
+      logoWrap?.classList.toggle("expanded", expanded);
+      resumeWrap?.classList.toggle("expanded", expanded);
+    };
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+
+      if (currentScrollY < THRESHOLD) {
+        setExpanded(true);
+      } else if (scrollingDown) {
+        setExpanded(false);
+      } else {
+        setExpanded(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-border z-50">
       <div className="container"></div>
@@ -67,7 +100,20 @@ export default function Navbar() {
               onClick={() => scrollToSection("home")}
               className="text-2xl 2xl:text-3xl  focus:outline-none font-bold bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
             >
-              Shiddhartha.
+              <div id="logo-wrap" className="expanded ">
+                <span
+                  id="letter-s"
+                  className="bg-purple-500 bg-clip-text text-transparent cursor-pointer"
+                >
+                  S
+                </span>
+                <span
+                  id="name-rest"
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 bg-clip-text text-transparent cursor-pointer"
+                >
+                  hiddharth.
+                </span>
+              </div>
             </button>
           </div>
           <div className="flex justify-center">
@@ -115,20 +161,22 @@ export default function Navbar() {
               </button>
 
               {/* Resume Button - Hidden on mobile */}
-              <a
-                href="https://drive.google.com/file/d/1g7jmMiWy3dvcIJUJMz6mDOPKtpuqEmHZ/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:block"
-              >
-                <button
-                  className="px-6 py-2 focus:outline-none bg-gradient-to-tl from-cyan-500 to-purple-800
+              <div id="resume-wrap" className="expanded">
+                <a
+                  href="https://drive.google.com/file/d/1g7jmMiWy3dvcIJUJMz6mDOPKtpuqEmHZ/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:block"
+                >
+                  <button
+                    className="px-6 py-2 focus:outline-none bg-gradient-to-tl from-cyan-500 to-purple-800
                text-white rounded-lg hover:bg-gradient-to-br transition-colors duration-200 dark:text-black 
                font-medium text-sm 2xl:text-lg "
-                >
-                  Resume
-                </button>
-              </a>
+                  >
+                    Resume
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
