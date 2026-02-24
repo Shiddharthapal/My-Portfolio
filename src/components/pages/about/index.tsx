@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Briefcase, FileText, Code, Brain } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { ScrollFadeText } from "../scrollFadeText";
 
 export default function About() {
   const navigate = useNavigate();
@@ -86,6 +87,13 @@ export default function About() {
           <div className=" gap-8 items-center">
             <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%]  md:w-[85%] ">
             </div>
+            <ScrollFadeText
+            text="SHIDDHARTHA"
+            initialSize={72}
+            maxScale={2.5}
+            scrollRange={500}
+            className="mb-8"
+          />
             <div className="text-center">
               <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8 dark:text-[hsl(0,0%,96%)]">
                 About{" "}
