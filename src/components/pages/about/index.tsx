@@ -39,7 +39,7 @@ export default function About() {
       id="about"
       className="flex items-center justify-center px-3 sm:px-4 lg:px-6 py-10"
     >
-      <div className="mx-auto w-full max-w-5xl px-1 sm:px-3">
+      <div className="mx-auto w-full  px-1 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function About() {
             scrollRange={500}
               className="mb-5 sm:mb-8 max-w-full overflow-hidden"
             />
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center  ">
               <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-6 sm:mb-8 dark:text-[hsl(0,0%,96%)]">
                 About{" "}
                 <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
