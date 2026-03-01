@@ -111,7 +111,7 @@ export default function Contact() {
                 ideas.
               </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-9">
               <div className="min-h-screen rounded-2xl border border-gray-300 dark:border-[hsl(255,41%,19%)]  relative">
                 {/* Split Background - Vertical Split */}
                 <div className="absolute inset-0 flex flex-col overflow-hidden rounded-2xl">
