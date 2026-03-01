@@ -31,39 +31,46 @@ export default function About() {
       label2: "",
       color: "text-[hsl(251,85%,75%)]",
       bgColor: "bg-purple-50",
-    }
+    },
   ];
 
   return (
     <section
       id="about"
-      className="flex items-center justify-center px-3 sm:px-4 lg:px-6 py-10"
+      className="w-full flex items-center justify-center px-3 sm:px-4 lg:px-6 py-8 sm:py-10"
     >
-      <div className="mx-auto max-w-7xl items-center   px-1 sm:px-3">
+      <div className="mx-auto w-full max-w-7xl items-center px-1 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="gap-8 items-center">
+          <div className="space-y-5 sm:space-y-7">
             <ScrollFadeText
               text="SHIDDHARTHA"
-               initialSize={72}
-            maxScale={2.5}
-            scrollRange={500}
-              className="mb-5 sm:mb-8 max-w-full overflow-hidden"
+              initialSize={54}
+              maxScale={2.5}
+              scrollRange={500}
+              className="
+    mb-4 sm:mb-6
+    text-4xl
+    sm:text-4xl
+    md:text-5xl
+    lg:text-6xl 
+    xl:text-7xl
+    max-w-full
+    overflow-hidden
+  "
             />
-            <div className="text-center ">
-              <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-6 sm:mb-8 dark:text-[hsl(0,0%,96%)]">
+            <div className="text-center max-w-7xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl text-gray-700 md:text-4xl font-bold mb-5 sm:mb-7 dark:text-[hsl(0,0%,96%)]">
                 About{" "}
                 <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Me
                 </span>{" "}
               </h2>
-              <p
-                className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 text-muted-foreground max-w-full pt-1 pb-2 sm:pb-4 text-left sm:text-justify"
-              >
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-5 sm:mb-6 text-muted-foreground max-w-full pt-1 pb-2 sm:pb-4 text-left sm:text-justify leading-relaxed">
                 I come from a small rural village where dreams are often bigger
                 than the resources around you. My father is a businessman who
                 studied only up to class 5, and my mother is a homemaker who
@@ -76,14 +83,14 @@ export default function About() {
                   more
                 </button>
               </p>
-              
-              <div className="mt-7 sm:mt-9 overflow-x-auto md:overflow-visible custom-x-scrollbar">
+
+              <div className="mt-6 sm:mt-8 overflow-x-auto md:overflow-visible custom-x-scrollbar pb-1">
                 <div className="flex flex-nowrap gap-4 w-max md:w-full md:grid md:grid-cols-3 md:gap-6">
                   {stats.map((stat, index) => (
                     <div
                       key={index}
                       className="bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] flex flex-col items-center 
-                      rounded-2xl px-3 py-4 w-[220px] sm:w-[240px] md:w-full md:max-w-none shadow-sm hover:shadow-lg dark:shadow-md  hover:shadow-[hsl(254,49%,86%)] 
+                      rounded-2xl px-3 py-4 w-[210px] sm:w-[230px] md:w-full md:max-w-none shadow-sm hover:shadow-lg dark:shadow-md  hover:shadow-[hsl(254,49%,86%)] 
                        dark:hover:shadow-[hsl(253,27%,39%)] transition-all 
                       duration-300 transform hover:-translate-y-1"
                     >
