@@ -88,16 +88,16 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className=" mx-auto min-h-screen flex items-center justify-center py-2 max-w-7xl"
+      className="mx-auto min-h-fit md:min-h-screen flex items-start md:items-center justify-center py-3 md:py-2 max-w-7xl w-full"
     >
-      <main className=" bg-background">
+      <main className="bg-background w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="  px-7">
+          <div className="px-3 sm:px-5 lg:px-7">
             <div className="text-center mb-8">
               <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
                 Get In{" "}
@@ -111,8 +111,8 @@ export default function Contact() {
                 ideas.
               </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-9">
-              <div className="min-h-screen rounded-2xl border border-gray-300 dark:border-[hsl(255,41%,19%)]  relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mb-4 md:mb-9">
+              <div className="min-h-fit md:min-h-screen rounded-2xl border border-gray-300 dark:border-[hsl(255,41%,19%)] relative">
                 {/* Split Background - Vertical Split */}
                 <div className="absolute inset-0 flex flex-col overflow-hidden rounded-2xl">
                   <div className="h-1/3 bg-gradient-to-br from-blue-300 to-purple-600"></div>
@@ -120,12 +120,12 @@ export default function Contact() {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-10">
+                <div className="relative z-10 min-h-fit md:min-h-screen flex items-center justify-center px-4 sm:px-6 pt-6 md:pt-10 pb-4 md:pb-0">
                   <div className="w-full max-w-2xl">
                     {/* Gradient Header */}
 
                     {/* Main Card */}
-                    <div className="bg-white dark:bg-[hsl(262,31%,12%)]  rounded-2xl px-8 py-3 md:p-8 shadow-2xl">
+                    <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl px-5 sm:px-8 py-3 md:p-8 shadow-2xl">
                       <h2 className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] mb-4">
                         Contact Information
                       </h2>
@@ -239,7 +239,7 @@ export default function Contact() {
 
               {/* Right Section - Contact Form */}
               <div className="flex flex-col border border-gray-400 dark:border-[hsl(255,41%,19%)] rounded-2xl">
-                <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl p-8 shadow-lg">
+                <div className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-2xl p-5 sm:p-8 shadow-lg">
                   <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-foreground mb-4">
                     Send me a message
                   </h2>

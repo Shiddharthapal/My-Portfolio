@@ -9,9 +9,9 @@ export default function ProjectsPage() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-3 px-6 mb-10"
+      className="min-h-fit md:min-h-screen flex items-start md:items-center justify-center pt-2 pb-2 md:py-3 px-3 sm:px-6 mb-3 md:mb-10"
     >
-      <main className=" mx-auto items-center w-full px-1  bg-background">
+      <main className="mx-auto items-center w-full px-1 bg-background">
         <div>
           {/* Header Section */}
           <motion.div
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <section className="py-5 px-2 sm:px-2 lg:px-4">
+            <section className="py-2 sm:py-5 px-1 sm:px-2 lg:px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)]  font-bold mb-4">
                   My{" "}
@@ -37,12 +37,12 @@ export default function ProjectsPage() {
 
             {/* Featured Projects Section */}
             <section className="py-0 ">
-              <div className="max-w-7xl  ">
-                <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-center mb-8">
+              <div className="max-w-7xl items-center mx-auto px-1 sm:px-3 lg:px-6">
+                <h2 className="text-2xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold text-center mb-4 md:mb-8">
                   Featured Projects
                 </h2>
 
-                <div className="flex flex-row flex-nowrap gap-6 custom-x-scrollbar scroll-smooth pb-2 overflow-x-auto">
+                <div className="flex flex-row flex-nowrap gap-4 md:gap-6 custom-x-scrollbar scroll-smooth pb-1 md:pb-2 overflow-x-auto">
                   {projects.map((project) => (
                     <Card
                       key={project.id}

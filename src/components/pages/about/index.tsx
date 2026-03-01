@@ -37,7 +37,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-3 sm:px-4 lg:px-6 py-10"
+      className="flex items-center justify-center px-3 sm:px-4 lg:px-6 py-10"
     >
       <div className="mx-auto w-full max-w-5xl px-1 sm:px-3">
         <motion.div
@@ -49,9 +49,9 @@ export default function About() {
           <div className="gap-8 items-center">
             <ScrollFadeText
               text="SHIDDHARTHA"
-              initialSize={56}
-              maxScale={2.2}
-              scrollRange={420}
+               initialSize={72}
+            maxScale={2.5}
+            scrollRange={500}
               className="mb-5 sm:mb-8 max-w-full overflow-hidden"
             />
             <div className="text-center max-w-4xl mx-auto">

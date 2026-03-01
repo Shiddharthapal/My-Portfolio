@@ -105,16 +105,16 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
   return (
     <section
       id="resume"
-      className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] pt-5 pb-10"
+      className="min-h-screen flex items-center  justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)]  pt-5 pb-10"
     >
-      <main className="mx-auto pt-2 pb-14 px-4 items-center w-full">
+      <main className="mx-auto pt-2 pb-14 px-4 justify-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="max-w-7xl mx-3">
+          <div className="max-w-7xl mx-auto px-1 sm:px-2 lg:px-0">
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
