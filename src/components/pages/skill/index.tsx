@@ -68,9 +68,9 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className=" flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 pt-8 pb-12 px-3"
+      className="w-full flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] mt-6 pt-8 pb-12 px-3"
     >
-      <div className=" sm:mx-5 2xl:mx-auto  items-center w-full px-1">
+      <div className="mx-auto w-full max-w-7xl items-center px-1 sm:px-3">
         {" "}
         {/* Use flex + justify-center instead of mx-auto */}
         <motion.div
@@ -80,7 +80,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.5 }}
         >
           {/* Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-10 ">
             <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
               My{" "}
               <span className="bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">

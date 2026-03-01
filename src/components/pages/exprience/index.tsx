@@ -11,6 +11,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { ScrollMarquee } from "../scrollMarquee";
 
  interface PlatformData {
   name: string
@@ -104,16 +105,16 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
   return (
     <section
       id="resume"
-      className="min-h-screen flex items-center justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] pt-5 pb-10"
+      className="min-h-screen flex items-center  justify-center bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)]  pt-5 pb-10"
     >
-      <main className="mx-auto pt-2 pb-14 px-4 items-center w-full">
+      <main className="mx-auto pt-2 pb-14 px-4 justify-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="max-w-7xl mx-3">
+          <div className="max-w-7xl mx-auto px-1 sm:px-2 lg:px-0">
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl text-gray-700 dark:text-[hsl(0,0%,96%)] font-bold mb-4">
@@ -127,6 +128,15 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                 shaped my career in web development and project management.
               </p>
             </div>
+            {/* Cards Grid */}
+              
+                <ScrollMarquee
+                text="Competitive Programmer"
+                fontSize={120}
+                normalSpeed={50}
+                scrollSpeed={150}
+
+              />
 
             <div className="w-full mb-8 mx-auto">
         {/* Header */}
@@ -207,7 +217,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                   className="bg-white dark:bg-[hsl(262,31%,12%)] rounded-lg mb-6 p-6 border border-purple-100
                  dark:border-[hsl(255,41%,19%)] shadow-sm hover:shadow-lg transition-shadow hover:shadow-purple-200
                  dark:hover:shadow-md dark:hover:shadow-[hsl(253,27%,39%)]
-                 h-[360px] custom-scrollbar sm:h-auto "
+                 h-[360px] custom-scrollbar  "
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -303,7 +313,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                       Achivement
                     </h3>
                   </div>
-                  <div className="space-y-3  h-[180px] custom-scrollbar sm:h-auto ">
+                  <div className="space-y-3  h-[180px] custom-scrollbar  ">
                     {[
                       {
                         title: "Recognized by Data Science Lab with a Professional Certificate for successful Full Stack Development on the AI-Medicare+ healthcare AI web application",
@@ -416,7 +426,7 @@ const sliderRef = useRef<HTMLDivElement | null>(null);
                       Additional Certifications
                     </h3>
                   </div>
-                  <div className="space-y-3 h-[250px] custom-scrollbar sm:h-auto">
+                  <div className="space-y-3 h-[250px] md:h-[360px] custom-scrollbar">
                     {[
                       {
                         title: "Participated in the ICPC 2024.",

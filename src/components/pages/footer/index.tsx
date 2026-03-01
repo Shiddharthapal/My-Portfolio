@@ -51,8 +51,8 @@ export default function PortfolioFooter() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col justify-center dark:bg-[hsl(262,31%,12%)] bg-[hsl(270,20%,98%)]">
-      <footer className="w-full max-w-7xl mx-auto px-6 md:px-10 py-7">
+    <div className=" flex flex-col justify-center dark:bg-[hsl(262,31%,12%)] bg-[hsl(270,20%,98%)]">
+      <footer className="w-full max-w-7xl mx-auto px-6 md:px-10 py-9">
         {/* Scroll to Top Button */}
         <div className="flex justify-center mb-4">
           <button

@@ -99,7 +99,7 @@ useEffect(() => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-6 "
+      className=" flex items-center justify-center px-6 py-16 lg:py-32"
     >
       <CartoonNotification onMenuOpen={() => setIsSidebarOpen(true)} />
       <RightSidebar
@@ -214,7 +214,7 @@ useEffect(() => {
             {/* White Border Ring */}
             <div
               className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-8 border-white dark:border-[hsl(232,31%,25%)]
-                shadow-2xl overflow-hidden mb-10 sm:mb-5
+                shadow-2xl overflow-hidden mb-10 sm:mb-5 lg:mb-0
             bg-gradient-to-br from-blue-400 to-blue-500"
             >
               <img
