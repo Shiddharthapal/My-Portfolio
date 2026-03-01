@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, FileText, Code, Brain } from "lucide-react";
+import { Briefcase, FileText, Brain } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { ScrollFadeText } from "../scrollFadeText";
 
@@ -34,76 +34,35 @@ export default function About() {
     }
   ];
 
-  const scrollToSection = (sectionId) => {
-    // First navigate to home if not already there
-    if (window.location.pathname !== "/") {
-      navigate("/");
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        performScroll(sectionId);
-      }, 100);
-    } else {
-      performScroll(sectionId);
-    }
-
-    if (window.history.replaceState) {
-      window.history.replaceState(null, "", "/");
-    }
-  };
-
-  const performScroll = (sectionId) => {
-    if (sectionId === "home") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-      return;
-    }
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 64; // Height of fixed navbar (h-16 = 4rem = 64px)
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-2 pb-5"
+      className="min-h-screen flex items-center justify-center px-3 sm:px-4 lg:px-6 py-10"
     >
-      <div className=" mx-auto items-center max-w-7xl px-4">
+      <div className="mx-auto w-full max-w-5xl px-1 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className=" gap-8 items-center">
-            <div className="relative max-w-md  mx-auto w-[55%] sm:w-[65%]  md:w-[85%] ">
-            </div>
+          <div className="gap-8 items-center">
             <ScrollFadeText
-            text="SHIDDHARTHA"
-            initialSize={72}
-            maxScale={2.5}
-            scrollRange={500}
-            className="mb-8"
-          />
-            <div className="text-center">
-              <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-8 dark:text-[hsl(0,0%,96%)]">
+              text="SHIDDHARTHA"
+              initialSize={56}
+              maxScale={2.2}
+              scrollRange={420}
+              className="mb-5 sm:mb-8 max-w-full overflow-hidden"
+            />
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl text-gray-700 md:text-4xl font-bold mb-6 sm:mb-8 dark:text-[hsl(0,0%,96%)]">
                 About{" "}
                 <span className=" bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Me
                 </span>{" "}
               </h2>
               <p
-                className="text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 text-muted-foreground max-w-full pt-1 pb-4"
-                style={{ textAlign: "justify" }}
+                className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-[hsl(261,15%,70%)] mb-6 text-muted-foreground max-w-full pt-1 pb-2 sm:pb-4 text-left sm:text-justify"
               >
                 I come from a small rural village where dreams are often bigger
                 than the resources around you. My father is a businessman who
@@ -112,41 +71,43 @@ export default function About() {
                 <button
                   type="button"
                   onClick={() => navigate("/dream")}
-                  className="ml-2 focus:outline-none inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
+                  className="ml-2 mt-1 sm:mt-0 focus:outline-none inline-flex items-center text-cyan-600 hover:text-purple-600 dark:text-cyan-400 dark:hover:text-purple-400 transition-colors duration-200"
                 >
                   more
                 </button>
               </p>
               
-              <div className="grid grid-cols-3 gap-6 mt-9">
-                {stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] flex flex-col items-center 
-                    rounded-2xl px-2 py-4 shadow-sm hover:shadow-lg dark:shadow-md  hover:shadow-[hsl(254,49%,86%)] 
-                     dark:hover:shadow-[hsl(253,27%,39%)] transition-all 
-                    duration-300 transform hover:-translate-y-1"
-                  >
-                    {/* Icon */}
+              <div className="mt-7 sm:mt-9 overflow-x-auto md:overflow-visible custom-x-scrollbar">
+                <div className="flex flex-nowrap gap-4 w-max md:w-full md:grid md:grid-cols-3 md:gap-6">
+                  {stats.map((stat, index) => (
                     <div
-                      className={`${stat.bgColor} dark:bg-[hsl(260,30%,14%)] w-10 h-6 rounded-xl flex items-center justify-center mb-2`}
+                      key={index}
+                      className="bg-[hsl(264,45%,96%)] dark:bg-[hsl(260,30%,14%)] flex flex-col items-center 
+                      rounded-2xl px-3 py-4 w-[220px] sm:w-[240px] md:w-full md:max-w-none shadow-sm hover:shadow-lg dark:shadow-md  hover:shadow-[hsl(254,49%,86%)] 
+                       dark:hover:shadow-[hsl(253,27%,39%)] transition-all 
+                      duration-300 transform hover:-translate-y-1"
                     >
-                      <stat.icon className={`w-6 h-6 ${stat.color}`} />
-                    </div>
+                      {/* Icon */}
+                      <div
+                        className={`${stat.bgColor} dark:bg-[hsl(260,30%,14%)] w-10 h-6 rounded-xl flex items-center justify-center mb-2`}
+                      >
+                        <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                      </div>
 
-                    {/* Count */}
-                    <div className="text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] ">
-                      {stat.count}
-                      {stat.suffix}
-                    </div>
+                      {/* Count */}
+                      <div className="text-xl sm:text-2xl font-bold text-gray-700 dark:text-[hsl(0,0%,96%)] ">
+                        {stat.count}
+                        {stat.suffix}
+                      </div>
 
-                    {/* Label */}
-                    <div className="text-gray-500 dark:text-[hsl(261,15%,70%)] flex flex-col items-center text-sm">
-                      <div>{stat.label1}</div>
-                      {stat.label2 && <div>{stat.label2}</div>}
+                      {/* Label */}
+                      <div className="text-gray-500 dark:text-[hsl(261,15%,70%)] flex flex-col items-center text-xs sm:text-sm">
+                        <div>{stat.label1}</div>
+                        {stat.label2 && <div>{stat.label2}</div>}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
