@@ -37,7 +37,11 @@ export default function PortfolioFooter() {
   ];
 
   const socialLinks = [
-    { icon: Mail, href:"mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!", label: "Mail" },
+    {
+      icon: Mail,
+      href: "mailto:shiddhartpal01355@gmail.com?subject=Hello&body=Hi there!",
+      label: "Mail",
+    },
     {
       icon: MessageCircle,
       href: "https://wa.me/8801860680768",
@@ -45,7 +49,7 @@ export default function PortfolioFooter() {
     },
     {
       icon: Phone,
-      href:"tel:01860680768",
+      href: "tel:01860680768",
       label: "Phone",
     },
   ];
@@ -74,8 +78,8 @@ export default function PortfolioFooter() {
               Shiddhartha.
             </h2>
             <p className="text-[hsl(261,7%,46%)] text-md font-medium leading-relaxed dark:text-[hsl(261,15%,70%)]">
-              Experienced software engineer crafting modern, high-performance full-stack web applications with a user-centric approach.
-          
+              Experienced software engineer crafting modern, high-performance
+              full-stack web applications with user-centric approachs.
             </p>
           </div>
 
