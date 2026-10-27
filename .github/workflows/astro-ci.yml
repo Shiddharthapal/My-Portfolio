@@ -58,5 +58,5 @@ jobs:
         run: |
           npx netlify-cli deploy \
             --dir=dist \
-            --prod \
+            --prod-if-unlocked \
             --site="$NETLIFY_SITE_ID"
