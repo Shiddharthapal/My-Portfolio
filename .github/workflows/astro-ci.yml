@@ -1,6 +1,7 @@
 name: Astro Portfolio CI/CD
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
